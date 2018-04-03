@@ -1,5 +1,6 @@
 ---
 layout: post
+comments: true
 title:  "How to run a Node-RED flow on Home Assistant start"
 date:   2018-03-24 14:34:00 -0400
 tags: home-assistant node-red

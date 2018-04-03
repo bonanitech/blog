@@ -1,5 +1,6 @@
 ---
 layout: post
+comments: true
 title:  "Blink lights when your IP phone rings"
 date:   2018-03-21 15:48:00 -0400
 tags: home-assistant

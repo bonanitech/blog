@@ -1,5 +1,6 @@
 ---
 layout: post
+comments: true
 title:  "Managing groups visibility in Home Assistant"
 date:   2018-03-18 19:54:00 -0400
 tags: home-assistant

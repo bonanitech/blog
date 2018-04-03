@@ -1,5 +1,6 @@
 ---
 layout: post
+comments: true
 title:  "Dynamically hide/unhide an entire view in Home Assistant"
 date:   2018-03-15 21:03:00 -0400
 tags: home-assistant
