@@ -24,7 +24,7 @@ url: "https://bonani.tech" # the base hostname & protocol for your site, e.g. ht
 twitter_username: jekyllrb
 github_username:  jekyll
 
-permalink: /:title/
+post_url: /:title/
 
 # Build settings
 markdown: kramdown
