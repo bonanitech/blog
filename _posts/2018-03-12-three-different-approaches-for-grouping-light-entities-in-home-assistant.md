@@ -2,7 +2,7 @@
 layout: post
 title:  "3 different ways to group light entities in Home Assistant"
 date:   2018-03-12 21:00:00 -0400
-categories: home-assistant
+tags: home-assistant
 ---
 
 I have three LIFX bulbs in a room, two in a ceiling fixture and one in a floor lamp. At first (months ago) I was controlling each bulb individually in the [Home Assistant🔗](https://home-assistant.io) [frontend🔗](https://home-assistant.io/components/frontend/), it was kinda annoying because any change in one of the ceiling fixture light bulbs should be manually replicated to the other one. Then I realized it would be much better to control them using groups.
