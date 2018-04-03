@@ -163,3 +163,7 @@ And here is the result:
 <br />
 
 ![]({{ "/assets/groups.gif" | absolute_url }})
+
+<br />
+
+{% include disqus.html %}

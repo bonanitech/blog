@@ -52,3 +52,7 @@ automation:
 <br />
 
 And that's it. From now on, every time Home Assistant is started the node is triggered.
+
+<br />
+
+{% include disqus.html %}

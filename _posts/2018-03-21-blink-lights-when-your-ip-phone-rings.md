@@ -86,3 +86,7 @@ incoming_call:
 <br />
 
 When a call is received, the phone "rings" silently and the lights blink in navy blue three times separated by delays of 4 seconds.
+
+<br />
+
+{% include disqus.html %}

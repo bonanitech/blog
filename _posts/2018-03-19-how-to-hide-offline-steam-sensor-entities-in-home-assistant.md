@@ -68,3 +68,7 @@ Some important points:
 *  If you use views, don't forget to add the group (in this case `group.steam`) to the desired view.
 
 *  You don't need to create the group, it will be created by the automations.
+
+<br />
+
+{% include disqus.html %}

@@ -59,3 +59,7 @@ This generates two views \(both visible\). When I call the \"Hide Second View\"
 <br />
 
 The only drawback is that if you only have two views and hide one of them, the blue bar will be resized, but the placement of the content below it will not be updated automatically.
+
+<br />
+
+{% include disqus.html %}

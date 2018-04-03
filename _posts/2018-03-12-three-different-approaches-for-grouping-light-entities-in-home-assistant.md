@@ -177,3 +177,7 @@ Awesome. Now, besides the icons being changed with each change of state (on or o
 Particularly I prefer using the new light group platform because it's easier to setup, specially when compared to the template switch approach and yet has the advantage of controlling the groups attributes.
 
 Of course the choice depends on the scenario and use cases. How do you group your light entities? Let us know in the comments section below.
+
+<br />
+
+{% include disqus.html %}
