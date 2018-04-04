@@ -3,7 +3,7 @@ layout: post
 comments: true
 title:  "How I used Caddy Proxy to publish this blog before migrating it to GitHub Pages"
 date:   2018-04-04 10:40:00 -0400
-tags: home-assistant
+tags: home-assistant duckdns caddy-proxy github
 ---
 
 Before migrating this blog to [GitHub Pages🔗](https://pages.github.com) I used this [Caddy Proxy add-on🔗](https://github.com/bestlibre/hassio-addons/tree/master/caddy_proxy) on Hass.io to help me publish it.
