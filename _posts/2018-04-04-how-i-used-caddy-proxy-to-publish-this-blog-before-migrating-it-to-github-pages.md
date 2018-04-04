@@ -80,3 +80,7 @@ Then I installed [WordPress🔗](https://hub.docker.com/_/wordpress/) on port `8
 <br />
 
 And VOILÀ!
+
+<br />
+
+{% include disqus.html %}
