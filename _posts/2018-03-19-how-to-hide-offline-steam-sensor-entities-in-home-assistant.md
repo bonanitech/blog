@@ -52,7 +52,10 @@ A few hours later...
 	      - service: group.set
 	        data_template:
 	          object_id: steam
-	          entities: 
+	          entities: "{% if not(is_state('sensor.steam_12345678901234567', 'offline')) %}sensor.steam_12345678901234567,{% endif %}
+	          {% if not(is_state('sensor.steam_98765432109847553', 'offline')) %}sensor.steam_98765432109847553,{% endif %}
+	          {% if not(is_state('sensor.steam_98409840789049048', 'offline')) %}sensor.steam_98409840789049048,{% endif %}
+	          {% if not(is_state('sensor.steam_90848949084989804', 'offline')) %}sensor.steam_90848949084989804{% endif %}"
 {% endraw %}
 
 <br />
