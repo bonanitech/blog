@@ -15,6 +15,7 @@ Here is an example code:
 <br />
 
 {% highlight yaml %}
+{% raw %}
 group:
   default_view:
     view: yes
@@ -154,6 +155,7 @@ automation:
         entity_id: group.test_subgroup3
         data:
           visible: false
+{% endraw %}
 {% endhighlight %}
 
 <br />

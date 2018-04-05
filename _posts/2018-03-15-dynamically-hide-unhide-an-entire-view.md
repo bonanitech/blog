@@ -13,6 +13,7 @@ Here is an example code:
 <br />
 
 {% highlight yaml %}
+{% raw %}
 group:
   default_view:
     name: "First"
@@ -42,6 +43,7 @@ script:
         data:
           object_id: second_view
           view: false
+{% endraw %}
 {% endhighlight %}
 
 <br />

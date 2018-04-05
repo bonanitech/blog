@@ -41,9 +41,11 @@ It calls the `/home/asterisk/hass.sh` shell script.
 <br />
 
 {% highlight shell %}
+{% raw %}
 #!/bin/bash
 
 curl -X POST -H "x-ha-access: HASS_PASSWORD" -H "Content-Type: application/json" http://HASS_SERVER_ADDRESS:8123/api/services/script/incoming_call
+{% endraw %}
 {% endhighlight %}
 
 <br />
@@ -53,6 +55,7 @@ Which triggers the `incoming_call` script in Home Assistant.
 <br />
 
 {% highlight yaml %}
+{% raw %}
 # FreePBX Incoming Call
 incoming_call:
   sequence:
@@ -81,6 +84,7 @@ incoming_call:
         brightness: 191
         period: 1
         cycles: 2
+{% endraw %}
 {% endhighlight %}
 
 <br />

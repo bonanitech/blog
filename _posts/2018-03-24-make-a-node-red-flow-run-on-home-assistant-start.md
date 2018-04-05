@@ -37,6 +37,7 @@ Now, in Home Assistant, we create a `shell_command` and an `automation` that wil
 <br />
 
 {% highlight yaml %}
+{% raw %}
 shell_command:
   ha_start: 'curl http://localhost:1880/hastart'
 
@@ -47,6 +48,7 @@ automation:
         event: start
     action:
       - service: shell_command.ha_start
+{% endraw %}
 {% endhighlight %}
 
 <br />

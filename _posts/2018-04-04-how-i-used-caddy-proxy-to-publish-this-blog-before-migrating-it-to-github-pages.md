@@ -21,6 +21,7 @@ After that I copied the domain and token to the DuckDNS add-on Config, saved and
 DuckDNS add-on Config example:  
 
 {% highlight json %}
+{% raw %}
 {
   "lets_encrypt": {
     "accept_terms": true,
@@ -30,6 +31,7 @@ DuckDNS add-on Config example:
   "token": "sdfj-2131023-dslfjsd-12321",
   "domains": ["my-domain.duckdns.org"]
 }
+{% endraw %}
 {% endhighlight %}
 
 <br />
@@ -55,6 +57,7 @@ I set up a forward on ports `80` and `443` to the IP address of the Caddy Proxy 
 I also set up the Caddy Proxy add-on like below:  
 
 {% highlight json %}
+{% raw %}
 {
   "homeassistant": "hassio_hostname",
   "vhosts": [
@@ -67,6 +70,7 @@ I also set up the Caddy Proxy add-on like below:
   "raw_config": [],
   "email": "user@email.com"
 }
+{% endraw %}
 {% endhighlight %}
 
 <br />

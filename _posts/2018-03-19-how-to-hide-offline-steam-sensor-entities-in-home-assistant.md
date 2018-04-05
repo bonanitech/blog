@@ -19,44 +19,46 @@ A few hours later...
 
 <br />
 
+{% highlight yaml %}
 {% raw %}
-	sensor:
-	  - platform: steam_online
-	    api_key: !secret steam_api_key
-	    accounts:
-	      - 12345678901234567
-	      - 98765432109847553
-	      - 98409840789049048
-	      - 90848949084989804
+sensor:
+  - platform: steam_online
+    api_key: !secret steam_api_key
+    accounts:
+      - 12345678901234567
+      - 98765432109847553
+      - 98409840789049048
+      - 90848949084989804
 
-	automation: 
-	  - alias: 'Steam Group Entities 1'
-	    trigger:
-	      - platform: homeassistant
-	        event: start
-	    action:
-	      - service: group.set
-	        data_template:
-	          object_id: steam
-	          entities: "{% if not(is_state('sensor.steam_12345678901234567', 'offline')) %}sensor.steam_12345678901234567,{% endif %}
-	          {% if not(is_state('sensor.steam_98765432109847553', 'offline')) %}sensor.steam_98765432109847553,{% endif %}
-	          {% if not(is_state('sensor.steam_98409840789049048', 'offline')) %}sensor.steam_98409840789049048,{% endif %}
-	          {% if not(is_state('sensor.steam_90848949084989804', 'offline')) %}sensor.steam_90848949084989804{% endif %}"
+automation: 
+  - alias: 'Steam Group Entities 1'
+    trigger:
+      - platform: homeassistant
+        event: start
+    action:
+      - service: group.set
+        data_template:
+          object_id: steam
+          entities: "{% if not(is_state('sensor.steam_12345678901234567', 'offline')) %}sensor.steam_12345678901234567,{% endif %}
+          {% if not(is_state('sensor.steam_98765432109847553', 'offline')) %}sensor.steam_98765432109847553,{% endif %}
+          {% if not(is_state('sensor.steam_98409840789049048', 'offline')) %}sensor.steam_98409840789049048,{% endif %}
+          {% if not(is_state('sensor.steam_90848949084989804', 'offline')) %}sensor.steam_90848949084989804{% endif %}"
 
-	  - alias: 'Steam Group Entities 2'
-	    trigger:
-	      - platform: time
-	        minutes: '/1'
-	        seconds: 0
-	    action:
-	      - service: group.set
-	        data_template:
-	          object_id: steam
-	          entities: "{% if not(is_state('sensor.steam_12345678901234567', 'offline')) %}sensor.steam_12345678901234567,{% endif %}
-	          {% if not(is_state('sensor.steam_98765432109847553', 'offline')) %}sensor.steam_98765432109847553,{% endif %}
-	          {% if not(is_state('sensor.steam_98409840789049048', 'offline')) %}sensor.steam_98409840789049048,{% endif %}
-	          {% if not(is_state('sensor.steam_90848949084989804', 'offline')) %}sensor.steam_90848949084989804{% endif %}"
+  - alias: 'Steam Group Entities 2'
+    trigger:
+      - platform: time
+        minutes: '/1'
+        seconds: 0
+    action:
+      - service: group.set
+        data_template:
+          object_id: steam
+          entities: "{% if not(is_state('sensor.steam_12345678901234567', 'offline')) %}sensor.steam_12345678901234567,{% endif %}
+          {% if not(is_state('sensor.steam_98765432109847553', 'offline')) %}sensor.steam_98765432109847553,{% endif %}
+          {% if not(is_state('sensor.steam_98409840789049048', 'offline')) %}sensor.steam_98409840789049048,{% endif %}
+          {% if not(is_state('sensor.steam_90848949084989804', 'offline')) %}sensor.steam_90848949084989804{% endif %}"
 {% endraw %}
+{% endhighlight %}
 
 <br />
 
