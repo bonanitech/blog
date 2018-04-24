@@ -4,6 +4,7 @@ comments: true
 title:  "Dynamically hide/unhide an entire view in Home Assistant"
 date:   2018-03-15 21:03:00 -0400
 tags: home-assistant
+permalink: /dynamically-hide-unhide-an-entire-view/
 ---
 
 Today I learned a way to hide and unhide a view in Home Assistant. It turns out it’s easier than I expected. All I had to do was use the `group.set`  service to change the attribute `view`.
@@ -52,16 +53,12 @@ This generates two views \(both visible\). When I call the \"Hide Second View\"
 
 <br />
 
-![]({{ "/assets/Screenshot-2018-03-15-20.25.38-e1521161151544.png" | absolute_url }})
+![]({{ "/assets/img/Screenshot-2018-03-15-20.25.38-e1521161151544.png" | absolute_url }})
 
 <br />
 
-![]({{ "/assets/Screenshot-2018-03-15-20.25.36-e1521161174731.png" | absolute_url }})
+![]({{ "/assets/img/Screenshot-2018-03-15-20.25.36-e1521161174731.png" | absolute_url }})
 
 <br />
 
 The only drawback is that if you only have two views and hide one of them, the blue bar will be resized, but the placement of the content below it will not be updated automatically.
-
-<br />
-
-{% include disqus.html %}

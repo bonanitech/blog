@@ -4,15 +4,16 @@ comments: true
 title:  "How I used Caddy Proxy to publish this blog before migrating it to GitHub Pages"
 date:   2018-04-04 10:40:00 -0400
 tags: home-assistant duckdns caddy-proxy github
+permalink: /how-i-used-caddy-proxy-to-publish-this-blog-before-migrating-it-to-github-pages/
 ---
 
-Before migrating this blog to [GitHub Pages🔗](https://pages.github.com) I used this [Caddy Proxy add-on🔗](https://github.com/bestlibre/hassio-addons/tree/master/caddy_proxy) on Hass.io to help me publish it.
+Before migrating this blog to [GitHub Pages](https://pages.github.com) I used this [Caddy Proxy add-on](https://github.com/bestlibre/hassio-addons/tree/master/caddy_proxy) on Hass.io to help me publish it.
 
 When using Caddy Proxy, there is no need to worry about certificates in the `configuration.yaml` file, it takes care of that automatically. Just let Home Assistant run on the default port \(`8123`\).
 
-As I don't have a static IP on my internet connection I had to use the [DuckDNS add-on🔗](https://www.home-assistant.io/addons/duckdns/) to translate my dynamic IP address to a hostname.
+As I don't have a static IP on my internet connection I had to use the [DuckDNS add-on](https://www.home-assistant.io/addons/duckdns/) to translate my dynamic IP address to a hostname.
 
-The first step was to create an account and a domain on the [DuckDNS website🔗](https://www.duckdns.org).
+The first step was to create an account and a domain on the [DuckDNS website](https://www.duckdns.org).
 
 After that I copied the domain and token to the DuckDNS add-on Config, saved and started the add-on.
 
@@ -38,11 +39,11 @@ DuckDNS add-on Config example:
 
 Time to edit some DNS entries.  
 
-I use [Cloudflare🔗](https://www.cloudflare.com) to manage my domain. All I had to do was add a `CNAME` record pointing the root of my domain \(`@`\) to my DuckDNS address.
+I use [Cloudflare](https://www.cloudflare.com) to manage my domain. All I had to do was add a `CNAME` record pointing the root of my domain \(`@`\) to my DuckDNS address.
 
 <br />
 
-![Cloudflare]({{ "/assets/cloudflare.jpg" | absolute_url }})
+![Cloudflare]({{ "/assets/img/cloudflare.jpg" | absolute_url }})
 
 <br />
 
@@ -75,7 +76,7 @@ I also set up the Caddy Proxy add-on like below:
 
 <br />
 
-Then I installed [WordPress🔗](https://hub.docker.com/_/wordpress/) on port `8081` \(because it was running on the same server\).
+Then I installed [WordPress](https://hub.docker.com/_/wordpress/) on port `8081` \(because it was running on the same server\).
 
 <br />
 
@@ -84,7 +85,3 @@ Then I installed [WordPress🔗](https://hub.docker.com/_/wordpress/) on port `8
 <br />
 
 And VOILÀ!
-
-<br />
-
-{% include disqus.html %}

@@ -4,15 +4,16 @@ comments: true
 title:  "3 different ways to group light entities in Home Assistant"
 date:   2018-03-12 21:00:00 -0400
 tags: home-assistant
+permalink: /three-different-approaches-for-grouping-light-entities-in-home-assistant/
 ---
 
-I have three LIFX bulbs in a room, two in a ceiling fixture and one in a floor lamp. At first (months ago) I was controlling each bulb individually in the [Home Assistant🔗](https://home-assistant.io) [frontend🔗](https://home-assistant.io/components/frontend/), it was kinda annoying because any change in one of the ceiling fixture light bulbs should be manually replicated to the other one. Then I realized it would be much better to control them using groups.
+I have three LIFX bulbs in a room, two in a ceiling fixture and one in a floor lamp. At first (months ago) I was controlling each bulb individually in the [Home Assistant](https://home-assistant.io) [frontend](https://home-assistant.io/components/frontend/), it was kinda annoying because any change in one of the ceiling fixture light bulbs should be manually replicated to the other one. Then I realized it would be much better to control them using groups.
 
 <br />
 
 ## Group
 
-The original way to group entities was by using the [Group component🔗](https://home-assistant.io/components/group/). Code and resulting card below.
+The original way to group entities was by using the [Group component](https://home-assistant.io/components/group/). Code and resulting card below.
 
 <br />
 
@@ -46,7 +47,7 @@ customize:
 
 <br />
 
-![Using the group component]({{ "/assets/Screenshot-2018-03-11-17.05.39-1.png" | absolute_url }})
+![Using the group component]({{ "/assets/img/Screenshot-2018-03-11-17.05.39-1.png" | absolute_url }})
 
 <br />
 
@@ -54,7 +55,7 @@ When you click/tap on the name (or icon) of the group, Home Assistant displays t
 
 <br />
 
-![Group component - attributes and controls]({{ "/assets/Screenshot-2018-03-11-17.05.54-1.png" | absolute_url }})
+![Group component - attributes and controls]({{ "/assets/img/Screenshot-2018-03-11-17.05.54-1.png" | absolute_url }})
 
 <br />
 
@@ -66,7 +67,7 @@ But \(there is always a but\) the color of the icons were not changed when the g
 
 ## Switch
 
-Then I found [this discussion🔗](https://community.home-assistant.io/t/three-smart-bulbs-in-a-group-can-i-get-the-default-dynamic-bulb-icon-to-work/10318) on the [Home Assistant Community Forum🔗](https://community.home-assistant.io) which led me to [this issue🔗](https://github.com/home-assistant/home-assistant-polymer/issues/186) on [GitHub🔗](https://github.com) where the use of the [Switch component🔗](https://home-assistant.io/components/switch/) was suggested. I decided to try it using a [Template Switch🔗](https://home-assistant.io/components/switch.template/).  Code and resulting card below.
+Then I found [this discussion](https://community.home-assistant.io/t/three-smart-bulbs-in-a-group-can-i-get-the-default-dynamic-bulb-icon-to-work/10318) on the [Home Assistant Community Forum](https://community.home-assistant.io) which led me to [this issue](https://github.com/home-assistant/home-assistant-polymer/issues/186) on [GitHub](https://github.com) where the use of the [Switch component](https://home-assistant.io/components/switch/) was suggested. I decided to try it using a [Template Switch](https://home-assistant.io/components/switch.template/).  Code and resulting card below.
 
 <br />
 
@@ -114,11 +115,11 @@ group:
 
 <br />
 
-![Using the switch component]({{ "/assets/Screenshot-2018-03-11-17.06.16-1.png" | absolute_url }})
+![Using the switch component]({{ "/assets/img/Screenshot-2018-03-11-17.06.16-1.png" | absolute_url }})
 
 <br />
 
-![Switch component - attributes and controls]({{ "/assets/Screenshot-2018-03-11-17.06.20-1.png" | absolute_url }})
+![Switch component - attributes and controls]({{ "/assets/img/Screenshot-2018-03-11-17.06.20-1.png" | absolute_url }})
 
 <br />
 
@@ -128,7 +129,7 @@ Now the icons were changed every time the corresponding group was turned on or o
 
 ## Light Group
 
-Beginning in version 0.65 we have a new platform called [Light Group🔗](https://home-assistant.io/components/light.group/) in the [Light component🔗](https://home-assistant.io/components/light/). So I decided to test it. Code and resulting card below.
+Beginning in version 0.65 we have a new platform called [Light Group](https://home-assistant.io/components/light.group/) in the [Light component](https://home-assistant.io/components/light/). So I decided to test it. Code and resulting card below.
 
 <br />
 
@@ -166,11 +167,11 @@ group:
 
 <br />
 
-![Using the new light group platform]({{ "/assets/Screenshot-2018-03-11-17.06.44-1.png" | absolute_url }})
+![Using the new light group platform]({{ "/assets/img/Screenshot-2018-03-11-17.06.44-1.png" | absolute_url }})
 
 <br />
 
-![Light group platform - attributes and controls]({{ "/assets/Screenshot-2018-03-11-17.07.15-1.png" | absolute_url }})
+![Light group platform - attributes and controls]({{ "/assets/img/Screenshot-2018-03-11-17.07.15-1.png" | absolute_url }})
 
 <br />
 
@@ -183,7 +184,3 @@ Awesome. Now, besides the icons being changed with each change of state (on or o
 Particularly I prefer using the new light group platform because it's easier to setup, specially when compared to the template switch approach and yet has the advantage of controlling the groups attributes.
 
 Of course the choice depends on the scenario and use cases. How do you group your light entities? Let us know in the comments section below.
-
-<br />
-
-{% include disqus.html %}

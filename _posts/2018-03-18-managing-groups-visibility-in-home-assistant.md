@@ -4,9 +4,10 @@ comments: true
 title:  "Managing groups visibility in Home Assistant"
 date:   2018-03-18 19:54:00 -0400
 tags: home-assistant
+permalink: /managing-groups-visibility-in-home-assistant/
 ---
 
-After I wrote [Dynamically hide / unhide an entire view in Home Assistant🔗](https://bonani.tech/dynamically-hide-unhide-an-entire-view/), many people asked me if it is possible to do the same with the cards \(groups\). It is, and it's easy too.
+After I wrote [Dynamically hide / unhide an entire view in Home Assistant](https://bonani.tech/dynamically-hide-unhide-an-entire-view/), many people asked me if it is possible to do the same with the cards \(groups\). It is, and it's easy too.
 
 <br />
 
@@ -164,8 +165,4 @@ And here is the result:
 
 <br />
 
-![]({{ "/assets/groups.gif" | absolute_url }})
-
-<br />
-
-{% include disqus.html %}
+![]({{ "/assets/img/groups.gif" | absolute_url }})

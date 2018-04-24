@@ -4,9 +4,10 @@ comments: true
 title:  "Blink lights when your IP phone rings"
 date:   2018-03-21 15:48:00 -0400
 tags: home-assistant freepbx asterisk
+permalink: /blink-lights-when-your-ip-phone-rings/
 ---
 
-I have an IP phone on my desk connected to a [FreePBX🔗](https://www.freepbx.org) server. It is permanently set to silent mode. I keep it that way because 90% of the time I work with headphones. It's also in a place where I can not easily see it.
+I have an IP phone on my desk connected to a [FreePBX](https://www.freepbx.org) server. It is permanently set to silent mode. I keep it that way because 90% of the time I work with headphones. It's also in a place where I can not easily see it.
 
 So how do I know when the phone is ringing? Easy. The lights flash in a different color from the ambient light, in this case Navy Blue.
 
@@ -20,7 +21,7 @@ On the FreePBX server, all incoming calls are redirected to a Ring Group contain
 
 <br />
 
-![FreePBX Ring Group]({{ "/assets/Screenshot-2018-03-21-13.47.34.png" | absolute_url }})
+![FreePBX Ring Group]({{ "/assets/img/Screenshot-2018-03-21-13.47.34.png" | absolute_url }})
 
 <br />
 
@@ -90,7 +91,3 @@ incoming_call:
 <br />
 
 When a call is received, the phone "rings" silently and the lights blink in navy blue three times separated by delays of 4 seconds.
-
-<br />
-
-{% include disqus.html %}

@@ -4,9 +4,10 @@ comments: true
 title:  "How to hide offline Steam sensor entities in Home Assistant"
 date:   2018-03-19 08:27:00 -0400
 tags: home-assistant
+permalink: /how-to-hide-offline-steam-sensor-entities-in-home-assistant/
 ---
 
-I received the message below on [Reddit🔗](https://www.reddit.com/r/homeassistant/comments/85fbob/managing_groups_visibility_in_home_assistant/dvx0473/) and decided to find a way to do what was proposed.
+I received the message below on [Reddit](https://www.reddit.com/r/homeassistant/comments/85fbob/managing_groups_visibility_in_home_assistant/dvx0473/) and decided to find a way to do what was proposed.
 
 <br />
 
@@ -73,7 +74,3 @@ Some important points:
 *  If you use views, don't forget to add the group (in this case `group.steam`) to the desired view.
 
 *  You don't need to create the group, it will be created by the automations.
-
-<br />
-
-{% include disqus.html %}
