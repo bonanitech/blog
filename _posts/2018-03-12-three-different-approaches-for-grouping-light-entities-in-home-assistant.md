@@ -2,6 +2,7 @@
 layout: post
 comments: true
 title:  "3 different ways to group light entities in Home Assistant"
+twitter_text: "3 different ways to group light entities in @home_assistant"
 date:   2018-03-12 21:00:00 -0400
 tags: home-assistant
 permalink: /three-different-approaches-for-grouping-light-entities-in-home-assistant/

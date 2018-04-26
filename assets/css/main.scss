@@ -46,13 +46,3 @@ $bp-mobile-large: 500px;
         "syntax-highlighting",
         "responsive"
 ;
-
-a[href^="http://"]:after, a[href^="https://"]:after {
-    content: "\f08e";
-    font-family: FontAwesome;
-    font-weight: normal;
-    font-style: normal;
-    display: inline-block;
-    text-decoration: none;
-    padding-left: 3px;
-}
