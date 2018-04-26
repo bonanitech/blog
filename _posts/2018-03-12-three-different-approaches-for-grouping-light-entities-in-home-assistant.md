@@ -180,6 +180,12 @@ Awesome. Now, besides the icons being changed with each change of state (on or o
 
 <br />
 
+**EDIT (26 Apr, 2018):** [Hasscasts](https://www.youtube.com/channel/UCGOCeqMJnLvr-5C-ypUw7IQ) has published a great video about Light Groups
+
+{% include youtubePlayer.html id="sgomUe6R3MI" %}
+
+<br />
+
 ## Conclusion
 
 Particularly I prefer using the new light group platform because it's easier to setup, specially when compared to the template switch approach and yet has the advantage of controlling the groups attributes.
