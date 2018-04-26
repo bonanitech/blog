@@ -83,6 +83,8 @@ sensor:
 
 Then created the sensors using the `icon_template` code found in the Cookbook to show the icon corresponding to each battery level.
 
+**NOTE:** I used two `input_number` to simulate the battery charge values of each `sensor`.
+
 <br />
 
 {% highlight yaml %}
@@ -112,8 +114,6 @@ customize:
 {% endhighlight %}
 
 And finally I customized each sensor. If the battery charge is below 40% the sensor will be displayed in yellow and if it’s below 20% it will be displayed in red. If the values are 40% and above the sensor will be displayed using the colors defined in the theme used at that moment.
-
-**NOTE:** I used two `input_number` to simulate the battery charge values of each `sensor`.
 
 <br />
 
