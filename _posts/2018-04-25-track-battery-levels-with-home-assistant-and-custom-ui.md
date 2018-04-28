@@ -4,7 +4,7 @@ comments: true
 title:  "Track battery levels with Home Assistant and Custom UI"
 twitter_text: "Track battery levels with @home_assistant and Custom UI"
 date:   2018-04-25 11:25:00 -0400
-tags: home-assistant custom-ui
+tags: home_assistant custom_ui
 permalink: /track-battery-levels-with-home-assistant-and-custom-ui/
 ---
 

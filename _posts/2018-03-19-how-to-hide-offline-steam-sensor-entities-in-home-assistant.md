@@ -4,7 +4,7 @@ comments: true
 title:  "How to hide offline Steam sensor entities in Home Assistant"
 twitter_text: "How to hide offline Steam sensor entities in @home_assistant"
 date:   2018-03-19 08:27:00 -0400
-tags: home-assistant
+tags: home_assistant
 permalink: /how-to-hide-offline-steam-sensor-entities-in-home-assistant/
 ---
 
