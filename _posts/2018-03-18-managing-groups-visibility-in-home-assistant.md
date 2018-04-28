@@ -4,7 +4,7 @@ comments: true
 title:  "Managing groups visibility in Home Assistant"
 twitter_text: "Managing groups visibility in @home_assistant"
 date:   2018-03-18 19:54:00 -0400
-tags: home_assistant
+tags: HomeAssistant
 permalink: /managing-groups-visibility-in-home-assistant/
 ---
 
