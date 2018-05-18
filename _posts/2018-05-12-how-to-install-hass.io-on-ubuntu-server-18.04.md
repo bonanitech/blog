@@ -117,3 +117,9 @@ Connect to it using your preferred SCP client, remove all the files in `/usr/sha
 Then you can restart Home Assistant or reboot your system \(only if you really want to\). 
 
 That's it! Now you have Hass.io running on Ubuntu Server 18.04.
+
+<br />
+
+**EDIT (18 May, 2018):** If you prefer to run Home Assistant in Python Virtual Environment [BurnsHA](https://www.youtube.com/channel/UCSKQutOXuNLvFetrKuwudpg) has a great video explaining how to do it
+
+{% include youtubePlayer.html id="OThxdTKVjHU" %}
