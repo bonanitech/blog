@@ -3,7 +3,7 @@ layout: post
 comments: true
 title:  "How to install Hass.io on Ubuntu Server 18.04"
 twitter_text: "How to install Hass.io on Ubuntu Server 18.04"
-date:   2018-05-12 10:30:00 -0400
+date:   2018-05-12 10:30:00
 tags: HomeAssistant
 permalink: /how-to-install-hass.io-on-ubuntu-server-18.04/
 ---
@@ -12,7 +12,7 @@ Until last month, I was running Hass.io on an Ubuntu Server 16.04. Now I decided
 
 <br />
 
-**STEP 1:** Perform a BACKUP 
+**STEP 1:** Perform a BACKUP
 
 I like to download the entire `/usr/share/hassio` directory. This is where the configuration files for Home Assistant \(in `/usr/share/hassio/homeassistant`\) and its add-ons \(in `/usr/share/hassio/addons`\) are located in Hass.io.
 
@@ -22,7 +22,7 @@ Write down the address of each add-on repository that you have added to your ins
 
 **STEP 2:** Install host O.S.
 
-You can follow [this guide](https://www.howtoforge.com/tutorial/ubuntu-lts-minimal-server/) explaining how to install Ubuntu Server 18.04. 
+You can follow [this guide](https://www.howtoforge.com/tutorial/ubuntu-lts-minimal-server/) explaining how to install Ubuntu Server 18.04.
 
 <br />
 
@@ -114,7 +114,7 @@ Connect to it using your preferred SCP client, remove all the files in `/usr/sha
 
 **STEP 8:** Restart Home Assistant or reboot the host system.
 
-Then you can restart Home Assistant or reboot your system \(only if you really want to\). 
+Then you can restart Home Assistant or reboot your system \(only if you really want to\).
 
 That's it! Now you have Hass.io running on Ubuntu Server 18.04.
 

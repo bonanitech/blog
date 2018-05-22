@@ -2,7 +2,7 @@
 layout: post
 comments: false
 title:  "Hello World"
-date:   2018-03-12 13:00:00 -0400
+date:   2018-03-12 13:00:00
 permalink: /hello-world/
 ---
 ![Hello World]({{ "/assets/img/helloworld.png" | absolute_url }})

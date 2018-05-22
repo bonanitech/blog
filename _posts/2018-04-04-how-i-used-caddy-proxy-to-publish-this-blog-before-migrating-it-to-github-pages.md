@@ -3,7 +3,7 @@ layout: post
 comments: true
 title:  "How I used Caddy Proxy to publish this blog before migrating it to GitHub Pages"
 twitter_text: "How I used Caddy Proxy to publish this blog before migrating it to @GitHub Pages @home_assistant"
-date:   2018-04-04 10:40:00 -0400
+date:   2018-04-04 10:40:00
 tags: HomeAssistant DuckDNS CaddyProxy GitHub
 permalink: /how-i-used-caddy-proxy-to-publish-this-blog-before-migrating-it-to-github-pages/
 ---
