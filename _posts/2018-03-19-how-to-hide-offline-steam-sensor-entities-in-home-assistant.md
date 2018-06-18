@@ -1,7 +1,7 @@
 ---
 layout: post
 comments: true
-title:  "How to hide offline Steam sensor entities in Home Assistant"
+title:  "How to hide offline Steam sensor entities in Home Assistant (EDITED)"
 twitter_text: "How to hide offline Steam sensor entities in @home_assistant"
 date:   2018-03-19 08:27:00
 tags: HomeAssistant
@@ -31,34 +31,73 @@ sensor:
       - 98765432109847553
       - 98409840789049048
       - 90848949084989804
+{% endraw %}
+{% endhighlight %}
 
+<br />
+
+**EDIT \(06/18/2018\):** After a request here on the comments section and on [Reddit](https://www.reddit.com/r/homeassistant/comments/85fbob/managing_groups_visibility_in_home_assistant/e0t40up/) I found out that, if the last or all entities of the sensor list in the automation template are offline, it would cause an error when the automation is run and therefore the frontend would not display the correct information in the group card.
+
+At first I did not know how to solve this and suggested to the requester that he tried to use [CustomUI](https://github.com/andrey-git/home-assistant-custom-ui/blob/master/docs/templates.md#make-a-group-that-contains-all-on-entities) as an alternative.
+
+As the problem did not leave my head, I challenged myself to solve it. Then, after much trial and error, I came out with the following automation. It solves the problem of when the last entity is offline, and the group (`group.steam`) is not automatically created when all entities are offline.
+
+It also solves another problem I encountered during the tests. If only one entity is online (not the last), the group is now created correctly.
+
+I really did not like the `if is_state_attr(steam.entity_id, 'icon', 'mdi:steam')` part, but I did not find another way to select only the sensor.steam_* entities. If anyone knows a better way to do it please tell us how on the comments section below.
+
+*Note:* I'm keeping the old automation (commented out) below the current one for readers to understand the context.
+
+<br />
+
+{% highlight yaml %}
+{% raw %}
 automation:
-  - alias: 'Steam Group Entities 1'
-    trigger:
-      - platform: homeassistant
-        event: start
-    action:
-      - service: group.set
-        data_template:
-          object_id: steam
-          entities: "{% if not(is_state('sensor.steam_12345678901234567', 'offline')) %}sensor.steam_12345678901234567,{% endif %}
-          {% if not(is_state('sensor.steam_98765432109847553', 'offline')) %}sensor.steam_98765432109847553,{% endif %}
-          {% if not(is_state('sensor.steam_98409840789049048', 'offline')) %}sensor.steam_98409840789049048,{% endif %}
-          {% if not(is_state('sensor.steam_90848949084989804', 'offline')) %}sensor.steam_90848949084989804{% endif %}"
+- alias: 'Group Entities Online/Offline'
+  trigger:
+    - platform: homeassistant
+      event: start
+    - platform: time
+      minutes: '/1'
+      seconds: 0
+  action:
+    - service: group.set
+      data_template:
+        object_id: steam
+        entities: "{% set counter = 0 %}
+                {%- for steam in states.sensor if is_state_attr(steam.entity_id, 'icon', 'mdi:steam') and not(is_state(steam.entity_id, 'offline')) -%}
+                {% set counter = counter + 1 %}
+                {%- endfor -%}
+                {%- for steam in states.sensor if is_state_attr(steam.entity_id, 'icon', 'mdi:steam') and not(is_state(steam.entity_id, 'offline')) -%}
+                {%- if loop.first -%}{%- if counter == 1 -%}{{ steam.entity_id | lower }}{%- else -%}{{ steam.entity_id | lower }},{%- endif -%}{%- elif loop.last -%}{{ steam.entity_id | lower }}{%- else -%}{{ steam.entity_id | lower }},{%- endif -%}
+                {%- endfor -%}"
 
-  - alias: 'Steam Group Entities 2'
-    trigger:
-      - platform: time
-        minutes: '/1'
-        seconds: 0
-    action:
-      - service: group.set
-        data_template:
-          object_id: steam
-          entities: "{% if not(is_state('sensor.steam_12345678901234567', 'offline')) %}sensor.steam_12345678901234567,{% endif %}
-          {% if not(is_state('sensor.steam_98765432109847553', 'offline')) %}sensor.steam_98765432109847553,{% endif %}
-          {% if not(is_state('sensor.steam_98409840789049048', 'offline')) %}sensor.steam_98409840789049048,{% endif %}
-          {% if not(is_state('sensor.steam_90848949084989804', 'offline')) %}sensor.steam_90848949084989804{% endif %}"
+#   - alias: 'Steam Group Entities 1'
+#     trigger:
+#       - platform: homeassistant
+#         event: start
+#     action:
+#       - service: group.set
+#         data_template:
+#           object_id: steam
+#           entities: "{% if not(is_state('sensor.steam_12345678901234567', 'offline')) %}sensor.steam_12345678901234567,{% endif %}
+#           {% if not(is_state('sensor.steam_98765432109847553', 'offline')) %}sensor.steam_98765432109847553,{% endif %}
+#           {% if not(is_state('sensor.steam_98409840789049048', 'offline')) %}sensor.steam_98409840789049048,{% endif %}
+#           {% if not(is_state('sensor.steam_90848949084989804', 'offline')) %}sensor.steam_90848949084989804{% endif %}"
+#
+#   - alias: 'Steam Group Entities 2'
+#     trigger:
+#       - platform: time
+#         minutes: '/1'
+#         seconds: 0
+#     action:
+#       - service: group.set
+#         data_template:
+#           object_id: steam
+#           entities: "{% if not(is_state('sensor.steam_12345678901234567', 'offline')) %}sensor.steam_12345678901234567,{% endif %}
+#           {% if not(is_state('sensor.steam_98765432109847553', 'offline')) %}sensor.steam_98765432109847553,{% endif %}
+#           {% if not(is_state('sensor.steam_98409840789049048', 'offline')) %}sensor.steam_98409840789049048,{% endif %}
+#           {% if not(is_state('sensor.steam_90848949084989804', 'offline')) %}sensor.steam_90848949084989804{% endif %}"
 {% endraw %}
 {% endhighlight %}
 
