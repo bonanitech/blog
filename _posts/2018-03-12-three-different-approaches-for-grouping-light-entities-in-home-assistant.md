@@ -180,7 +180,10 @@ Awesome. Now, besides the icons being changed with each change of state (on or o
 
 <br />
 
-**EDIT (26 Apr, 2018):** [Hasscasts](https://www.youtube.com/channel/UCGOCeqMJnLvr-5C-ypUw7IQ) has published a great video about Light Groups
+**--- EDIT \(26 Apr, 2018\) ---**
+{: style="color:gray; font-size: 80%; text-align: center;"}
+
+[Hasscasts](https://www.youtube.com/channel/UCGOCeqMJnLvr-5C-ypUw7IQ) has published a great video about Light Groups
 
 {% include youtubePlayer.html id="sgomUe6R3MI" %}
 

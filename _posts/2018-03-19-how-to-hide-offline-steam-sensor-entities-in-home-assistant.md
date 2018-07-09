@@ -3,10 +3,40 @@ layout: post
 comments: true
 title:  "How to hide offline Steam sensor entities in Home Assistant (EDITED)"
 twitter_text: "How to hide offline Steam sensor entities in @home_assistant"
-date:   2018-03-19 08:27:00
+date:   2018-07-09 10:00:00
 tags: HomeAssistant
 permalink: /how-to-hide-offline-steam-sensor-entities-in-home-assistant/
 ---
+
+**--- EDIT \(09 Jul, 2018\) ---**
+{: style="color:gray; font-size: 80%; text-align: center;"}
+
+Now with the new Lovelace UI it's even easier to do it. We just need to use this `entity-filter` in `ui-lovelace.yaml`.
+
+{% highlight yaml %}
+{% raw %}
+- type: entity-filter
+  entities:
+    - sensor.steam_12345678901234567
+    - sensor.steam_98765432109847553
+    - sensor.steam_98409840789049048
+    - sensor.steam_90848949084989804
+  state_filter:
+    - 'online'
+    - 'busy'
+    - 'away'
+    - 'snooze'
+    - 'looking_to_trade'
+    - 'looking_to_play'
+  card:
+    type: glance
+    title: Steam
+  show_empty: false
+{% endraw %}
+{% endhighlight %}
+
+**--- ORIGINAL POST ---**
+{: style="color:gray; font-size: 80%; text-align: center;"}
 
 I received the message below on [Reddit](https://www.reddit.com/r/homeassistant/comments/85fbob/managing_groups_visibility_in_home_assistant/dvx0473/) and decided to find a way to do what was proposed.
 
@@ -36,7 +66,10 @@ sensor:
 
 <br />
 
-**EDIT \(06/18/2018\):** After a request here on the comments section and on [Reddit](https://www.reddit.com/r/homeassistant/comments/85fbob/managing_groups_visibility_in_home_assistant/e0t40up/) I found out that, if the last or all entities of the sensor list in the automation template are offline, it would cause an error when the automation is run and therefore the frontend would not display the correct information in the group card.
+**--- EDIT \(18 Jun, 2018\) ---**
+{: style="color:gray; font-size: 80%; text-align: center;"}
+
+After a request here on the comments section and on [Reddit](https://www.reddit.com/r/homeassistant/comments/85fbob/managing_groups_visibility_in_home_assistant/e0t40up/) I found out that, if the last or all entities of the sensor list in the automation template are offline, it would cause an error when the automation is run and therefore the frontend would not display the correct information in the group card.
 
 At first I did not know how to solve this and suggested to the requester that he tried to use [CustomUI](https://github.com/andrey-git/home-assistant-custom-ui/blob/master/docs/templates.md#make-a-group-that-contains-all-on-entities) as an alternative.
 

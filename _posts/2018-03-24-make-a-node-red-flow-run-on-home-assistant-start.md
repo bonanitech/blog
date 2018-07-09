@@ -8,7 +8,7 @@ tags: HomeAssistant NodeRED
 permalink: /make-a-node-red-flow-run-on-home-assistant-start/
 ---
 
-**--- EDIT \(07/09/2018\) ---**
+**--- EDIT \(09 Jul, 2018\) ---**
 {: style="color:gray; font-size: 80%; text-align: center;"}
 
 I've just found a simpler and better way to do that. All we need is a status node and a switch node.

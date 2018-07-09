@@ -120,6 +120,9 @@ That's it! Now you have Hass.io running on Ubuntu Server 18.04.
 
 <br />
 
-**EDIT (18 May, 2018):** If you prefer to run Home Assistant in Python Virtual Environment [BurnsHA](https://www.youtube.com/channel/UCSKQutOXuNLvFetrKuwudpg) has a great video explaining how to do it
+**--- EDIT \(05/18/2018\) ---**
+{: style="color:gray; font-size: 80%; text-align: center;"}
+
+If you prefer to run Home Assistant in Python Virtual Environment [BurnsHA](https://www.youtube.com/channel/UCSKQutOXuNLvFetrKuwudpg) has a great video explaining how to do it
 
 {% include youtubePlayer.html id="OThxdTKVjHU" %}
