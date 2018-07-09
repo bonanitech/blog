@@ -1,12 +1,80 @@
 ---
 layout: post
 comments: true
-title:  "How to run a Node-RED flow on Home Assistant start"
-twitter_text: "How to run a @NodeRED flow on @home_assistant start"
-date:   2018-03-24 14:34:00
+title:  "How to run a Node-RED flow on Home Assistant start (UPDATED)"
+twitter_text: "How to run a @NodeRED flow on @home_assistant start (UPDATED)"
+date:   2018-07-09 12:00:00
 tags: HomeAssistant NodeRED
 permalink: /make-a-node-red-flow-run-on-home-assistant-start/
 ---
+
+**--- EDIT \(07/09/2018\) ---**
+{: style="color:gray; font-size: 80%; text-align: center;"}
+
+I've just found a simpler and better way to do that. All we need is a status node and a switch node.
+
+<br />
+
+![]({{ "/assets/img/Screenshot 2018-07-09 12.06.44.png" | absolute_url }})
+
+<br />
+
+In this case the status node checks for status changes in a selected node. I selected one of my home assistant nodes. The switch node checks if the status node is sending the string "*connected*" in `msg.status.text`.
+
+Following is the JSON code of the sequence. Do not forget to change the status node configuration according to your environment.
+
+<br />
+
+{% highlight json %}
+{% raw %}
+[
+    {
+        "id": "45fc4a1a.70c274",
+        "type": "status",
+        "z": "152abd73.69dcbb",
+        "name": "",
+        "scope": [
+            "95360a40.8cb83"
+        ],
+        "x": 100,
+        "y": 660,
+        "wires": [
+            [
+                "65572a91.71965c"
+            ]
+        ]
+    },
+    {
+        "id": "65572a91.71965c",
+        "type": "switch",
+        "z": "152abd73.69dcbb",
+        "name": "",
+        "property": "status.text",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "connected",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 230,
+        "y": 660,
+        "wires": [
+            []
+        ]
+    }
+]
+{% endraw %}
+{% endhighlight %}
+
+<br />
+
+**--- ORIGINAL POST ---**
+{: style="color:gray; font-size: 80%; text-align: center;"}
 
 Here is an easy and simple way to run a Node-RED flow when Home Assistant starts.
 
