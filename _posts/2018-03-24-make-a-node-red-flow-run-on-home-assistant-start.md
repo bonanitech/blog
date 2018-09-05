@@ -19,7 +19,7 @@ I've just found a simpler and better way to do that. All we need is a status nod
 
 <br />
 
-In this case the status node checks for status changes in a selected node. I selected one of my home assistant nodes. The switch node checks if the status node is sending the string "*connected*" in `msg.status.text`.
+In this case the status node checks for status changes in a selected node. I selected one of my home assistant "events: state" nodes. The switch node checks if the status node is sending the string "*connected*" in `msg.status.text`.
 
 Following is the JSON code of the sequence. Do not forget to change the status node configuration according to your environment.
 
