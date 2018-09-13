@@ -45,7 +45,7 @@ Some would say this is an optional step, but I think it's a good practice.
 On the latest Ubuntu server, `jq` and `docker.io` are in the universe repository. Enable it with.
 
 ```
-$ sudo add-apt-repository universe
+$ sudo add-apt-repository universe && sudo apt-get update
 ```
 
 Install the packages.
