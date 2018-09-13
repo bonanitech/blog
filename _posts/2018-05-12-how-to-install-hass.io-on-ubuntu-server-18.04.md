@@ -40,6 +40,16 @@ Some would say this is an optional step, but I think it's a good practice.
 
 **STEP 4:** Install needed packages.
 
+**--- EDIT \(09/12/2018\) ---**
+
+On the latest Ubuntu server, `jq` and `docker.io` are in the universe repository. Enable it with.
+
+```
+$ sudo add-apt-repository universe
+```
+
+Install the packages.
+
 ```
 $ sudo apt-get install docker.io avahi-daemon jq
 ```
