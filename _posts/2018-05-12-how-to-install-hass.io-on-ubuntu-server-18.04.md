@@ -18,6 +18,10 @@ I like to download the entire `/usr/share/hassio` directory. This is where the c
 
 Write down the address of each add-on repository that you have added to your installation, the name of all installed add-on and their configuration, they will be needed later.
 
+**--- EDIT \(10/24/2018\) ---**
+
+Like John Mesberg [well remembered in the comments section](https://bonani.tech/how-to-install-hass.io-on-ubuntu-server-18.04/#comment-4159094116), you can use the Hass.io snapshot feature for the backup and restore process.
+
 <br />
 
 **STEP 2:** Install host O.S.
@@ -116,7 +120,7 @@ Add the repositories you wrote down in **STEP 1**, install the add-ons you had i
 
 **STEP 7:** Restore Home Assistant configuration files from backup.
 
-If you followed the guide in **STEP 2**	you should have access to the server via SSH.
+If you followed the guide in **STEP 2** you should have access to the server via SSH.
 
 Connect to it using your preferred SCP client, remove all the files in `/usr/share/hassio/homeassistant` and upload the Home Assistant configuration files from your backup to that directory.
 
