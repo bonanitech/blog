@@ -10,7 +10,7 @@ permalink: /making-home-assistants-presence-detection-not-so-binary-node-red-ver
 
 My special thanks to Phil Hawthorne for letting me use the title of his post here.
 
-In early 2018 I found Phil's excellent blog post "[Making Home Assistant’s Presence Detection not so Binary](https://philhawthorne.com/making-home-assistants-presence-detection-not-so-binary/)", I began using the setup suggested by him almost immediately.
+In early 2018 I found Phil's excellent blog post "[Making Home Assistant’s Presence Detection not so Binary](https://philhawthorne.com/making-home-assistants-presence-detection-not-so-binary/)" and began using the setup suggested by him almost immediately.
 
 A few months later I started migrating my automations to Node-RED and posted the initial results in the [comments section](https://philhawthorne.com/making-home-assistants-presence-detection-not-so-binary/#comment-3945751887) of Phil's post.
 
