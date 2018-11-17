@@ -1,12 +1,23 @@
 ---
 layout: post
 comments: true
-title:  "How to install Hass.io on Ubuntu Server 18.04"
-twitter_text: "How to install Hass.io on Ubuntu Server 18.04"
+title:  "(UPDATED) How to install Hass.io on Ubuntu Server 18.04"
+twitter_text: "(UPDATED) How to install Hass.io on Ubuntu Server 18.04"
 date:   2018-05-12 10:30:00
 tags: HomeAssistant
 permalink: /how-to-install-hass.io-on-ubuntu-server-18.04/
 ---
+
+**--- EDIT \(11/17/2018\) ---**
+
+The best method to install Hass.io on a Generic Ubuntu/Debian machine is described at https://gist.github.com/frenck/32b4f74919ca6b95b30c66f85976ec58
+
+My thanks to Frenck for the awesome script.
+
+**DO NOT** follow the instructions below. I'm keeping them here just as a historical reference.
+
+**--- ORIGINAL POST ---**
+{: style="color:gray; font-size: 80%; text-align: center;"}
 
 Until last month, I was running Hass.io on an Ubuntu Server 16.04. Now I decided to upgrade the host O.S. to the newest version. This is a step by step guide on how I did it.
 
