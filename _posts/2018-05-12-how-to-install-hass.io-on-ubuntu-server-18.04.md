@@ -9,6 +9,7 @@ permalink: /how-to-install-hass.io-on-ubuntu-server-18.04/
 ---
 
 **--- EDIT \(11/17/2018\) ---**
+{: style="color:gray; font-size: 80%; text-align: center;"}
 
 The best method to install Hass.io on a Generic Ubuntu/Debian machine is described at [https://gist.github.com/frenck/32b4f74919ca6b95b30c66f85976ec58](https://gist.github.com/frenck/32b4f74919ca6b95b30c66f85976ec58)
 
@@ -32,6 +33,7 @@ I like to download the entire `/usr/share/hassio` directory. This is where the c
 Write down the address of each add-on repository that you have added to your installation, the name of all installed add-on and their configuration, they will be needed later.
 
 **--- EDIT \(10/24/2018\) ---**
+{: style="color:gray; font-size: 80%; text-align: center;"}
 
 Like John Mesberg [well remembered in the comments section](https://bonani.tech/how-to-install-hass.io-on-ubuntu-server-18.04/#comment-4159094116), you can use the Hass.io snapshot feature for the backup and restore process.
 
@@ -58,6 +60,7 @@ Some would say this is an optional step, but I think it's a good practice.
 **STEP 4:** Install needed packages.
 
 **--- EDIT \(09/12/2018\) ---**
+{: style="color:gray; font-size: 80%; text-align: center;"}
 
 On the latest Ubuntu server, `jq` and `docker.io` are in the universe repository. Enable it with.
 
