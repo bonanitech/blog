@@ -7,7 +7,7 @@ date:   2018-05-28 20:30:00
 tags: HomeAssistant NodeRED
 permalink: /using-node-red-to-capture-dash-button-press/
 ---
-
+<!-- markdownlint-disable html -->
 **--- EDIT \(May 28, 2018\) ---**
 {: style="color:gray; font-size: 80%; text-align: center;"}
 
@@ -32,7 +32,7 @@ Based on what's written there I created the following subflow.
 
 <br />
 
-{% highlight json %}
+```json
 {% raw %}
 [
     {
@@ -130,7 +130,7 @@ Based on what's written there I created the following subflow.
     }
 ]
 {% endraw %}
-{% endhighlight %}
+```
 
 <br />
 
@@ -156,7 +156,9 @@ If you're curious, these are the switches I currently use.
 
 ![Dash - Bedroom Lights]({{ "/assets/img/Screenshot 2018-05-21 18.29.48.png" | absolute_url }})
 
-{% highlight yaml %}
+<br />
+
+```yaml
 {% raw %}
 switch:
   - platform: template
@@ -170,13 +172,15 @@ switch:
           service: script.turn_on
           entity_id: script.good_night
 {% endraw %}
-{% endhighlight %}
+```
 
 <br />
 
 ![Dash - Livingroom Lights]({{ "/assets/img/Screenshot 2018-05-21 18.29.53.png" | absolute_url }})
 
-{% highlight yaml %}
+<br />
+
+```yaml
 {% raw %}
 switch:
   - platform: template
@@ -190,7 +194,7 @@ switch:
           service: script.turn_on
           entity_id: script.turn_off_1s
 {% endraw %}
-{% endhighlight %}
+```
 
 <br />
 

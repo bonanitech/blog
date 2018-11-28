@@ -7,7 +7,7 @@ date:   2018-03-21 15:48:00
 tags: HomeAssistant FreePBX Asterisk
 permalink: /blink-lights-when-your-ip-phone-rings/
 ---
-
+<!-- markdownlint-disable html -->
 I have an IP phone on my desk connected to a [FreePBX](https://www.freepbx.org) server. It is permanently set to silent mode. I keep it that way because 90% of the time I work with headphones. It's also in a place where I can not easily see it.
 
 So how do I know when the phone is ringing? Easy. The lights flash in a different color from the ambient light, in this case Navy Blue.
@@ -16,9 +16,9 @@ And how did I set this up? Also easy.
 
 On the FreePBX server, all incoming calls are redirected to a Ring Group containing two extensions:
 
-*  My desk phone - extension 200
+* My desk phone - extension 200
 
-*  "Fake" extension - extension \*\*\*\*5678
+* "Fake" extension - extension \*\*\*\*5678
 
 <br />
 
@@ -30,10 +30,12 @@ The ****5678 extension is created in the `extensions_custom.conf` file.
 
 <br />
 
-```
+```asterisk
+{% raw %}
 [from-internal-custom]
 exten => ****5678,1,TrySystem(/home/asterisk/hass.sh > /dev/null 2>&1 &)
 same => n,Congestion
+{% endraw %}
 ```
 
 <br />
@@ -42,13 +44,13 @@ It calls the `/home/asterisk/hass.sh` shell script.
 
 <br />
 
-{% highlight shell %}
+```bash
 {% raw %}
 #!/bin/bash
 
 curl -X POST -H "x-ha-access: HASS_PASSWORD" -H "Content-Type: application/json" http://HASS_SERVER_ADDRESS:8123/api/services/script/incoming_call
 {% endraw %}
-{% endhighlight %}
+```
 
 <br />
 
@@ -56,7 +58,7 @@ Which triggers the `incoming_call` script in Home Assistant.
 
 <br />
 
-{% highlight yaml %}
+```yaml
 {% raw %}
 # FreePBX Incoming Call
 incoming_call:
@@ -87,7 +89,7 @@ incoming_call:
         period: 1
         cycles: 2
 {% endraw %}
-{% endhighlight %}
+```
 
 <br />
 

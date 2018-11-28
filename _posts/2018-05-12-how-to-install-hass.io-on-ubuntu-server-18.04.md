@@ -7,7 +7,7 @@ date:   2018-05-12 10:30:00
 tags: HomeAssistant
 permalink: /how-to-install-hass.io-on-ubuntu-server-18.04/
 ---
-
+<!-- markdownlint-disable html -->
 **--- EDIT \(Nov 17,2018\) ---**
 {: style="color:gray; font-size: 80%; text-align: center;"}
 
@@ -47,11 +47,15 @@ You can follow [this guide](https://www.howtoforge.com/tutorial/ubuntu-lts-minim
 
 **STEP 3:** Make sure the host system is up to date.
 
-```
-$ sudo apt-get update
+<br />
 
-$ sudo apt-get -y upgrade
+```bash
+sudo apt-get update
+
+sudo apt-get -y upgrade
 ```
+
+<br />
 
 Some would say this is an optional step, but I think it's a good practice.
 
@@ -64,15 +68,23 @@ Some would say this is an optional step, but I think it's a good practice.
 
 On the latest Ubuntu server, `jq` and `docker.io` are in the universe repository. Enable it with.
 
+<br />
+
+```bash
+sudo add-apt-repository universe && sudo apt-get update
 ```
-$ sudo add-apt-repository universe && sudo apt-get update
-```
+
+<br />
 
 Install the packages.
 
+<br />
+
+```bash
+sudo apt-get install docker.io avahi-daemon jq
 ```
-$ sudo apt-get install docker.io avahi-daemon jq
-```
+
+<br />
 
 These are the only packages required to install Hass.io on an Ubuntu Server.
 
@@ -80,16 +92,16 @@ These are the only packages required to install Hass.io on an Ubuntu Server.
 
 **\(OPTIONAL\):** If you want to make sure docker was correctly installed and it's running you can run one of the commands below.
 
-```
-$ sudo systemctl status docker
+```bash
+sudo systemctl status docker
 ```
 
 ![sudo systemctl status docker]({{ "/assets/img/Screenshot 2018-05-11 12.00.41.png" | absolute_url }})
 
 <br />
 
-```
-$ sudo docker ps
+```bash
+sudo docker ps
 ```
 
 ![sudo docker ps]({{ "/assets/img/Screenshot 2018-05-11 12.01.07.png" | absolute_url }})
@@ -100,9 +112,13 @@ $ sudo docker ps
 
 To install Hass.io in this environment you need to run the following command as described in [this page](https://www.home-assistant.io/hassio/installation/#alternative-install-on-generic-linux-server).
 
+<br />
+
+```bash
+curl -sL https://raw.githubusercontent.com/home-assistant/hassio-build/master/install/hassio_install | sudo bash -s
 ```
-$ curl -sL https://raw.githubusercontent.com/home-assistant/hassio-build/master/install/hassio_install | sudo bash -s
-```
+
+<br />
 
 Then you can access `http://server_ip_address:8123` in your web browser.
 

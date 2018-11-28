@@ -7,7 +7,7 @@ date:   2018-11-14 17:30:00
 tags: HomeAssistant NodeRED
 permalink: /making-home-assistants-presence-detection-not-so-binary-node-red-version/
 ---
-
+<!-- markdownlint-disable html -->
 My special thanks to Phil Hawthorne for letting me use the title of his post here.
 
 In early 2018 I found Phil's excellent blog post "[Making Home Assistant’s Presence Detection not so Binary](https://philhawthorne.com/making-home-assistants-presence-detection-not-so-binary/)" and began using the setup suggested by him almost immediately.
@@ -24,7 +24,7 @@ I started looking for a way to have only one sequence for all the tracked device
 
 <br />
 
-**NOTE:** The JSON code of this sequence is at the end of this page.
+**Note:** The JSON code of this sequence is at the end of this page.
 
 <br />
 
@@ -36,7 +36,7 @@ In `known_devices.yaml`:
 
 <br />
 
-{% highlight yaml %}
+```yaml
 {% raw %}
 homer:
   hide_if_away: false
@@ -46,7 +46,7 @@ homer:
   picture: /local/homer.png
   track: true
 {% endraw %}
-{% endhighlight %}
+```
 
 <br />
 
@@ -54,7 +54,7 @@ In `configuration.yaml`:
 
 <br />
 
-{% highlight yaml %}
+```yaml
 {% raw %}
 input_select:
   homer:
@@ -64,8 +64,9 @@ input_select:
       - Just Left
       - Away
       - Extended Away
+
 {% endraw %}
-{% endhighlight %}
+```
 
 <br />
 
@@ -83,7 +84,7 @@ For example:
 
 <br />
 
-{% highlight yaml %}
+```yaml
 {% raw %}
 marge:
   hide_if_away: false
@@ -93,11 +94,11 @@ marge:
   picture: /local/marge.png
   track: true
 {% endraw %}
-{% endhighlight %}
+```
 
 <br />
 
-{% highlight yaml %}
+```yaml
 {% raw %}
 input_select:
   marge:
@@ -107,8 +108,9 @@ input_select:
       - Just Left
       - Away
       - Extended Away
+
 {% endraw %}
-{% endhighlight %}
+```
 
 <br />
 
@@ -132,7 +134,7 @@ Node-RED JSON code for the sequence in the beginning of this post:
 
 <br />
 
-{% highlight json %}
+```json
 {% raw %}
 [
     {
@@ -573,8 +575,8 @@ Node-RED JSON code for the sequence in the beginning of this post:
     }
 ]
 {% endraw %}
-{% endhighlight %}
+```
 
 <br />
 
-**\(IMPORTANT\):** Don't forget to review the Server configuration in the Home Assistant nodes if you are going to use this sequence.
+**IMPORTANT:** Don't forget to review the Server configuration in the Home Assistant nodes if you are going to use this sequence.

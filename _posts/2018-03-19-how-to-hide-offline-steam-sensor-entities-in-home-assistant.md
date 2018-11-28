@@ -7,13 +7,15 @@ date:   2018-07-09 10:00:00
 tags: HomeAssistant
 permalink: /how-to-hide-offline-steam-sensor-entities-in-home-assistant/
 ---
-
+<!-- markdownlint-disable html -->
 **--- EDIT \(Jul 09, 2018\) ---**
 {: style="color:gray; font-size: 80%; text-align: center;"}
 
 Now with the new Lovelace UI it's even easier to do it. We just need to use this `entity-filter` in `ui-lovelace.yaml`.
 
-{% highlight yaml %}
+<br />
+
+```yaml
 {% raw %}
 - type: entity-filter
   entities:
@@ -33,7 +35,9 @@ Now with the new Lovelace UI it's even easier to do it. We just need to use this
     title: Steam
   show_empty: false
 {% endraw %}
-{% endhighlight %}
+```
+
+<br />
 
 **--- ORIGINAL POST ---**
 {: style="color:gray; font-size: 80%; text-align: center;"}
@@ -51,7 +55,7 @@ A few hours later...
 
 <br />
 
-{% highlight yaml %}
+```yaml
 {% raw %}
 sensor:
   - platform: steam_online
@@ -62,7 +66,7 @@ sensor:
       - 98409840789049048
       - 90848949084989804
 {% endraw %}
-{% endhighlight %}
+```
 
 <br />
 
@@ -79,11 +83,11 @@ It also solves another problem I encountered during the tests. If only one entit
 
 I really did not like the `if is_state_attr(steam.entity_id, 'icon', 'mdi:steam')` part, but I did not find another way to select only the sensor.steam_* entities. If anyone knows a better way to do it please tell us how on the comments section below.
 
-*Note:* I'm keeping the old automation (commented out) below the current one for readers to understand the context.
+**Note:** I'm keeping the old automation (commented out) below the current one for readers to understand the context.
 
 <br />
 
-{% highlight yaml %}
+```yaml
 {% raw %}
 automation:
 - alias: 'Group Entities Online/Offline'
@@ -132,18 +136,16 @@ automation:
 #           {% if not(is_state('sensor.steam_98409840789049048', 'offline')) %}sensor.steam_98409840789049048,{% endif %}
 #           {% if not(is_state('sensor.steam_90848949084989804', 'offline')) %}sensor.steam_90848949084989804{% endif %}"
 {% endraw %}
-{% endhighlight %}
+```
 
 <br />
 
 **It works!**
 
-*Note:* These SteamIDs do not exist
+**Note:** These SteamIDs do not exist
 
 Some important points:
 
-*  Pay attention to the commas after each sensor in the templates, the last doesn't need one.
-
-*  If you use views, don't forget to add the group (in this case `group.steam`) to the desired view.
-
-*  You don't need to create the group, it will be created by the automations.
+* Pay attention to the commas after each sensor in the templates, the last doesn't need one.
+* If you use views, don't forget to add the group (in this case `group.steam`) to the desired view.
+* You don't need to create the group, it will be created by the automations.

@@ -7,7 +7,7 @@ date:   2018-04-04 10:40:00
 tags: HomeAssistant DuckDNS CaddyProxy GitHub
 permalink: /how-i-used-caddy-proxy-to-publish-this-blog-before-migrating-it-to-github-pages/
 ---
-
+<!-- markdownlint-disable html -->
 Before migrating this blog to [GitHub Pages](https://pages.github.com) I used this [Caddy Proxy add-on](https://github.com/bestlibre/hassio-addons/tree/master/caddy_proxy) on Hass.io to help me publish it.
 
 When using Caddy Proxy, there is no need to worry about certificates in the `configuration.yaml` file, it takes care of that automatically. Just let Home Assistant run on the default port \(`8123`\).
@@ -22,7 +22,7 @@ After that I copied the domain and token to the DuckDNS add-on Config, saved and
 
 DuckDNS add-on Config example:  
 
-{% highlight json %}
+```json
 {% raw %}
 {
   "lets_encrypt": {
@@ -34,7 +34,7 @@ DuckDNS add-on Config example:
   "domains": ["my-domain.duckdns.org"]
 }
 {% endraw %}
-{% endhighlight %}
+```
 
 <br />
 
@@ -58,7 +58,7 @@ I set up a forward on ports `80` and `443` to the IP address of the Caddy Proxy 
 
 I also set up the Caddy Proxy add-on like below:  
 
-{% highlight json %}
+```json
 {% raw %}
 {
   "homeassistant": "hassio_hostname",
@@ -73,7 +73,7 @@ I also set up the Caddy Proxy add-on like below:
   "email": "user@email.com"
 }
 {% endraw %}
-{% endhighlight %}
+```
 
 <br />
 

@@ -7,7 +7,7 @@ date:   2018-07-09 12:00:00
 tags: HomeAssistant NodeRED
 permalink: /make-a-node-red-flow-run-on-home-assistant-start/
 ---
-
+<!-- markdownlint-disable html -->
 **--- EDIT \(Jul 09, 2018\) ---**
 {: style="color:gray; font-size: 80%; text-align: center;"}
 
@@ -25,7 +25,7 @@ Following is the JSON code of the sequence. Do not forget to change the status n
 
 <br />
 
-{% highlight json %}
+```json
 {% raw %}
 [
     {
@@ -69,7 +69,7 @@ Following is the JSON code of the sequence. Do not forget to change the status n
     }
 ]
 {% endraw %}
-{% endhighlight %}
+```
 
 <br />
 
@@ -106,7 +106,7 @@ Now, in Home Assistant, we create a `shell_command` and an `automation` that wil
 
 <br />
 
-{% highlight yaml %}
+```yaml
 {% raw %}
 shell_command:
   ha_start: 'curl http://localhost:1880/hastart'
@@ -119,7 +119,7 @@ automation:
     action:
       - service: shell_command.ha_start
 {% endraw %}
-{% endhighlight %}
+```
 
 <br />
 

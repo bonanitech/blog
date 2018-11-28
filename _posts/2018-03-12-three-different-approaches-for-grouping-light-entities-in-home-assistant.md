@@ -7,18 +7,18 @@ date:   2018-03-12 21:00:00
 tags: HomeAssistant
 permalink: /three-different-approaches-for-grouping-light-entities-in-home-assistant/
 ---
-
+<!-- markdownlint-disable html -->
 I have three LIFX bulbs in a room, two in a ceiling fixture and one in a floor lamp. At first (months ago) I was controlling each bulb individually in the [Home Assistant](https://home-assistant.io) [frontend](https://home-assistant.io/components/frontend/), it was kinda annoying because any change in one of the ceiling fixture light bulbs should be manually replicated to the other one. Then I realized it would be much better to control them using groups.
 
 <br />
 
-## Group
+# Group
 
 The original way to group entities was by using the [Group component](https://home-assistant.io/components/group/). Code and resulting card below.
 
 <br />
 
-{% highlight yaml %}
+```yaml
 {% raw %}
 group:
   room_lights:
@@ -44,7 +44,7 @@ customize:
     friendly_name: "Lamp Lights"
     icon: mdi:lamp
 {% endraw %}
-{% endhighlight %}
+```
 
 <br />
 
@@ -66,13 +66,13 @@ But \(there is always a but\) the color of the icons were not changed when the g
 
 <br />
 
-## Switch
+# Switch
 
 Then I found [this discussion](https://community.home-assistant.io/t/three-smart-bulbs-in-a-group-can-i-get-the-default-dynamic-bulb-icon-to-work/10318) on the [Home Assistant Community Forum](https://community.home-assistant.io) which led me to [this issue](https://github.com/home-assistant/home-assistant-polymer/issues/186) on [GitHub](https://github.com) where the use of the [Switch component](https://home-assistant.io/components/switch/) was suggested. I decided to try it using a [Template Switch](https://home-assistant.io/components/switch.template/).  Code and resulting card below.
 
 <br />
 
-{% highlight yaml %}
+```yaml
 {% raw %}
 switch:
   - platform: template
@@ -112,7 +112,7 @@ group:
       - switch.room_ceiling_lights
       - switch.room_lamp_lights
 {% endraw %}
-{% endhighlight %}
+```
 
 <br />
 
@@ -128,13 +128,13 @@ Now the icons were changed every time the corresponding group was turned on or o
 
 <br />
 
-## Light Group
+# Light Group
 
 Beginning in version 0.65 we have a new platform called [Light Group](https://home-assistant.io/components/light.group/) in the [Light component](https://home-assistant.io/components/light/). So I decided to test it. Code and resulting card below.
 
 <br />
 
-{% highlight yaml %}
+```yaml
 {% raw %}
 light:
   - platform: lifx
@@ -164,7 +164,7 @@ group:
       - light.ceiling_lights
       - light.lamp_lights
 {% endraw %}
-{% endhighlight %}
+```
 
 <br />
 
@@ -189,7 +189,7 @@ Awesome. Now, besides the icons being changed with each change of state (on or o
 
 <br />
 
-## Conclusion
+# Conclusion
 
 Particularly I prefer using the new light group platform because it's easier to setup, specially when compared to the template switch approach and yet has the advantage of controlling the groups attributes.
 

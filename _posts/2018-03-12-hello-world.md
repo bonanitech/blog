@@ -5,6 +5,7 @@ title:  "Hello World"
 date:   2018-03-12 13:00:00
 permalink: /hello-world/
 ---
+<!-- markdownlint-disable html -->
 ![Hello World]({{ "/assets/img/helloworld.png" | absolute_url }})
 
 <br />

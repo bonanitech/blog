@@ -7,7 +7,7 @@ date:   2018-03-18 19:54:00
 tags: HomeAssistant
 permalink: /managing-groups-visibility-in-home-assistant/
 ---
-
+<!-- markdownlint-disable html -->
 After I wrote [Dynamically hide / unhide an entire view in Home Assistant](https://bonani.tech/dynamically-hide-unhide-an-entire-view/), many people asked me if it is possible to do the same with the cards \(groups\). It is, and it's easy too.
 
 <br />
@@ -16,7 +16,7 @@ Here is an example code:
 
 <br />
 
-{% highlight yaml %}
+```yaml
 {% raw %}
 group:
   default_view:
@@ -158,7 +158,7 @@ automation:
         data:
           visible: false
 {% endraw %}
-{% endhighlight %}
+```
 
 <br />
 

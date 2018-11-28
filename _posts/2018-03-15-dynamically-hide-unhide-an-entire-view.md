@@ -7,14 +7,14 @@ date:   2018-03-15 21:03:00
 tags: HomeAssistant
 permalink: /dynamically-hide-unhide-an-entire-view/
 ---
-
+<!-- markdownlint-disable html -->
 Today I learned a way to hide and unhide a view in Home Assistant. It turns out it’s easier than I expected. All I had to do was use the `group.set`  service to change the attribute `view`.
 
 Here is an example code:
 
 <br />
 
-{% highlight yaml %}
+```yaml
 {% raw %}
 group:
   default_view:
@@ -46,7 +46,7 @@ script:
           object_id: second_view
           view: false
 {% endraw %}
-{% endhighlight %}
+```
 
 <br />
 

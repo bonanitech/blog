@@ -7,7 +7,7 @@ date:   2018-04-25 11:25:00
 tags: HomeAssistant CustomUI
 permalink: /track-battery-levels-with-home-assistant-and-custom-ui/
 ---
-
+<!-- markdownlint-disable html -->
 If you have sensors around the house, you should be concerned about the battery life of these sensors. Unless they are hard wired, of course. 🙂
 
 I was reading [this example](https://www.home-assistant.io/cookbook/track_battery_level/) from the [Home Assistant Cookbook](https://www.home-assistant.io/cookbook) and started to think *"why not change the colors of the entities according to their battery level?"*.
@@ -18,12 +18,12 @@ I chose to install it [manually](https://github.com/andrey-git/home-assistant-cu
 
 <br />
 
-{% highlight yaml %}
+```yaml
 {% raw %}
 customizer:
   custom_ui: local
 {% endraw %}
-{% endhighlight %}
+```
 
 <br />
 
@@ -31,7 +31,7 @@ Then it was time to have fun with the YAML files.
 
 <br />
 
-{% highlight yaml %}
+```yaml
 {% raw %}
 frontend:
   themes:
@@ -42,13 +42,15 @@ frontend:
       primary-text-color: '#FF0000'
       paper-item-icon-color: '#FF0000'
 {% endraw %}
-{% endhighlight %}
+```
+
+<br />
 
 First I created two themes, `alert_yellow` and `alert_red`. Each of them define the colors for the text \(name and state\) and for the icon of a given entity.
 
 <br />
 
-{% highlight yaml %}
+```yaml
 {% raw %}
 sensor:
   - platform: template
@@ -80,15 +82,17 @@ sensor:
             mdi:battery-alert
           {% endif %}
 {% endraw %}
-{% endhighlight %}
-
-Then created the sensors using the `icon_template` code found in the Cookbook to show the icon corresponding to each battery level.
-
-**NOTE:** I used two `input_number` to simulate the battery charge values of each `sensor`.
+```
 
 <br />
 
-{% highlight yaml %}
+Then created the sensors using the `icon_template` code found in the Cookbook to show the icon corresponding to each battery level.
+
+**Note:** I used two `input_number` to simulate the battery charge values of each `sensor`.
+
+<br />
+
+```yaml
 {% raw %}
 customize:
   sensor.window_sensor_battery_level:
@@ -112,7 +116,9 @@ customize:
           return 'alert_yellow';
         }
 {% endraw %}
-{% endhighlight %}
+```
+
+<br />
 
 And finally I customized each sensor. If the battery charge is below 40% the sensor will be displayed in yellow and if it’s below 20% it will be displayed in red. If the values are 40% and above the sensor will be displayed using the colors defined in the theme used at that moment.
 
@@ -134,4 +140,4 @@ Here are some samples of the output.
 
 Using this with a good notification system will help prevent a sensor from stop responding due to a discharged battery. Additionally, this will give you the possibility to choose the best time to change each battery and minimize the risk of discarding batteries that can still be used for some time.
 
-**NOTE:** Unfortunately this is not working with Safari 11.1 on MacOS High Sierra, I had to use Chrome.
+**Note:** Unfortunately this is not working with Safari 11.1 on MacOS High Sierra, I had to use Chrome.
