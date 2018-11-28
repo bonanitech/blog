@@ -8,7 +8,7 @@ tags: HomeAssistant
 permalink: /how-to-hide-offline-steam-sensor-entities-in-home-assistant/
 ---
 
-**--- EDIT \(09 Jul, 2018\) ---**
+**--- EDIT \(Jul 09, 2018\) ---**
 {: style="color:gray; font-size: 80%; text-align: center;"}
 
 Now with the new Lovelace UI it's even easier to do it. We just need to use this `entity-filter` in `ui-lovelace.yaml`.
@@ -66,7 +66,7 @@ sensor:
 
 <br />
 
-**--- EDIT \(18 Jun, 2018\) ---**
+**--- EDIT \(Jun 18, 2018\) ---**
 {: style="color:gray; font-size: 80%; text-align: center;"}
 
 After a request here on the comments section and on [Reddit](https://www.reddit.com/r/homeassistant/comments/85fbob/managing_groups_visibility_in_home_assistant/e0t40up/) I found out that, if the last or all entities of the sensor list in the automation template are offline, it would cause an error when the automation is run and therefore the frontend would not display the correct information in the group card.

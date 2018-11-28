@@ -8,7 +8,7 @@ tags: HomeAssistant NodeRED
 permalink: /using-node-red-to-capture-dash-button-press/
 ---
 
-**--- EDIT \(28 May, 2018\) ---**
+**--- EDIT \(May 28, 2018\) ---**
 {: style="color:gray; font-size: 80%; text-align: center;"}
 
 With the release of Home Assistant version 0.70 it is now possible to install Dasher add-on again when running Hass.io on Ubuntu Server.
