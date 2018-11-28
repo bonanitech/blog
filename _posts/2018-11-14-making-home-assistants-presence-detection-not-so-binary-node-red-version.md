@@ -24,7 +24,7 @@ I started looking for a way to have only one sequence for all the tracked device
 
 <br />
 
-**Note:** The JSON code of this sequence is at the end of this page.
+**Note:** The JSON code of this sequence is [here](#json-code).
 
 <br />
 
@@ -130,7 +130,9 @@ The final result should be something like this:
 
 <br />
 
-Node-RED JSON code for the sequence in the beginning of this post:
+# JSON code
+
+Node-RED JSON code for the sequence in the beginning of this post.
 
 <br />
 
