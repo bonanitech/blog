@@ -1,8 +1,8 @@
 ---
 layout: post
 comments: true
-title:  "Using Node-RED to capture Dash Button press (EDITED)"
-twitter_text: "Using Node-RED to capture Dash Button press"
+title:  "Using Node-RED to capture Dash Button press"
+twitter_text: "Using @NodeRED to capture Dash Button press"
 date:   2018-05-28 20:30:00
 tags: HomeAssistant NodeRED
 permalink: /using-node-red-to-capture-dash-button-press/

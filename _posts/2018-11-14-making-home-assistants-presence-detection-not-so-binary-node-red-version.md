@@ -2,7 +2,7 @@
 layout: post
 comments: true
 title:  "Making Home Assistant's Presence Detection not so Binary (Node-RED version)"
-twitter_text: "Making Home Assistant's Presence Detection not so Binary (Node-RED version)"
+twitter_text: "Making @home_assistant Presence Detection not so Binary (@NodeRED version)"
 date:   2018-11-14 17:30:00
 tags: HomeAssistant NodeRED
 permalink: /making-home-assistants-presence-detection-not-so-binary-node-red-version/

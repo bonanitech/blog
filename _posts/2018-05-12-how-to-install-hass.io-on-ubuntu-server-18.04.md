@@ -1,8 +1,8 @@
 ---
 layout: post
 comments: true
-title:  "(UPDATED) How to install Hass.io on Ubuntu Server 18.04"
-twitter_text: "(UPDATED) How to install Hass.io on Ubuntu Server 18.04"
+title:  "How to install Hass.io on Ubuntu Server 18.04"
+twitter_text: "How to install Hass.io on Ubuntu Server 18.04"
 date:   2018-05-12 10:30:00
 tags: HomeAssistant
 permalink: /how-to-install-hass.io-on-ubuntu-server-18.04/
