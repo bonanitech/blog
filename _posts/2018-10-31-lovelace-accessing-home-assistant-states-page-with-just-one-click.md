@@ -3,12 +3,35 @@ layout: post
 comments: true
 title:  "[Lovelace] Accessing Home Assistant states page with just one click"
 twitter_text: "[Lovelace] Accessing @home_assistant states page with just one click"
-date:   2018-11-15 10:30:00
+date:   2018-12-24 10:30:00
 tags: HomeAssistant Lovelace
 permalink: /lovelace-accessing-home-assistant-states-page-with-just-one-click/
 ---
 <!-- markdownlint-disable html -->
-**WARNING: As of Home Assistant version 0.84 this method no longer works.**
+**--- EDIT \(Dec 24, 2018\) ---**
+{: style="color:gray; font-size: 80%; text-align: center;"}
+
+An alternative way to achieve this is to place a `weblink` in a Lovelace entities card.
+
+```yaml
+{% raw %}
+- type: entities
+  show_header_toggle: false
+  entities:
+    - type: weblink
+      url: /states
+      name: "States"
+      icon: mdi:home-assistant
+{% endraw %}
+```
+
+**--- EDIT \(Nov 15, 2018\) ---**
+{: style="color:gray; font-size: 80%; text-align: center;"}
+
+**WARNING: As of Home Assistant version 0.84 the method below no longer works.**
+
+**--- ORIGINAL POST ---**
+{: style="color:gray; font-size: 80%; text-align: center;"}
 
 Sometimes you need to access the Home Assistant `states` page \(old UI\) and when you have Lovelace as the default UI you have to type it in the address bar. Here is an easier way to access it.
 
@@ -22,7 +45,7 @@ Add the following code to your `configuration.yaml` file and restart Home Assist
 {% raw %}
 panel_iframe:
   states:
-    title: States
+    title: "States"
     icon: mdi:home-assistant
     url: http://<your_home_assistant_url>/states
 {% endraw %}
