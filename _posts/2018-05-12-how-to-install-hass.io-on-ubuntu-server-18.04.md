@@ -19,6 +19,8 @@ My thanks to Frenck for the awesome script.
 
 **DO NOT** follow the instructions below. I'm keeping them here just as a historical reference.
 
+<br />
+
 **--- ORIGINAL POST ---**
 {: style="color:gray; font-size: 80%; text-align: center;"}
 
@@ -31,6 +33,8 @@ Until last month, I was running Hass.io on an Ubuntu Server 16.04. Now I decided
 I like to download the entire `/usr/share/hassio` directory. This is where the configuration files for Home Assistant \(in `/usr/share/hassio/homeassistant`\) and its add-ons \(in `/usr/share/hassio/addons`\) are located in Hass.io.
 
 Write down the address of each add-on repository that you have added to your installation, the name of all installed add-on and their configuration, they will be needed later.
+
+<br />
 
 **--- EDIT \(Oct 24,2018\) ---**
 {: style="color:gray; font-size: 80%; text-align: center;"}
@@ -62,6 +66,8 @@ Some would say this is an optional step, but I think it's a good practice.
 <br />
 
 **STEP 4:** Install needed packages.
+
+<br />
 
 **--- EDIT \(Sep 12,2018\) ---**
 {: style="color:gray; font-size: 80%; text-align: center;"}

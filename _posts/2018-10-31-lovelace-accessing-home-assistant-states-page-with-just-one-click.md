@@ -25,10 +25,14 @@ An alternative way to achieve this is to place a `weblink` in a Lovelace entitie
 {% endraw %}
 ```
 
+<br />
+
 **--- EDIT \(Nov 15, 2018\) ---**
 {: style="color:gray; font-size: 80%; text-align: center;"}
 
 **WARNING: As of Home Assistant version 0.84 the method below no longer works.**
+
+<br />
 
 **--- ORIGINAL POST ---**
 {: style="color:gray; font-size: 80%; text-align: center;"}

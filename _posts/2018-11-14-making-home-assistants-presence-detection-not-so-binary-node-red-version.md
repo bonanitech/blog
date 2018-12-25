@@ -3,11 +3,35 @@ layout: post
 comments: true
 title:  "Making Home Assistant's Presence Detection not so Binary (Node-RED version)"
 twitter_text: "Making @home_assistant Presence Detection not so Binary (@NodeRED version)"
-date:   2018-11-14 17:30:00
+date:   2018-12-25 10:30:00
 tags: HomeAssistant NodeRED
 permalink: /making-home-assistants-presence-detection-not-so-binary-node-red-version/
 ---
 <!-- markdownlint-disable html -->
+**--- EDIT \(Dec 25, 2018\) ---**
+{: style="color:gray; font-size: 80%; text-align: center;"}
+
+If you use `node-red-contrib-home-assistant-websocket` (default in Node-RED Community Hass.io Add-on), the sequence can be even smaller.
+
+Since its [version 0.3.0](https://github.com/zachowj/node-red-contrib-home-assistant-websocket/releases/tag/v0.3.0):
+
+> Call Service and Fire Event nodes are now able to render mustache templates in the data property.
+
+This means that we can remove almost all of the template nodes used in the original sequence and move their content to the call service nodes right after them.
+
+<br />
+
+![Template Sequence]({{ "/assets/img/2018-11-14-template_sequence_v2.png" | absolute_url }})
+
+<br />
+
+**Note:** The JSON code of this sequence is [here](#json-code-v2).
+
+<br />
+
+**--- ORIGINAL POST ---**
+{: style="color:gray; font-size: 80%; text-align: center;"}
+
 My special thanks to Phil Hawthorne for letting me use the title of his post here.
 
 In early 2018 I found Phil's excellent blog post "[Making Home Assistant’s Presence Detection not so Binary](https://philhawthorne.com/making-home-assistants-presence-detection-not-so-binary/)" and began using the setup suggested by him almost immediately.
@@ -574,6 +598,405 @@ Node-RED JSON code for the sequence in the beginning of this post.
         "wires": [
             []
         ]
+    }
+]
+{% endraw %}
+```
+
+<br />
+
+**IMPORTANT:** Don't forget to review the Server configuration in the Home Assistant nodes if you are going to use this sequence.
+
+<br />
+
+**--- EDIT \(Dec 25, 2018\) ---**
+{: style="color:gray; font-size: 80%; text-align: center;"}
+
+# JSON code v2
+
+Node-RED JSON code for the sequence in the beginning of this post.
+
+<br />
+
+```json
+{% raw %}
+[
+    {
+        "id": "b3cfb392.48ca3",
+        "type": "switch",
+        "z": "e7991d63.81fb",
+        "name": "Home?",
+        "property": "status",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "home",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "not_home",
+                "vt": "str"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 2,
+        "x": 500,
+        "y": 380,
+        "wires": [
+            [
+                "9b6b31e1.6730b"
+            ],
+            [
+                "a61252d8.10fcb"
+            ]
+        ]
+    },
+    {
+        "id": "9b6b31e1.6730b",
+        "type": "template",
+        "z": "e7991d63.81fb",
+        "name": "",
+        "field": "payload.entity_id",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "input_select.{{topic}}",
+        "output": "str",
+        "x": 640,
+        "y": 340,
+        "wires": [
+            [
+                "dff67339.913bc"
+            ]
+        ]
+    },
+    {
+        "id": "dff67339.913bc",
+        "type": "api-current-state",
+        "z": "e7991d63.81fb",
+        "name": "Status?",
+        "server": "2591f105.083aee",
+        "halt_if": "",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "override_topic": false,
+        "override_payload": true,
+        "override_data": true,
+        "entity_id": "",
+        "state_type": "str",
+        "outputs": 1,
+        "x": 780,
+        "y": 340,
+        "wires": [
+            [
+                "75535264.27122c",
+                "c8c0f0c5.0248b"
+            ]
+        ]
+    },
+    {
+        "id": "75535264.27122c",
+        "type": "switch",
+        "z": "e7991d63.81fb",
+        "name": "Just Left?",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "neq",
+                "v": "Just Left",
+                "vt": "str"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 920,
+        "y": 320,
+        "wires": [
+            [
+                "8ec9325c.161b8"
+            ],
+            [
+                "5e1e544e.f92d7c"
+            ]
+        ]
+    },
+    {
+        "id": "c8c0f0c5.0248b",
+        "type": "change",
+        "z": "e7991d63.81fb",
+        "name": "RESET",
+        "rules": [
+            {
+                "t": "set",
+                "p": "reset",
+                "pt": "msg",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 910,
+        "y": 360,
+        "wires": [
+            [
+                "3168e10c.9094fe",
+                "8c42cf94.02f97"
+            ]
+        ]
+    },
+    {
+        "id": "5094372.30750c8",
+        "type": "change",
+        "z": "e7991d63.81fb",
+        "name": "RESET",
+        "rules": [
+            {
+                "t": "set",
+                "p": "reset",
+                "pt": "msg",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1050,
+        "y": 420,
+        "wires": [
+            [
+                "f5770290.c56e7",
+                "8c42cf94.02f97"
+            ]
+        ]
+    },
+    {
+        "id": "a61252d8.10fcb",
+        "type": "api-call-service",
+        "z": "e7991d63.81fb",
+        "name": "Just Left",
+        "server": "2591f105.083aee",
+        "service_domain": "input_select",
+        "service": "select_option",
+        "data": "{\"entity_id\":\"input_select.{{topic}}\",\"option\":\"Just Left\"}",
+        "render_data": true,
+        "mergecontext": "",
+        "output_location": "payload",
+        "output_location_type": "msg",
+        "x": 640,
+        "y": 420,
+        "wires": [
+            [
+                "3168e10c.9094fe",
+                "5094372.30750c8"
+            ]
+        ]
+    },
+    {
+        "id": "8ec9325c.161b8",
+        "type": "api-call-service",
+        "z": "e7991d63.81fb",
+        "name": "Just Arrived",
+        "server": "2591f105.083aee",
+        "service_domain": "input_select",
+        "service": "select_option",
+        "data": "{\"entity_id\":\"input_select.{{topic}}\",\"option\":\"Just Arrived\"}",
+        "render_data": true,
+        "mergecontext": "",
+        "output_location": "payload",
+        "output_location_type": "msg",
+        "x": 1070,
+        "y": 300,
+        "wires": [
+            [
+                "f5770290.c56e7"
+            ]
+        ]
+    },
+    {
+        "id": "c065d7d1.bce048",
+        "type": "api-call-service",
+        "z": "e7991d63.81fb",
+        "name": "Away",
+        "server": "2591f105.083aee",
+        "service_domain": "input_select",
+        "service": "select_option",
+        "data": "{\"entity_id\":\"input_select.{{topic}}\",\"option\":\"Away\"}",
+        "render_data": true,
+        "mergecontext": "",
+        "output_location": "payload",
+        "output_location_type": "msg",
+        "x": 1050,
+        "y": 380,
+        "wires": [
+            [
+                "8c42cf94.02f97"
+            ]
+        ]
+    },
+    {
+        "id": "74ed9275.0db39c",
+        "type": "api-call-service",
+        "z": "e7991d63.81fb",
+        "name": "Extended Away",
+        "server": "2591f105.083aee",
+        "service_domain": "input_select",
+        "service": "select_option",
+        "data": "{\"entity_id\":\"input_select.{{topic}}\",\"option\":\"Extended Away\"}",
+        "render_data": true,
+        "mergecontext": "",
+        "output_location": "payload",
+        "output_location_type": "msg",
+        "x": 1360,
+        "y": 360,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "3168e10c.9094fe",
+        "type": "trigger",
+        "z": "e7991d63.81fb",
+        "op1": "",
+        "op2": "{\"payload\":{\"data\":{\"option\":\"\"}}}",
+        "op1type": "nul",
+        "op2type": "json",
+        "duration": "10",
+        "extend": false,
+        "units": "min",
+        "reset": "",
+        "bytopic": "topic",
+        "name": "10 Min",
+        "x": 910,
+        "y": 400,
+        "wires": [
+            [
+                "c065d7d1.bce048"
+            ]
+        ]
+    },
+    {
+        "id": "8c42cf94.02f97",
+        "type": "trigger",
+        "z": "e7991d63.81fb",
+        "op1": "",
+        "op2": "{\"payload\":{\"data\":{\"option\":\"\"}}}",
+        "op1type": "nul",
+        "op2type": "json",
+        "duration": "24",
+        "extend": false,
+        "units": "hr",
+        "reset": "",
+        "bytopic": "topic",
+        "name": "24 Hrs",
+        "x": 1210,
+        "y": 360,
+        "wires": [
+            [
+                "74ed9275.0db39c"
+            ]
+        ]
+    },
+    {
+        "id": "f5770290.c56e7",
+        "type": "trigger",
+        "z": "e7991d63.81fb",
+        "op1": "",
+        "op2": "{\"payload\":{\"data\":{\"option\":\"\"}}}",
+        "op1type": "nul",
+        "op2type": "json",
+        "duration": "10",
+        "extend": false,
+        "units": "min",
+        "reset": "",
+        "bytopic": "topic",
+        "name": "10 Min",
+        "x": 1210,
+        "y": 300,
+        "wires": [
+            [
+                "5e1e544e.f92d7c"
+            ]
+        ]
+    },
+    {
+        "id": "5e1e544e.f92d7c",
+        "type": "api-call-service",
+        "z": "e7991d63.81fb",
+        "name": "Home",
+        "server": "2591f105.083aee",
+        "service_domain": "input_select",
+        "service": "select_option",
+        "data": "{\"entity_id\":\"input_select.{{topic}}\",\"option\":\"Home\"}",
+        "render_data": true,
+        "mergecontext": "",
+        "output_location": "payload",
+        "output_location_type": "msg",
+        "x": 1330,
+        "y": 320,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "9dbba4b1.4a1868",
+        "type": "change",
+        "z": "e7991d63.81fb",
+        "name": "Change",
+        "rules": [
+            {
+                "t": "move",
+                "p": "payload",
+                "pt": "msg",
+                "to": "status",
+                "tot": "msg"
+            },
+            {
+                "t": "change",
+                "p": "topic",
+                "pt": "msg",
+                "from": "device_tracker.",
+                "fromt": "str",
+                "to": "",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 360,
+        "y": 380,
+        "wires": [
+            [
+                "b3cfb392.48ca3"
+            ]
+        ]
+    },
+    {
+        "id": "2591f105.083aee",
+        "type": "server",
+        "z": "",
+        "name": "Home Assistant",
+        "legacy": false,
+        "hassio": true,
+        "rejectUnauthorizedCerts": true,
+        "ha_boolean": "y|yes|true|on|home|open"
     }
 ]
 {% endraw %}

@@ -13,6 +13,8 @@ permalink: /using-node-red-to-capture-dash-button-press/
 
 With the release of Home Assistant version 0.70 it is now possible to install Dasher add-on again when running Hass.io on Ubuntu Server.
 
+<br />
+
 **--- ORIGINAL POST ---**
 {: style="color:gray; font-size: 80%; text-align: center;"}
 
