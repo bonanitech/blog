@@ -17,7 +17,7 @@ My thanks to Frenck for the awesome script.
 
 <br />
 
-**DO NOT** follow the instructions below. I'm keeping them here just as a historical reference.
+**\* DO NOT \*** follow the instructions below. I'm keeping them here just as a historical reference.
 
 <br />
 
