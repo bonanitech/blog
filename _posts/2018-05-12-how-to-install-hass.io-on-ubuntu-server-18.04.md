@@ -8,7 +8,7 @@ tags: HomeAssistant
 permalink: /how-to-install-hass.io-on-ubuntu-server-18.04/
 ---
 <!-- markdownlint-disable html -->
-**--- EDIT \(Nov 17,2018\) ---**
+**--- EDIT \(Nov 17, 2018\) ---**
 {: style="color:gray; font-size: 80%; text-align: center;"}
 
 The best method to install Hass.io on a Generic Ubuntu/Debian machine is described at [https://gist.github.com/frenck/32b4f74919ca6b95b30c66f85976ec58](https://gist.github.com/frenck/32b4f74919ca6b95b30c66f85976ec58)
@@ -36,7 +36,7 @@ Write down the address of each add-on repository that you have added to your ins
 
 <br />
 
-**--- EDIT \(Oct 24,2018\) ---**
+**--- EDIT \(Oct 24, 2018\) ---**
 {: style="color:gray; font-size: 80%; text-align: center;"}
 
 Like John Mesberg [well remembered in the comments section](https://bonani.tech/how-to-install-hass.io-on-ubuntu-server-18.04/#comment-4159094116), you can use the Hass.io snapshot feature for the backup and restore process.
@@ -69,7 +69,7 @@ Some would say this is an optional step, but I think it's a good practice.
 
 <br />
 
-**--- EDIT \(Sep 12,2018\) ---**
+**--- EDIT \(Sep 12, 2018\) ---**
 {: style="color:gray; font-size: 80%; text-align: center;"}
 
 On the latest Ubuntu server, `jq` and `docker.io` are in the universe repository. Enable it with.
@@ -172,7 +172,7 @@ That's it! Now you have Hass.io running on Ubuntu Server 18.04.
 
 <br />
 
-**--- EDIT \(May 18,2018\) ---**
+**--- EDIT \(May 18, 2018\) ---**
 {: style="color:gray; font-size: 80%; text-align: center;"}
 
 If you prefer to run Home Assistant in Python Virtual Environment [BurnsHA](https://www.youtube.com/channel/UCSKQutOXuNLvFetrKuwudpg) has a great video explaining how to do it
