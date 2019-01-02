@@ -13,6 +13,8 @@ permalink: /lovelace-accessing-home-assistant-states-page-with-just-one-click/
 
 An alternative way to achieve this is to place a `weblink` in a Lovelace entities card.
 
+<br />
+
 ```yaml
 {% raw %}
 - type: entities
@@ -24,6 +26,10 @@ An alternative way to achieve this is to place a `weblink` in a Lovelace entitie
       icon: mdi:home-assistant
 {% endraw %}
 ```
+
+<br />
+
+![States]({{ "/assets/img/2018-10-31-states.png" | absolute_url }})
 
 <br />
 
