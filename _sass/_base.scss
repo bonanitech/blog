@@ -19,7 +19,8 @@ button {
 ------------*/
 body {
     font-family: $default-font;
-    color: $black; 
+    color: $white;
+    background-color: $midnight;
 }
 
 /*------------------
@@ -124,6 +125,7 @@ table {
 --------------*/
 img {
     max-width: 100%;
+    border: 1px solid $blue;
     vertical-align: middle;
     display: block;
     margin: 0 auto;

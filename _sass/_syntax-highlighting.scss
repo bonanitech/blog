@@ -3,10 +3,11 @@
 ////////////
 pre,
 code {
+    font-family: $code-font;
     font-size: 15px;
     border: 1px solid $blue;
     border-radius: 3px;
-    background: #272822;
+    background: $black;
 }
 
 code {
@@ -29,10 +30,10 @@ pre {
  * Syntax highlighting styles
  */
 .highlight {
-    background: #272822;
+    background: $black;
 
     .highlighter-rouge & {
-      background: #272822;
+      background: $black;
     }
 
     .c { color: #75715e } /* Comment */
