@@ -80,4 +80,4 @@ When I press the button (below) in the UI or say "Hey Google, good morning" the 
 
 <br />
 
-I prefer this approach because I do not like the idea of using `input_boolean` for this. It would be like using a light switch to trigger a doorbell.
+I prefer this approach because I do not like the idea of using `input_boolean` for this. It would be like using a light switch to activate a doorbell.
