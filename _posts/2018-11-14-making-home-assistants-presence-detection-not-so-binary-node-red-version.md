@@ -154,7 +154,7 @@ The final result should be something like this:
 
 <br />
 
-# JSON code
+## JSON code
 
 Node-RED JSON code for the sequence in the beginning of this post.
 
@@ -612,7 +612,7 @@ Node-RED JSON code for the sequence in the beginning of this post.
 **--- EDIT \(Dec 25, 2018\) ---**
 {: style="color:gray; font-size: 80%; text-align: center;"}
 
-# JSON code v2
+## JSON code v2
 
 Node-RED JSON code for the sequence in the beginning of this post.
 

@@ -12,7 +12,7 @@ I have three LIFX bulbs in a room, two in a ceiling fixture and one in a floor l
 
 <br />
 
-# Group
+## Group
 
 The original way to group entities was by using the [Group component](https://home-assistant.io/components/group/). Code and resulting card below.
 
@@ -66,7 +66,7 @@ But \(there is always a but\) the color of the icons were not changed when the g
 
 <br />
 
-# Switch
+## Switch
 
 Then I found [this discussion](https://community.home-assistant.io/t/three-smart-bulbs-in-a-group-can-i-get-the-default-dynamic-bulb-icon-to-work/10318) on the [Home Assistant Community Forum](https://community.home-assistant.io) which led me to [this issue](https://github.com/home-assistant/home-assistant-polymer/issues/186) on [GitHub](https://github.com) where the use of the [Switch component](https://home-assistant.io/components/switch/) was suggested. I decided to try it using a [Template Switch](https://home-assistant.io/components/switch.template/).  Code and resulting card below.
 
@@ -128,7 +128,7 @@ Now the icons were changed every time the corresponding group was turned on or o
 
 <br />
 
-# Light Group
+## Light Group
 
 Beginning in version 0.65 we have a new platform called [Light Group](https://home-assistant.io/components/light.group/) in the [Light component](https://home-assistant.io/components/light/). So I decided to test it. Code and resulting card below.
 
@@ -189,7 +189,7 @@ Awesome. Now, besides the icons being changed with each change of state (on or o
 
 <br />
 
-# Conclusion
+## Conclusion
 
 Particularly I prefer using the new light group platform because it's easier to setup, specially when compared to the template switch approach and yet has the advantage of controlling the groups attributes.
 

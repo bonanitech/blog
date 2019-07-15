@@ -68,6 +68,7 @@ sudo apt-get update
 
 sudo apt-get -y upgrade
 ```
+
 {: style="text-decoration: line-through;"}
 
 <br />
@@ -93,6 +94,7 @@ On the latest Ubuntu server, `jq` and `docker.io` are in the universe repository
 ```bash
 sudo add-apt-repository universe && sudo apt-get update
 ```
+
 {: style="text-decoration: line-through;"}
 
 <br />
@@ -105,6 +107,7 @@ Install the packages.
 ```bash
 sudo apt-get install docker.io avahi-daemon jq
 ```
+
 {: style="text-decoration: line-through;"}
 
 <br />
@@ -120,6 +123,7 @@ These are the only packages required to install Hass.io on an Ubuntu Server.
 ```bash
 sudo systemctl status docker
 ```
+
 {: style="text-decoration: line-through;"}
 
 ![sudo systemctl status docker]({{ "/assets/img/Screenshot 2018-05-11 12.00.41.png" | absolute_url }})
@@ -130,6 +134,7 @@ sudo systemctl status docker
 ```bash
 sudo docker ps
 ```
+
 {: style="text-decoration: line-through;"}
 
 ![sudo docker ps]({{ "/assets/img/Screenshot 2018-05-11 12.01.07.png" | absolute_url }})
@@ -148,6 +153,7 @@ To install Hass.io in this environment you need to run the following command as 
 ```bash
 curl -sL https://raw.githubusercontent.com/home-assistant/hassio-build/master/install/hassio_install | sudo bash -s
 ```
+
 {: style="text-decoration: line-through;"}
 
 <br />
