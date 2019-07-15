@@ -13,7 +13,7 @@ permalink: /how-to-install-hass.io-on-ubuntu-server-18.04/
 
 The best method to install Hass.io on a Generic Ubuntu/Debian machine is described at [https://gist.github.com/frenck/32b4f74919ca6b95b30c66f85976ec58](https://gist.github.com/frenck/32b4f74919ca6b95b30c66f85976ec58)
 
-My thanks to Frenck for the awesome script.
+My thanks to [Frenck](https://frenck.dev/) for the awesome script.
 
 <script src="https://gist.github.com/frenck/32b4f74919ca6b95b30c66f85976ec58.js"></script>
 
