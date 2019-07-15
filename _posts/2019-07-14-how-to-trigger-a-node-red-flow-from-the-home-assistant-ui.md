@@ -72,7 +72,7 @@ The `call-service` node turns on my bedroom ceiling lights in a 30 seconds trans
 
 <br />
 
-When I press the button (below) in the UI or say "Hey Google, good morning" the flow is triggered and the lights turn on.
+When I press the button (below) in the UI or say "Hey Google, good morning" [^1] the flow is triggered and the lights turn on.
 
 <br />
 
@@ -81,3 +81,7 @@ When I press the button (below) in the UI or say "Hey Google, good morning" the 
 <br />
 
 I prefer this approach because I do not like the idea of using `input_boolean` for this. It would be like using a light switch to activate a doorbell.
+
+<br />
+
+[^1]: The script was exposed to Google Assistant using [Home Assistant Cloud](https://www.home-assistant.io/cloud/).
