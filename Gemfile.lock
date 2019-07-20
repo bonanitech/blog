@@ -40,6 +40,8 @@ GEM
       listen (~> 3.0)
     kramdown (1.17.0)
     liquid (4.0.3)
+    liquid-c (4.0.0)
+      liquid (>= 3.0.0)
     listen (3.1.5)
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
@@ -65,11 +67,12 @@ PLATFORMS
 
 DEPENDENCIES
   jekyll (~> 3.8.6)
-  jekyll-feed (~> 0.6)
-  jekyll-paginate (~> 1.1)
+  jekyll-feed
+  jekyll-paginate
   jekyll-seo-tag
   jekyll-sitemap
-  sass (~> 3.4, >= 3.4.19)
+  liquid-c
+  sass
 
 BUNDLED WITH
    1.17.2

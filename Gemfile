@@ -18,9 +18,9 @@ gem "liquid-c"
 
 # If you have any plugins, put them here!
 group :jekyll_plugins do
-  gem "jekyll-feed", "~> 0.6"
-  gem 'jekyll-paginate', '~> 1.1'
-  gem 'sass', '~> 3.4', '>= 3.4.19'
-  gem 'jekyll-seo-tag'
+  gem "jekyll-feed"
+  gem "jekyll-paginate"
+  gem "jekyll-seo-tag"
   gem "jekyll-sitemap"
+  gem "sass"
 end
