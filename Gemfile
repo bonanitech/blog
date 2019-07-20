@@ -24,7 +24,6 @@ group :jekyll_plugins do
   gem 'sass', '~> 3.4', '>= 3.4.19'
   gem 'jekyll-seo-tag'
   gem "jekyll-sitemap"
-  gem "jekyll-redirect-from"
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
