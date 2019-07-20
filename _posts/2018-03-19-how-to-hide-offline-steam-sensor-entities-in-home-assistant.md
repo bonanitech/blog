@@ -1,6 +1,4 @@
 ---
-layout: post
-comments: true
 title:  "How to hide offline Steam sensor entities in Home Assistant"
 twitter_text: "How to hide offline @steam_games sensor entities in @home_assistant"
 date:   2018-07-09 10:00:00

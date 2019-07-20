@@ -1,5 +1,4 @@
 ---
-layout: post
 comments: false
 title:  "Hello World"
 date:   2018-03-12 13:00:00

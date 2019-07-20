@@ -1,6 +1,4 @@
 ---
-layout: post
-comments: true
 title: "How to trigger a Node-RED flow from the Home Assistant UI"
 twitter_text: "How to trigger a @NodeRED flow from the @home_assistant UI"
 date:   2019-07-14 10:30:00

@@ -1,6 +1,4 @@
 ---
-layout: post
-comments: true
 title:  "Dynamically hide/unhide an entire view in Home Assistant"
 twitter_text: "Dynamically hide/unhide an entire view in @home_assistant"
 date:   2018-04-19 11:25:00

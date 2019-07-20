@@ -35,6 +35,19 @@ plugins:
 # Build settings
 markdown: kramdown
 
+defaults:
+  # Defaults for all pages
+  - scope:
+      path: ""
+    values:
+      layout: page
+      comments: false
+  # Defaults for blog posts
+  - scope:
+      path: "_posts"
+    values:
+      layout: post
+      comments: true
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.

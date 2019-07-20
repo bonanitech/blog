@@ -1,6 +1,4 @@
 ---
-layout: post
-comments: true
 title:  "How to install Hass.io on Ubuntu Server 18.04"
 twitter_text: "How to install Hass.io on Ubuntu Server 18.04"
 date:   2018-11-17 10:30:00

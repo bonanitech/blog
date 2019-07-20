@@ -1,6 +1,4 @@
 ---
-layout: post
-comments: true
 title:  "Smartening up a dumb light switch to control smart bulbs"
 twitter_text: "Smartening up a dumb light switch to control smart bulbs"
 date:   2019-06-01 10:30:00

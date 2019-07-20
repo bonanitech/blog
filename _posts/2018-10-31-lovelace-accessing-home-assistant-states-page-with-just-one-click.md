@@ -1,6 +1,4 @@
 ---
-layout: post
-comments: true
 title:  "[Lovelace] Accessing Home Assistant states page with just one click"
 twitter_text: "[Lovelace] Accessing @home_assistant states page with just one click"
 date:   2018-12-24 10:30:00
