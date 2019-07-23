@@ -43,7 +43,7 @@ Write down the address of each add-on repository that you have added to your ins
 **--- EDIT \(Oct 24, 2018\) ---**
 {: style="color:gray; font-size: 80%; text-align: center; text-decoration: line-through;"}
 
-Like John Mesberg [well remembered in the comments section](https://bonani.tech/how-to-install-hass.io-on-ubuntu-server-18.04/#comment-4159094116), you can use the Hass.io snapshot feature for the backup and restore process.
+Like John Mesberg [well remembered in the comments section](/how-to-install-hass.io-on-ubuntu-server-18.04/#comment-4159094116), you can use the Hass.io snapshot feature for the backup and restore process.
 {: style="text-decoration: line-through;"}
 
 <br />

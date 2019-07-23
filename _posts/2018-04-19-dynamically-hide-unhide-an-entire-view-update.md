@@ -6,7 +6,7 @@ tags: HomeAssistant
 permalink: /dynamically-hide-unhide-an-entire-view-update/
 ---
 <!-- markdownlint-disable html -->
-Reddit user [/u/lordjustice17](https://www.reddit.com/user/lordjustice17) sent me a message \(see below\) on [Reddit](https://www.reddit.com/r/homeassistant/comments/84rogz/dynamically_hideunhide_an_entire_view_in_home/dxlv4ql/) with a different use of [Dynamically hide/unhide an entire view in Home Assistant](https://bonani.tech/dynamically-hide-unhide-an-entire-view/)
+Reddit user [/u/lordjustice17](https://www.reddit.com/user/lordjustice17) sent me a message \(see below\) on [Reddit](https://www.reddit.com/r/homeassistant/comments/84rogz/dynamically_hideunhide_an_entire_view_in_home/dxlv4ql/) with a different use of [Dynamically hide/unhide an entire view in Home Assistant](/dynamically-hide-unhide-an-entire-view/)
 
 <br />
 

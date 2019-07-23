@@ -12,7 +12,7 @@ As I mentioned in a previous post, I have several LIFX installed in the house. A
 
 On the other hand, I had to keep the switches for my older relatives (and some visitors), who always come here, and are used to using the "good old switches" or are not comfortable using voice assistants.
 
-At first, I tried to use [Amazon Dash Buttons](https://bonani.tech/using-node-red-to-capture-dash-button-press/) while I kept the light button on. It worked very well, but the time between pushing the button and the light turn on was a bit annoying. Not to mention the complaints of those who used them: *"Why do your lights take so long to turn on?".* Sometimes it would take almost 3 seconds for a light to come on.
+At first, I tried to use [Amazon Dash Buttons](/using-node-red-to-capture-dash-button-press/) while I kept the light button on. It worked very well, but the time between pushing the button and the light turn on was a bit annoying. Not to mention the complaints of those who used them: *"Why do your lights take so long to turn on?".* Sometimes it would take almost 3 seconds for a light to come on.
 
 I also tried replacing the switches with TP-Link HS200 Smart Switches. They look good and fit very well on the wall, but they're just expensive relays and would not solve the issue. When switched off they also turned off the bulbs. It would need a custom firmware, but not all smart switches allow us to change their firmware.
 
