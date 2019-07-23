@@ -11,9 +11,9 @@ permalink: /how-to-install-hass.io-on-ubuntu-server-18.04/
 
 The best method to install Hass.io on a Generic Ubuntu/Debian machine is described at [https://gist.github.com/frenck/32b4f74919ca6b95b30c66f85976ec58](https://gist.github.com/frenck/32b4f74919ca6b95b30c66f85976ec58)
 
-My thanks to [Frenck](https://frenck.dev/) for the awesome script.
-
 <script src="https://gist.github.com/frenck/32b4f74919ca6b95b30c66f85976ec58.js"></script>
+
+My thanks to [Frenck](https://frenck.dev/) for the awesome script.
 
 <br />
 
@@ -22,7 +22,7 @@ My thanks to [Frenck](https://frenck.dev/) for the awesome script.
 <br />
 
 **--- ORIGINAL POST ---**
-{: style="color:gray; font-size: 80%; text-align: center;"}
+{: style="color:gray; font-size: 80%; text-align: center; text-decoration: line-through;"}
 
 Until last month, I was running Hass.io on an Ubuntu Server 16.04. Now I decided to upgrade the host O.S. to the newest version. This is a step by step guide on how I did it.
 {: style="text-decoration: line-through;"}
@@ -41,7 +41,7 @@ Write down the address of each add-on repository that you have added to your ins
 <br />
 
 **--- EDIT \(Oct 24, 2018\) ---**
-{: style="color:gray; font-size: 80%; text-align: center;"}
+{: style="color:gray; font-size: 80%; text-align: center; text-decoration: line-through;"}
 
 Like John Mesberg [well remembered in the comments section](https://bonani.tech/how-to-install-hass.io-on-ubuntu-server-18.04/#comment-4159094116), you can use the Hass.io snapshot feature for the backup and restore process.
 {: style="text-decoration: line-through;"}
@@ -82,7 +82,7 @@ Some would say this is an optional step, but I think it's a good practice.
 <br />
 
 **--- EDIT \(Sep 12, 2018\) ---**
-{: style="color:gray; font-size: 80%; text-align: center;"}
+{: style="color:gray; font-size: 80%; text-align: center; text-decoration: line-through;"}
 
 On the latest Ubuntu server, `jq` and `docker.io` are in the universe repository. Enable it with.
 {: style="text-decoration: line-through;"}
