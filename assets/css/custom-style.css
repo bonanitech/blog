@@ -1,0 +1,15 @@
+a[href^="http://"]:after, a[href^="https://"]:after {
+  content: "\f08e";
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  display: inline-block;
+  text-decoration: none;
+  padding-left: 3px;
+}
+
+.share-buttons a[href^="http://"]:after, .share-buttons a[href^="https://"]:after {
+  content: none;
+  padding-left: 0;
+}
+
