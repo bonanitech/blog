@@ -17,10 +17,8 @@ I chose to install it [manually](https://github.com/andrey-git/home-assistant-cu
 <br />
 
 ```yaml
-{% raw %}
 customizer:
   custom_ui: local
-{% endraw %}
 ```
 
 <br />
@@ -30,7 +28,6 @@ Then it was time to have fun with the YAML files.
 <br />
 
 ```yaml
-{% raw %}
 frontend:
   themes:
     alert_yellow:
@@ -39,7 +36,6 @@ frontend:
     alert_red:
       primary-text-color: '#FF0000'
       paper-item-icon-color: '#FF0000'
-{% endraw %}
 ```
 
 <br />
@@ -48,8 +44,9 @@ First I created two themes, `alert_yellow` and `alert_red`. Each of them define 
 
 <br />
 
-```yaml
 {% raw %}
+
+```yaml
 sensor:
   - platform: template
     sensors:
@@ -79,8 +76,9 @@ sensor:
           {% else %}
             mdi:battery-alert
           {% endif %}
-{% endraw %}
 ```
+
+{% endraw %}
 
 <br />
 
@@ -91,7 +89,6 @@ Then created the sensors using the `icon_template` code found in the Cookbook to
 <br />
 
 ```yaml
-{% raw %}
 customize:
   sensor.window_sensor_battery_level:
     custom_ui_state_card: state-card-custom-ui
@@ -113,14 +110,11 @@ customize:
         } else if (state < 40) {
           return 'alert_yellow';
         }
-{% endraw %}
 ```
 
 <br />
 
 And finally I customized each sensor. If the battery charge is below 40% the sensor will be displayed in yellow and if it’s below 20% it will be displayed in red. If the values are 40% and above the sensor will be displayed using the colors defined in the theme used at that moment.
-
-<br />
 
 Here are some samples of the output.
 

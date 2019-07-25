@@ -21,7 +21,6 @@ After that I copied the domain and token to the DuckDNS add-on Config, saved and
 DuckDNS add-on Config example:  
 
 ```json
-{% raw %}
 {
   "lets_encrypt": {
     "accept_terms": true,
@@ -31,7 +30,6 @@ DuckDNS add-on Config example:
   "token": "sdfj-2131023-dslfjsd-12321",
   "domains": ["my-domain.duckdns.org"]
 }
-{% endraw %}
 ```
 
 <br />
@@ -48,16 +46,11 @@ I use [Cloudflare](https://www.cloudflare.com) to manage my domain. All I had to
 
 I don't like NAT Reflection/NAT Loopback/NAT Hairpinning, so I created an internal DNS zone to be able to access the blog in the LAN.
 
-<br />
-
 I set up a forward on ports `80` and `443` to the IP address of the Caddy Proxy \(in this case the same IP of my Home Assistant install\) in my router.
-
-<br />
 
 I also set up the Caddy Proxy add-on like below:  
 
 ```json
-{% raw %}
 {
   "homeassistant": "hassio_hostname",
   "vhosts": [
@@ -70,7 +63,6 @@ I also set up the Caddy Proxy add-on like below:
   "raw_config": [],
   "email": "user@email.com"
 }
-{% endraw %}
 ```
 
 <br />
@@ -79,7 +71,9 @@ Then I installed [WordPress](https://hub.docker.com/_/wordpress/) on port `8081`
 
 <br />
 
-`docker run --network=bridge -p 8081:80 -v /opt/wordpress/html:/var/www/html --name wordpress -d wordpress`
+```shell
+docker run --network=bridge -p 8081:80 -v /opt/wordpress/html:/var/www/html --name wordpress -d wordpress
+```
 
 <br />
 

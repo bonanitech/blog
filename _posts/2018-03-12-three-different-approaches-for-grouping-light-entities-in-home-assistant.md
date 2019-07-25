@@ -17,7 +17,6 @@ The original way to group entities was by using the [Group component](https://ho
 <br />
 
 ```yaml
-{% raw %}
 group:
   room_lights:
     name: "Group"
@@ -41,7 +40,6 @@ customize:
   group.room_lamp_lights:
     friendly_name: "Lamp Lights"
     icon: mdi:lamp
-{% endraw %}
 ```
 
 <br />
@@ -70,8 +68,9 @@ Then I found [this discussion](https://community.home-assistant.io/t/three-smart
 
 <br />
 
-```yaml
 {% raw %}
+
+```yaml
 switch:
   - platform: template
     switches:
@@ -109,8 +108,9 @@ group:
     entities:
       - switch.room_ceiling_lights
       - switch.room_lamp_lights
-{% endraw %}
 ```
+
+{% endraw %}
 
 <br />
 
@@ -133,7 +133,6 @@ Beginning in version 0.65 we have a new platform called [Light Group](https://ho
 <br />
 
 ```yaml
-{% raw %}
 light:
   - platform: lifx
   - platform: group
@@ -161,7 +160,6 @@ group:
     entities:
       - light.ceiling_lights
       - light.lamp_lights
-{% endraw %}
 ```
 
 <br />

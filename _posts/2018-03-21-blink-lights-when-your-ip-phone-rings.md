@@ -29,11 +29,9 @@ The ****5678 extension is created in the `extensions_custom.conf` file.
 <br />
 
 ```asterisk
-{% raw %}
 [from-internal-custom]
 exten => ****5678,1,TrySystem(/home/asterisk/hass.sh > /dev/null 2>&1 &)
 same => n,Congestion
-{% endraw %}
 ```
 
 <br />
@@ -43,11 +41,9 @@ It calls the `/home/asterisk/hass.sh` shell script.
 <br />
 
 ```bash
-{% raw %}
 #!/bin/bash
 
 curl -X POST -H "x-ha-access: HASS_PASSWORD" -H "Content-Type: application/json" http://HASS_SERVER_ADDRESS:8123/api/services/script/incoming_call
-{% endraw %}
 ```
 
 <br />
@@ -57,7 +53,6 @@ Which triggers the `incoming_call` script in Home Assistant.
 <br />
 
 ```yaml
-{% raw %}
 # FreePBX Incoming Call
 incoming_call:
   sequence:
@@ -86,7 +81,6 @@ incoming_call:
         brightness: 191
         period: 1
         cycles: 2
-{% endraw %}
 ```
 
 <br />

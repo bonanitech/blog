@@ -14,7 +14,6 @@ Now with the new Lovelace UI it's even easier to do it. We just need to use this
 <br />
 
 ```yaml
-{% raw %}
 - type: entity-filter
   entities:
     - sensor.steam_12345678901234567
@@ -32,7 +31,6 @@ Now with the new Lovelace UI it's even easier to do it. We just need to use this
     type: glance
     title: Steam
   show_empty: false
-{% endraw %}
 ```
 
 <br />
@@ -54,7 +52,6 @@ A few hours later...
 <br />
 
 ```yaml
-{% raw %}
 sensor:
   - platform: steam_online
     api_key: !secret steam_api_key
@@ -63,7 +60,6 @@ sensor:
       - 98765432109847553
       - 98409840789049048
       - 90848949084989804
-{% endraw %}
 ```
 
 <br />
@@ -85,8 +81,9 @@ I really did not like the `if is_state_attr(steam.entity_id, 'icon', 'mdi:steam'
 
 <br />
 
-```yaml
 {% raw %}
+
+```yaml
 automation:
 - alias: 'Group Entities Online/Offline'
   trigger:
@@ -133,14 +130,13 @@ automation:
 #           {% if not(is_state('sensor.steam_98765432109847553', 'offline')) %}sensor.steam_98765432109847553,{% endif %}
 #           {% if not(is_state('sensor.steam_98409840789049048', 'offline')) %}sensor.steam_98409840789049048,{% endif %}
 #           {% if not(is_state('sensor.steam_90848949084989804', 'offline')) %}sensor.steam_90848949084989804{% endif %}"
-{% endraw %}
 ```
+
+{% endraw %}
 
 <br />
 
 **It works!**
-
-**Note:** These SteamIDs do not exist
 
 Some important points:
 

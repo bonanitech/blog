@@ -33,7 +33,6 @@ Based on what's written there I created the following subflow.
 <br />
 
 ```json
-{% raw %}
 [
     {
         "id": "27274ec0.477d32",
@@ -129,7 +128,6 @@ Based on what's written there I created the following subflow.
         ]
     }
 ]
-{% endraw %}
 ```
 
 <br />
@@ -158,8 +156,9 @@ If you're curious, these are the switches I currently use.
 
 <br />
 
-```yaml
 {% raw %}
+
+```yaml
 switch:
   - platform: template
     switches:
@@ -171,8 +170,9 @@ switch:
         turn_off:
           service: script.turn_on
           entity_id: script.good_night
-{% endraw %}
 ```
+
+{% endraw %}
 
 <br />
 
@@ -180,8 +180,9 @@ switch:
 
 <br />
 
-```yaml
 {% raw %}
+
+```yaml
 switch:
   - platform: template
     switches:
@@ -193,8 +194,9 @@ switch:
         turn_off:
           service: script.turn_on
           entity_id: script.turn_off_1s
-{% endraw %}
 ```
+
+{% endraw %}
 
 <br />
 

@@ -25,7 +25,6 @@ Then on Home Assistant I have the following.
 <br />
 
 ```yaml
-{% raw %}
 shell_command:
   mauricio_arrived: printf 'Channel: Local/724464@from-internal\nApplication: Flite\nData: "*. Welcome home, Mauricio."' > `date +"%Y%m%d%H%M%S"`.call && scp *.call root@192.168.10.10:/var/spool/asterisk/outgoing && rm *.call
 
@@ -38,7 +37,6 @@ automation:
         to: 'on'
     action:
       - service: shell_command.mauricio_arrived
-{% endraw %}
 ```
 
 <br />
@@ -47,7 +45,7 @@ It will generate a file with the content below and upload it via SCP to the dire
 
 <br />
 
-```asterisk
+```yaml
 Channel: Local/724464@from-internal
 Application: Flite
 Data: "*. Welcome home, Mauricio."

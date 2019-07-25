@@ -8,8 +8,6 @@ permalink: /how-to-trigger-a-node-red-flow-from-the-home-assistant-ui/
 <!-- markdownlint-disable html -->
 I see a lot of people who use Node-RED as their automation engine looking for a way to trigger a flow from the Home Assistant UI. Here's how I do it.
 
-<br />
-
 First I created an empty `script`.
 
 <br />
@@ -81,7 +79,5 @@ When I press the button (below) in the UI or say "Hey Google, good morning" [^1]
 <br />
 
 I prefer this approach because I do not like the idea of using `input_boolean` for this. It would be like using a light switch to activate a doorbell.
-
-<br />
 
 [^1]: The script was exposed to Google Assistant using [Home Assistant Cloud](https://www.home-assistant.io/cloud/).

@@ -21,9 +21,7 @@ This means that we can remove almost all of the template nodes used in the origi
 
 ![Template Sequence]({{ "/assets/img/2018-11-14-template_sequence_v2.png" | absolute_url }})
 
-<br />
-
-**Note:** The JSON code of this sequence is [here](#json-code-v2).
+The JSON code of this sequence is [here](#json-code-v2).
 
 <br />
 
@@ -44,22 +42,17 @@ I started looking for a way to have only one sequence for all the tracked device
 
 ![Template Sequence]({{ "/assets/img/2018-11-14-template_sequence.png" | absolute_url }})
 
-<br />
-
-**Note:** The JSON code of this sequence is [here](#json-code).
+The JSON code of this sequence is [here](#json-code).
 
 <br />
 
 Now all I needed was to set up an `input_select` with the same name of a `device_tracker` in Home Assistant.
-
-<br />
 
 In `known_devices.yaml`:
 
 <br />
 
 ```yaml
-{% raw %}
 homer:
   hide_if_away: false
   icon:
@@ -67,7 +60,6 @@ homer:
   name: Homer
   picture: /local/homer.png
   track: true
-{% endraw %}
 ```
 
 <br />
@@ -77,7 +69,6 @@ In `configuration.yaml`:
 <br />
 
 ```yaml
-{% raw %}
 input_select:
   homer:
     options:
@@ -86,8 +77,6 @@ input_select:
       - Just Left
       - Away
       - Extended Away
-
-{% endraw %}
 ```
 
 <br />
@@ -107,7 +96,6 @@ For example:
 <br />
 
 ```yaml
-{% raw %}
 marge:
   hide_if_away: false
   icon:
@@ -115,13 +103,11 @@ marge:
   name: Marge
   picture: /local/marge.png
   track: true
-{% endraw %}
 ```
 
 <br />
 
 ```yaml
-{% raw %}
 input_select:
   marge:
     options:
@@ -130,8 +116,6 @@ input_select:
       - Just Left
       - Away
       - Extended Away
-
-{% endraw %}
 ```
 
 <br />
@@ -159,7 +143,6 @@ Node-RED JSON code for the sequence in the beginning of this post.
 <br />
 
 ```json
-{% raw %}
 [
     {
         "id": "d40df6c2.d47028",
@@ -581,24 +564,8 @@ Node-RED JSON code for the sequence in the beginning of this post.
                 "d40df6c2.d47028"
             ]
         ]
-    },
-    {
-        "id": "2e01cc90.59e594",
-        "type": "api-call-service",
-        "z": "8563a7bd.384e78",
-        "name": "HA",
-        "service_domain": "",
-        "service": "",
-        "data": "",
-        "mergecontext": "",
-        "x": 1470,
-        "y": 40,
-        "wires": [
-            []
-        ]
     }
 ]
-{% endraw %}
 ```
 
 <br />
@@ -617,7 +584,6 @@ Node-RED JSON code for the sequence in the beginning of this post.
 <br />
 
 ```json
-{% raw %}
 [
     {
         "id": "b3cfb392.48ca3",
@@ -985,19 +951,8 @@ Node-RED JSON code for the sequence in the beginning of this post.
                 "b3cfb392.48ca3"
             ]
         ]
-    },
-    {
-        "id": "2591f105.083aee",
-        "type": "server",
-        "z": "",
-        "name": "Home Assistant",
-        "legacy": false,
-        "hassio": true,
-        "rejectUnauthorizedCerts": true,
-        "ha_boolean": "y|yes|true|on|home|open"
     }
 ]
-{% endraw %}
 ```
 
 <br />

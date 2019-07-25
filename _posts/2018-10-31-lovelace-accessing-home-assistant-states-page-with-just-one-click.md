@@ -14,7 +14,6 @@ An alternative way to achieve this is to place a `weblink` in a Lovelace entitie
 <br />
 
 ```yaml
-{% raw %}
 - type: entities
   show_header_toggle: false
   entities:
@@ -22,7 +21,6 @@ An alternative way to achieve this is to place a `weblink` in a Lovelace entitie
       url: /states
       name: "States"
       icon: mdi:home-assistant
-{% endraw %}
 ```
 
 <br />
@@ -50,13 +48,11 @@ Add the following code to your `configuration.yaml` file and restart Home Assist
 <br />
 
 ```yaml
-{% raw %}
 panel_iframe:
   states:
     title: "States"
     icon: mdi:home-assistant
     url: http://<your_home_assistant_url>/states
-{% endraw %}
 ```
 
 <br />
