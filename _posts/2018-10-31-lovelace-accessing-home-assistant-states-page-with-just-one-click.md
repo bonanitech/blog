@@ -32,7 +32,7 @@ An alternative way to achieve this is to place a `weblink` in a Lovelace entitie
 **--- EDIT \(Nov 15, 2018\) ---**
 {: style="color:gray; font-size: 80%; text-align: center;"}
 
-**WARNING: As of Home Assistant version 0.84 the method below no longer works.**
+{% include warning.html content="As of Home Assistant version 0.84 the method below no longer works." %}
 
 <br />
 
@@ -43,7 +43,7 @@ Sometimes you need to access the Home Assistant `states` page \(old UI\) and whe
 
 Add the following code to your `configuration.yaml` file and restart Home Assistant.
 
-**IMPORTANT:** Make sure you have the correct value in `url:`.
+{% include important.html content="Make sure you have the correct value in `url:`." %}
 
 <br />
 

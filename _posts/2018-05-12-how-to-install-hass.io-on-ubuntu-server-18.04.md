@@ -15,11 +15,7 @@ The best method to install Hass.io on a Generic Ubuntu/Debian machine is describ
 
 My thanks to [Frenck](https://frenck.dev/) for the awesome script.
 
-<br />
-
-**\* DO NOT \*** follow the instructions below. I'm keeping them here just as a historical reference.
-
-<br />
+{% include warning.html content="**DO NOT** follow the instructions below. I'm keeping them here just as a historical reference." %}
 
 **--- ORIGINAL POST ---**
 {: style="color:gray; font-size: 80%; text-align: center; text-decoration: line-through;"}

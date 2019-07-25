@@ -568,9 +568,7 @@ Node-RED JSON code for the sequence in the beginning of this post.
 ]
 ```
 
-<br />
-
-**IMPORTANT:** Don't forget to review the Server configuration in the Home Assistant nodes if you are going to use this sequence.
+{% include important.html content="Don't forget to review the Server configuration in the Home Assistant nodes if you are going to import this sequence." %}
 
 <br />
 
@@ -955,6 +953,4 @@ Node-RED JSON code for the sequence in the beginning of this post.
 ]
 ```
 
-<br />
-
-**IMPORTANT:** Don't forget to review the Server configuration in the Home Assistant nodes if you are going to use this sequence.
+{% include important.html content="Don't forget to review the Server configuration in the Home Assistant nodes if you are going to import this sequence." %}

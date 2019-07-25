@@ -84,7 +84,7 @@ sensor:
 
 Then created the sensors using the `icon_template` code found in the Cookbook to show the icon corresponding to each battery level.
 
-**Note:** I used two `input_number` to simulate the battery charge values of each `sensor`.
+I used two `input_number` to simulate the battery charge values of each `sensor`.
 
 <br />
 
@@ -132,4 +132,4 @@ Here are some samples of the output.
 
 Using this with a good notification system will help prevent a sensor from stop responding due to a discharged battery. Additionally, this will give you the possibility to choose the best time to change each battery and minimize the risk of discarding batteries that can still be used for some time.
 
-**Note:** Unfortunately this is not working with Safari 11.1 on MacOS High Sierra, I had to use Chrome.
+Unfortunately this is not working with Safari 11.1 on MacOS High Sierra, I had to use Chrome.

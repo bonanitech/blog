@@ -77,7 +77,7 @@ It also solves another problem I encountered during the tests. If only one entit
 
 I really did not like the `if is_state_attr(steam.entity_id, 'icon', 'mdi:steam')` part, but I did not find another way to select only the sensor.steam_* entities. If anyone knows a better way to do it please tell us how on the comments section below.
 
-**Note:** I'm keeping the old automation (commented out) below the current one for readers to understand the context.
+{% include note.html content="I'm keeping the old automation (commented out) below the current one for readers to understand the context." %}
 
 <br />
 

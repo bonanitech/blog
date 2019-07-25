@@ -39,7 +39,7 @@ automation:
       - service: shell_command.mauricio_arrived
 ```
 
-<br />
+{% include tip.html content="You must set SSH to use keys for authentication, this will prevent the system from prompting for passwords every time shell command is executed." %}
 
 It will generate a file with the content below and upload it via SCP to the directory `/var/spool/asterisk/outgoing` on the FreePBX server. Asterisk uses files in this directory to initiate calls automatically, see [this](https://wiki.asterisk.org/wiki/display/AST/Asterisk+Call+Files) and [this](https://www.voip-info.org/wiki/view/Asterisk+auto-dial+out).
 
@@ -51,10 +51,6 @@ Application: Flite
 Data: "*. Welcome home, Mauricio."
 ```
 
-<br />
+{% include note.html content="I inserted `*.` in the text because my phone \(Sangoma S500\) has a two second beep that is played 'before' the audio, but it overlaps the beggining of the text being 'said'. I tried removing the beep in the phone configuration, but then I had a two second silence with the same problem." %}
 
 When I get home, the automation is triggered and I'm greeted with a robotic voice. 🤖
-
-**Note 1:** You must set SSH to use keys for authentication, this will prevent the system from prompting for passwords every time shell command is executed.
-
-**Note 2:** I inserted '*.' in the text because my phone \(Sangoma S500\) has a two second beep that is played "before" the audio, but it overlaps the beggining of the text being 'said'. I tried removing the beep in the phone configuration, but then I had a two second silence with the same problem.
