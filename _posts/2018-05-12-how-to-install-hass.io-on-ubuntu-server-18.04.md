@@ -62,7 +62,6 @@ sudo apt-get update
 
 sudo apt-get -y upgrade
 ```
-
 {: style="text-decoration: line-through;"}
 
 <br />
@@ -88,7 +87,6 @@ On the latest Ubuntu server, `jq` and `docker.io` are in the universe repository
 ```bash
 sudo add-apt-repository universe && sudo apt-get update
 ```
-
 {: style="text-decoration: line-through;"}
 
 <br />
@@ -101,7 +99,6 @@ Install the packages.
 ```bash
 sudo apt-get install docker.io avahi-daemon jq
 ```
-
 {: style="text-decoration: line-through;"}
 
 <br />
@@ -117,22 +114,20 @@ These are the only packages required to install Hass.io on an Ubuntu Server.
 ```bash
 sudo systemctl status docker
 ```
-
 {: style="text-decoration: line-through;"}
 
 ![sudo systemctl status docker]({{ "/assets/img/Screenshot 2018-05-11 12.00.41.png" | absolute_url }})
-{: style="opacity: 0.5;"}
+{: style="opacity: 0.5; -webkit-filter: blur(2px); filter: blur(2px);"}
 
 <br />
 
 ```bash
 sudo docker ps
 ```
-
 {: style="text-decoration: line-through;"}
 
 ![sudo docker ps]({{ "/assets/img/Screenshot 2018-05-11 12.01.07.png" | absolute_url }})
-{: style="opacity: 0.5;"}
+{: style="opacity: 0.5; -webkit-filter: blur(2px); filter: blur(2px);"}
 
 <br />
 
@@ -147,7 +142,6 @@ To install Hass.io in this environment you need to run the following command as 
 ```bash
 curl -sL https://raw.githubusercontent.com/home-assistant/hassio-build/master/install/hassio_install | sudo bash -s
 ```
-
 {: style="text-decoration: line-through;"}
 
 <br />
@@ -161,7 +155,7 @@ You should see this message. Just wait.
 <br />
 
 ![installing]({{ "/assets/img/Screenshot 2018-05-11 12.12.18.png" | absolute_url }})
-{: style="opacity: 0.5;"}
+{: style="opacity: 0.5; -webkit-filter: blur(2px); filter: blur(2px);"}
 
 <br />
 
@@ -171,7 +165,7 @@ After a few minutes the page should be refreshed automatically and you should se
 <br />
 
 ![running]({{ "/assets/img/Screenshot 2018-05-11 12.17.24.png" | absolute_url }})
-{: style="opacity: 0.5;"}
+{: style="opacity: 0.5; -webkit-filter: blur(2px); filter: blur(2px);"}
 
 <br />
 
