@@ -142,12 +142,14 @@ Node-RED JSON code for the sequence in the beginning of this post.
 
 <br />
 
+{% raw %}
+
 ```json
 [
     {
-        "id": "d40df6c2.d47028",
+        "id": "63bc1c41.4818b4",
         "type": "switch",
-        "z": "8563a7bd.384e78",
+        "z": "92d8d5f4.738fe8",
         "name": "Home?",
         "property": "status",
         "propertyType": "msg",
@@ -166,21 +168,21 @@ Node-RED JSON code for the sequence in the beginning of this post.
         "checkall": "false",
         "repair": false,
         "outputs": 2,
-        "x": 400,
+        "x": 240,
         "y": 100,
         "wires": [
             [
-                "c06ebef7.051a7"
+                "48116c4c.4e2024"
             ],
             [
-                "1c5fa89c.e32cc7"
+                "e665e2e.424d02"
             ]
         ]
     },
     {
-        "id": "1c5fa89c.e32cc7",
+        "id": "e665e2e.424d02",
         "type": "template",
-        "z": "8563a7bd.384e78",
+        "z": "92d8d5f4.738fe8",
         "name": "Just Left",
         "field": "payload",
         "fieldType": "msg",
@@ -188,18 +190,18 @@ Node-RED JSON code for the sequence in the beginning of this post.
         "syntax": "mustache",
         "template": "{ \"domain\": \"input_select\",\n  \"service\": \"select_option\",\n  \"data\": {\n    \"entity_id\": \"input_select.{{topic}}\",\n    \"option\": \"Just Left\"\n   }\n}",
         "output": "str",
-        "x": 540,
+        "x": 380,
         "y": 140,
         "wires": [
             [
-                "c6209771.e44568"
+                "fd43f67e.91b0d8"
             ]
         ]
     },
     {
-        "id": "c06ebef7.051a7",
+        "id": "48116c4c.4e2024",
         "type": "template",
-        "z": "8563a7bd.384e78",
+        "z": "92d8d5f4.738fe8",
         "name": "",
         "field": "payload.entity_id",
         "fieldType": "msg",
@@ -207,36 +209,46 @@ Node-RED JSON code for the sequence in the beginning of this post.
         "syntax": "mustache",
         "template": "input_select.{{topic}}",
         "output": "str",
-        "x": 540,
+        "x": 380,
         "y": 60,
         "wires": [
             [
-                "ee350274.26dfb"
+                "70796e6c.ac84d"
             ]
         ]
     },
     {
-        "id": "ee350274.26dfb",
+        "id": "70796e6c.ac84d",
         "type": "api-current-state",
-        "z": "8563a7bd.384e78",
+        "z": "92d8d5f4.738fe8",
         "name": "Status?",
+        "server": "f7db64c8.551da8",
+        "version": "1",
+        "outputs": 1,
         "halt_if": "",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
         "override_topic": false,
-        "override_payload": true,
         "entity_id": "",
-        "x": 680,
+        "state_type": "str",
+        "state_location": "payload",
+        "override_payload": "msg",
+        "entity_location": "data",
+        "override_data": "msg",
+        "blockInputOverrides": false,
+        "x": 520,
         "y": 60,
         "wires": [
             [
-                "b9e404f5.ac9ee8",
-                "72adcd60.18ef94"
+                "dfda57cf.84b928",
+                "27264311.e3345c"
             ]
         ]
     },
     {
-        "id": "b9e404f5.ac9ee8",
+        "id": "dfda57cf.84b928",
         "type": "switch",
-        "z": "8563a7bd.384e78",
+        "z": "92d8d5f4.738fe8",
         "name": "Just Left?",
         "property": "payload",
         "propertyType": "msg",
@@ -253,21 +265,21 @@ Node-RED JSON code for the sequence in the beginning of this post.
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 820,
+        "x": 660,
         "y": 40,
         "wires": [
             [
-                "bff37b9c.a09628"
+                "cd88b28d.36f0b"
             ],
             [
-                "49cf7023.7e66"
+                "2bbf8591.d344ba"
             ]
         ]
     },
     {
-        "id": "72adcd60.18ef94",
+        "id": "27264311.e3345c",
         "type": "change",
-        "z": "8563a7bd.384e78",
+        "z": "92d8d5f4.738fe8",
         "name": "RESET",
         "rules": [
             {
@@ -283,19 +295,19 @@ Node-RED JSON code for the sequence in the beginning of this post.
         "from": "",
         "to": "",
         "reg": false,
-        "x": 810,
+        "x": 650,
         "y": 80,
         "wires": [
             [
-                "7becd2f9.0dd21c",
-                "f4835fc3.0baf2"
+                "fe6163e2.6ef36",
+                "a5420f5c.c41da"
             ]
         ]
     },
     {
-        "id": "85a514ff.5e7dd8",
+        "id": "e522ae3b.d86a7",
         "type": "change",
-        "z": "8563a7bd.384e78",
+        "z": "92d8d5f4.738fe8",
         "name": "RESET",
         "rules": [
             {
@@ -311,86 +323,114 @@ Node-RED JSON code for the sequence in the beginning of this post.
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1170,
+        "x": 1010,
         "y": 140,
         "wires": [
             [
-                "6586b018.1ce49",
-                "f4835fc3.0baf2"
+                "2e48c4eb.a8c30c",
+                "a5420f5c.c41da"
             ]
         ]
     },
     {
-        "id": "c6209771.e44568",
+        "id": "fd43f67e.91b0d8",
         "type": "api-call-service",
-        "z": "8563a7bd.384e78",
+        "z": "92d8d5f4.738fe8",
         "name": "HA",
+        "server": "f7db64c8.551da8",
+        "version": "1",
         "service_domain": "",
         "service": "",
+        "entityId": "",
         "data": "",
+        "dataType": "json",
         "mergecontext": "",
-        "x": 670,
+        "output_location": "payload",
+        "output_location_type": "msg",
+        "mustacheAltTags": false,
+        "x": 510,
         "y": 140,
         "wires": [
             [
-                "7becd2f9.0dd21c",
-                "85a514ff.5e7dd8"
+                "fe6163e2.6ef36",
+                "e522ae3b.d86a7"
             ]
         ]
     },
     {
-        "id": "1213e3a7.af404c",
+        "id": "7d55c4ca.ebcb3c",
         "type": "api-call-service",
-        "z": "8563a7bd.384e78",
+        "z": "92d8d5f4.738fe8",
         "name": "HA",
+        "server": "f7db64c8.551da8",
+        "version": 1,
         "service_domain": "",
         "service": "",
+        "entityId": "",
         "data": "",
+        "dataType": "json",
         "mergecontext": "",
-        "x": 1110,
+        "output_location": "payload",
+        "output_location_type": "msg",
+        "mustacheAltTags": false,
+        "x": 950,
         "y": 20,
         "wires": [
             [
-                "6586b018.1ce49"
+                "2e48c4eb.a8c30c"
             ]
         ]
     },
     {
-        "id": "9f3a6cdc.4bc01",
+        "id": "fa4008f4.b2b498",
         "type": "api-call-service",
-        "z": "8563a7bd.384e78",
+        "z": "92d8d5f4.738fe8",
         "name": "HA",
+        "server": "f7db64c8.551da8",
+        "version": "1",
         "service_domain": "",
         "service": "",
+        "entityId": "",
         "data": "",
+        "dataType": "json",
         "mergecontext": "",
-        "x": 1050,
+        "output_location": "payload",
+        "output_location_type": "msg",
+        "mustacheAltTags": false,
+        "x": 890,
         "y": 120,
         "wires": [
             [
-                "f4835fc3.0baf2"
+                "a5420f5c.c41da"
             ]
         ]
     },
     {
-        "id": "a6ac7a43.a32818",
+        "id": "f517c6e4.0f7b08",
         "type": "api-call-service",
-        "z": "8563a7bd.384e78",
+        "z": "92d8d5f4.738fe8",
         "name": "HA",
+        "server": "f7db64c8.551da8",
+        "version": "1",
         "service_domain": "",
         "service": "",
+        "entityId": "",
         "data": "",
+        "dataType": "json",
         "mergecontext": "",
-        "x": 1530,
+        "output_location": "payload",
+        "output_location_type": "msg",
+        "mustacheAltTags": false,
+        "x": 1370,
         "y": 80,
         "wires": [
             []
         ]
     },
     {
-        "id": "7becd2f9.0dd21c",
+        "id": "fe6163e2.6ef36",
         "type": "trigger",
-        "z": "8563a7bd.384e78",
+        "z": "92d8d5f4.738fe8",
         "op1": "",
         "op2": "",
         "op1type": "nul",
@@ -401,18 +441,18 @@ Node-RED JSON code for the sequence in the beginning of this post.
         "reset": "",
         "bytopic": "topic",
         "name": "10 Min",
-        "x": 810,
+        "x": 650,
         "y": 120,
         "wires": [
             [
-                "f78cad65.d2879"
+                "ae21edc5.d0ec1"
             ]
         ]
     },
     {
-        "id": "f4835fc3.0baf2",
+        "id": "a5420f5c.c41da",
         "type": "trigger",
-        "z": "8563a7bd.384e78",
+        "z": "92d8d5f4.738fe8",
         "op1": "",
         "op2": "",
         "op1type": "nul",
@@ -423,18 +463,18 @@ Node-RED JSON code for the sequence in the beginning of this post.
         "reset": "",
         "bytopic": "topic",
         "name": "24 Hrs",
-        "x": 1230,
+        "x": 1070,
         "y": 80,
         "wires": [
             [
-                "a73294ba.2c45b8"
+                "6721c902.c5f848"
             ]
         ]
     },
     {
-        "id": "6586b018.1ce49",
+        "id": "2e48c4eb.a8c30c",
         "type": "trigger",
-        "z": "8563a7bd.384e78",
+        "z": "92d8d5f4.738fe8",
         "op1": "",
         "op2": "",
         "op1type": "nul",
@@ -445,18 +485,18 @@ Node-RED JSON code for the sequence in the beginning of this post.
         "reset": "",
         "bytopic": "topic",
         "name": "10 Min",
-        "x": 1230,
+        "x": 1070,
         "y": 20,
         "wires": [
             [
-                "49cf7023.7e66"
+                "2bbf8591.d344ba"
             ]
         ]
     },
     {
-        "id": "bff37b9c.a09628",
+        "id": "cd88b28d.36f0b",
         "type": "template",
-        "z": "8563a7bd.384e78",
+        "z": "92d8d5f4.738fe8",
         "name": "Just Arrived",
         "field": "payload",
         "fieldType": "msg",
@@ -464,18 +504,18 @@ Node-RED JSON code for the sequence in the beginning of this post.
         "syntax": "mustache",
         "template": "{ \"domain\": \"input_select\",\n  \"service\": \"select_option\",\n  \"data\": {\n    \"entity_id\": \"input_select.{{topic}}\",\n    \"option\": \"Just Arrived\"\n   }\n}",
         "output": "str",
-        "x": 970,
+        "x": 810,
         "y": 20,
         "wires": [
             [
-                "1213e3a7.af404c"
+                "7d55c4ca.ebcb3c"
             ]
         ]
     },
     {
-        "id": "49cf7023.7e66",
+        "id": "2bbf8591.d344ba",
         "type": "template",
-        "z": "8563a7bd.384e78",
+        "z": "92d8d5f4.738fe8",
         "name": "Home",
         "field": "payload",
         "fieldType": "msg",
@@ -483,18 +523,16 @@ Node-RED JSON code for the sequence in the beginning of this post.
         "syntax": "mustache",
         "template": "{ \"domain\": \"input_select\",\n  \"service\": \"select_option\",\n  \"data\": {\n    \"entity_id\": \"input_select.{{topic}}\",\n    \"option\": \"Home\"\n   }\n}",
         "output": "str",
-        "x": 1350,
+        "x": 1190,
         "y": 40,
         "wires": [
-            [
-                "2e01cc90.59e594"
-            ]
+            []
         ]
     },
     {
-        "id": "a73294ba.2c45b8",
+        "id": "6721c902.c5f848",
         "type": "template",
-        "z": "8563a7bd.384e78",
+        "z": "92d8d5f4.738fe8",
         "name": "Extended Away",
         "field": "payload",
         "fieldType": "msg",
@@ -502,18 +540,18 @@ Node-RED JSON code for the sequence in the beginning of this post.
         "syntax": "mustache",
         "template": "{ \"domain\": \"input_select\",\n  \"service\": \"select_option\",\n  \"data\": {\n    \"entity_id\": \"input_select.{{topic}}\",\n    \"option\": \"Extended Away\"\n   }\n}",
         "output": "str",
-        "x": 1380,
+        "x": 1220,
         "y": 80,
         "wires": [
             [
-                "a6ac7a43.a32818"
+                "f517c6e4.0f7b08"
             ]
         ]
     },
     {
-        "id": "f78cad65.d2879",
+        "id": "ae21edc5.d0ec1",
         "type": "template",
-        "z": "8563a7bd.384e78",
+        "z": "92d8d5f4.738fe8",
         "name": "Away",
         "field": "payload",
         "fieldType": "msg",
@@ -521,18 +559,18 @@ Node-RED JSON code for the sequence in the beginning of this post.
         "syntax": "mustache",
         "template": "{ \"domain\": \"input_select\",\n  \"service\": \"select_option\",\n  \"data\": {\n    \"entity_id\": \"input_select.{{topic}}\",\n    \"option\": \"Away\"\n   }\n}",
         "output": "str",
-        "x": 930,
+        "x": 770,
         "y": 120,
         "wires": [
             [
-                "9f3a6cdc.4bc01"
+                "fa4008f4.b2b498"
             ]
         ]
     },
     {
-        "id": "25670fd1.5262b",
+        "id": "bb846ce5.4cd4a",
         "type": "change",
-        "z": "8563a7bd.384e78",
+        "z": "92d8d5f4.738fe8",
         "name": "Change",
         "rules": [
             {
@@ -557,16 +595,18 @@ Node-RED JSON code for the sequence in the beginning of this post.
         "from": "",
         "to": "",
         "reg": false,
-        "x": 260,
+        "x": 100,
         "y": 100,
         "wires": [
             [
-                "d40df6c2.d47028"
+                "63bc1c41.4818b4"
             ]
         ]
     }
 ]
 ```
+
+{% endraw %}
 
 {% include important.html content="Don't forget to review the Server configuration in the Home Assistant nodes if you are going to import this sequence." %}
 
@@ -580,6 +620,8 @@ Node-RED JSON code for the sequence in the beginning of this post.
 Node-RED JSON code for the sequence in the beginning of this post.
 
 <br />
+
+{% raw %}
 
 ```json
 [
@@ -968,19 +1010,10 @@ Node-RED JSON code for the sequence in the beginning of this post.
                 "e817c354.2e18"
             ]
         ]
-    },
-    {
-        "id": "f7db64c8.551da8",
-        "type": "server",
-        "z": "",
-        "name": "Home Assistant",
-        "legacy": false,
-        "hassio": true,
-        "rejectUnauthorizedCerts": true,
-        "ha_boolean": "y|yes|true|on|home|open",
-        "connectionDelay": true
     }
 ]
 ```
+
+{% endraw %}
 
 {% include important.html content="Don't forget to review the Server configuration in the Home Assistant nodes if you are going to import this sequence." %}
