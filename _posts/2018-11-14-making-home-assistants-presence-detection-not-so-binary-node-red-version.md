@@ -584,9 +584,9 @@ Node-RED JSON code for the sequence in the beginning of this post.
 ```json
 [
     {
-        "id": "b3cfb392.48ca3",
+        "id": "e817c354.2e18",
         "type": "switch",
-        "z": "e7991d63.81fb",
+        "z": "fd7e6f11.57548",
         "name": "Home?",
         "property": "status",
         "propertyType": "msg",
@@ -605,64 +605,68 @@ Node-RED JSON code for the sequence in the beginning of this post.
         "checkall": "false",
         "repair": false,
         "outputs": 2,
-        "x": 500,
-        "y": 380,
+        "x": 240,
+        "y": 100,
         "wires": [
             [
-                "9b6b31e1.6730b"
+                "6faf2677.041528"
             ],
             [
-                "a61252d8.10fcb"
+                "ddc97c15.f5558"
             ]
         ]
     },
     {
-        "id": "9b6b31e1.6730b",
+        "id": "6faf2677.041528",
         "type": "template",
-        "z": "e7991d63.81fb",
+        "z": "fd7e6f11.57548",
         "name": "",
         "field": "payload.entity_id",
         "fieldType": "msg",
         "format": "handlebars",
         "syntax": "mustache",
-        "template": "input_select.{{topic}}",
+        "template": "input_select.",
         "output": "str",
-        "x": 640,
-        "y": 340,
+        "x": 380,
+        "y": 60,
         "wires": [
             [
-                "dff67339.913bc"
+                "cc718e97.c5df5"
             ]
         ]
     },
     {
-        "id": "dff67339.913bc",
+        "id": "cc718e97.c5df5",
         "type": "api-current-state",
-        "z": "e7991d63.81fb",
+        "z": "fd7e6f11.57548",
         "name": "Status?",
-        "server": "2591f105.083aee",
+        "server": "f7db64c8.551da8",
+        "version": "1",
+        "outputs": 1,
         "halt_if": "",
         "halt_if_type": "str",
         "halt_if_compare": "is",
         "override_topic": false,
-        "override_payload": true,
-        "override_data": true,
         "entity_id": "",
         "state_type": "str",
-        "outputs": 1,
-        "x": 780,
-        "y": 340,
+        "state_location": "payload",
+        "override_payload": "msg",
+        "entity_location": "data",
+        "override_data": "msg",
+        "blockInputOverrides": false,
+        "x": 520,
+        "y": 60,
         "wires": [
             [
-                "75535264.27122c",
-                "c8c0f0c5.0248b"
+                "4b8e4dd1.55db84",
+                "255bf0c.522981"
             ]
         ]
     },
     {
-        "id": "75535264.27122c",
+        "id": "4b8e4dd1.55db84",
         "type": "switch",
-        "z": "e7991d63.81fb",
+        "z": "fd7e6f11.57548",
         "name": "Just Left?",
         "property": "payload",
         "propertyType": "msg",
@@ -679,21 +683,21 @@ Node-RED JSON code for the sequence in the beginning of this post.
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 920,
-        "y": 320,
+        "x": 660,
+        "y": 40,
         "wires": [
             [
-                "8ec9325c.161b8"
+                "97fc9f3e.e9845"
             ],
             [
-                "5e1e544e.f92d7c"
+                "5d9d99eb.12bf68"
             ]
         ]
     },
     {
-        "id": "c8c0f0c5.0248b",
+        "id": "255bf0c.522981",
         "type": "change",
-        "z": "e7991d63.81fb",
+        "z": "fd7e6f11.57548",
         "name": "RESET",
         "rules": [
             {
@@ -709,19 +713,19 @@ Node-RED JSON code for the sequence in the beginning of this post.
         "from": "",
         "to": "",
         "reg": false,
-        "x": 910,
-        "y": 360,
+        "x": 650,
+        "y": 80,
         "wires": [
             [
-                "3168e10c.9094fe",
-                "8c42cf94.02f97"
+                "aa153516.f666b8",
+                "ddbb8120.446fc"
             ]
         ]
     },
     {
-        "id": "5094372.30750c8",
+        "id": "d5752739.886ce8",
         "type": "change",
-        "z": "e7991d63.81fb",
+        "z": "fd7e6f11.57548",
         "name": "RESET",
         "rules": [
             {
@@ -737,102 +741,114 @@ Node-RED JSON code for the sequence in the beginning of this post.
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1050,
-        "y": 420,
+        "x": 790,
+        "y": 140,
         "wires": [
             [
-                "f5770290.c56e7",
-                "8c42cf94.02f97"
+                "751e6205.ecbd3c",
+                "ddbb8120.446fc"
             ]
         ]
     },
     {
-        "id": "a61252d8.10fcb",
+        "id": "ddc97c15.f5558",
         "type": "api-call-service",
-        "z": "e7991d63.81fb",
+        "z": "fd7e6f11.57548",
         "name": "Just Left",
-        "server": "2591f105.083aee",
+        "server": "f7db64c8.551da8",
+        "version": 1,
         "service_domain": "input_select",
         "service": "select_option",
+        "entityId": "",
         "data": "{\"entity_id\":\"input_select.{{topic}}\",\"option\":\"Just Left\"}",
-        "render_data": true,
+        "dataType": "json",
         "mergecontext": "",
         "output_location": "payload",
         "output_location_type": "msg",
-        "x": 640,
-        "y": 420,
+        "mustacheAltTags": false,
+        "x": 380,
+        "y": 140,
         "wires": [
             [
-                "3168e10c.9094fe",
-                "5094372.30750c8"
+                "aa153516.f666b8",
+                "d5752739.886ce8"
             ]
         ]
     },
     {
-        "id": "8ec9325c.161b8",
+        "id": "97fc9f3e.e9845",
         "type": "api-call-service",
-        "z": "e7991d63.81fb",
+        "z": "fd7e6f11.57548",
         "name": "Just Arrived",
-        "server": "2591f105.083aee",
+        "server": "f7db64c8.551da8",
+        "version": 1,
         "service_domain": "input_select",
         "service": "select_option",
+        "entityId": "",
         "data": "{\"entity_id\":\"input_select.{{topic}}\",\"option\":\"Just Arrived\"}",
-        "render_data": true,
+        "dataType": "json",
         "mergecontext": "",
         "output_location": "payload",
         "output_location_type": "msg",
-        "x": 1070,
-        "y": 300,
+        "mustacheAltTags": false,
+        "x": 810,
+        "y": 20,
         "wires": [
             [
-                "f5770290.c56e7"
+                "751e6205.ecbd3c"
             ]
         ]
     },
     {
-        "id": "c065d7d1.bce048",
+        "id": "c6fa9f19.d7b77",
         "type": "api-call-service",
-        "z": "e7991d63.81fb",
+        "z": "fd7e6f11.57548",
         "name": "Away",
-        "server": "2591f105.083aee",
+        "server": "f7db64c8.551da8",
+        "version": 1,
         "service_domain": "input_select",
         "service": "select_option",
+        "entityId": "",
         "data": "{\"entity_id\":\"input_select.{{topic}}\",\"option\":\"Away\"}",
-        "render_data": true,
+        "dataType": "json",
         "mergecontext": "",
         "output_location": "payload",
         "output_location_type": "msg",
-        "x": 1050,
-        "y": 380,
+        "mustacheAltTags": false,
+        "x": 790,
+        "y": 100,
         "wires": [
             [
-                "8c42cf94.02f97"
+                "ddbb8120.446fc"
             ]
         ]
     },
     {
-        "id": "74ed9275.0db39c",
+        "id": "e7bf876d.8ba068",
         "type": "api-call-service",
-        "z": "e7991d63.81fb",
+        "z": "fd7e6f11.57548",
         "name": "Extended Away",
-        "server": "2591f105.083aee",
+        "server": "f7db64c8.551da8",
+        "version": 1,
         "service_domain": "input_select",
         "service": "select_option",
+        "entityId": "",
         "data": "{\"entity_id\":\"input_select.{{topic}}\",\"option\":\"Extended Away\"}",
-        "render_data": true,
+        "dataType": "json",
         "mergecontext": "",
         "output_location": "payload",
         "output_location_type": "msg",
-        "x": 1360,
-        "y": 360,
+        "mustacheAltTags": false,
+        "x": 1100,
+        "y": 80,
         "wires": [
             []
         ]
     },
     {
-        "id": "3168e10c.9094fe",
+        "id": "aa153516.f666b8",
         "type": "trigger",
-        "z": "e7991d63.81fb",
+        "z": "fd7e6f11.57548",
         "op1": "",
         "op2": "{\"payload\":{\"data\":{\"option\":\"\"}}}",
         "op1type": "nul",
@@ -843,18 +859,18 @@ Node-RED JSON code for the sequence in the beginning of this post.
         "reset": "",
         "bytopic": "topic",
         "name": "10 Min",
-        "x": 910,
-        "y": 400,
+        "x": 650,
+        "y": 120,
         "wires": [
             [
-                "c065d7d1.bce048"
+                "c6fa9f19.d7b77"
             ]
         ]
     },
     {
-        "id": "8c42cf94.02f97",
+        "id": "ddbb8120.446fc",
         "type": "trigger",
-        "z": "e7991d63.81fb",
+        "z": "fd7e6f11.57548",
         "op1": "",
         "op2": "{\"payload\":{\"data\":{\"option\":\"\"}}}",
         "op1type": "nul",
@@ -865,18 +881,18 @@ Node-RED JSON code for the sequence in the beginning of this post.
         "reset": "",
         "bytopic": "topic",
         "name": "24 Hrs",
-        "x": 1210,
-        "y": 360,
+        "x": 950,
+        "y": 80,
         "wires": [
             [
-                "74ed9275.0db39c"
+                "e7bf876d.8ba068"
             ]
         ]
     },
     {
-        "id": "f5770290.c56e7",
+        "id": "751e6205.ecbd3c",
         "type": "trigger",
-        "z": "e7991d63.81fb",
+        "z": "fd7e6f11.57548",
         "op1": "",
         "op2": "{\"payload\":{\"data\":{\"option\":\"\"}}}",
         "op1type": "nul",
@@ -887,37 +903,40 @@ Node-RED JSON code for the sequence in the beginning of this post.
         "reset": "",
         "bytopic": "topic",
         "name": "10 Min",
-        "x": 1210,
-        "y": 300,
+        "x": 950,
+        "y": 20,
         "wires": [
             [
-                "5e1e544e.f92d7c"
+                "5d9d99eb.12bf68"
             ]
         ]
     },
     {
-        "id": "5e1e544e.f92d7c",
+        "id": "5d9d99eb.12bf68",
         "type": "api-call-service",
-        "z": "e7991d63.81fb",
+        "z": "fd7e6f11.57548",
         "name": "Home",
-        "server": "2591f105.083aee",
+        "server": "f7db64c8.551da8",
+        "version": 1,
         "service_domain": "input_select",
         "service": "select_option",
+        "entityId": "",
         "data": "{\"entity_id\":\"input_select.{{topic}}\",\"option\":\"Home\"}",
-        "render_data": true,
+        "dataType": "json",
         "mergecontext": "",
         "output_location": "payload",
         "output_location_type": "msg",
-        "x": 1330,
-        "y": 320,
+        "mustacheAltTags": false,
+        "x": 1070,
+        "y": 40,
         "wires": [
             []
         ]
     },
     {
-        "id": "9dbba4b1.4a1868",
+        "id": "f37171b7.f1caa",
         "type": "change",
-        "z": "e7991d63.81fb",
+        "z": "fd7e6f11.57548",
         "name": "Change",
         "rules": [
             {
@@ -942,13 +961,24 @@ Node-RED JSON code for the sequence in the beginning of this post.
         "from": "",
         "to": "",
         "reg": false,
-        "x": 360,
-        "y": 380,
+        "x": 100,
+        "y": 100,
         "wires": [
             [
-                "b3cfb392.48ca3"
+                "e817c354.2e18"
             ]
         ]
+    },
+    {
+        "id": "f7db64c8.551da8",
+        "type": "server",
+        "z": "",
+        "name": "Home Assistant",
+        "legacy": false,
+        "hassio": true,
+        "rejectUnauthorizedCerts": true,
+        "ha_boolean": "y|yes|true|on|home|open",
+        "connectionDelay": true
     }
 ]
 ```
