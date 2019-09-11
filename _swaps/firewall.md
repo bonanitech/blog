@@ -1,6 +1,6 @@
 ---
 item: "firewall"
-name: "Compact Network Appliance with 6 Gigabit LAN | Lanner FW-7535"
+name: "Compact Network Appliance with 6 Gigabit LAN - Lanner FW-7535"
 ---
 
 # {{ page.name }}
