@@ -2,7 +2,7 @@
 /* The grid: Four equal columns that floats next to each other */
 .column {
   float: left;
-  width: 25%;
+  width: 20%;
   padding: 10px;
 }
 
@@ -51,12 +51,6 @@
 
 <br>
 
-<div class="container">
-  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
-  <img id="expandedImg" style="width:100%">
-  <div id="imgtext"></div>
-</div>
-
 <div class="row">
 {% for file in site.static_files %}
   {% if file.path contains include.folder %}
@@ -70,6 +64,12 @@
     {% endif %}
   {% endif %}
 {% endfor %}
+</div>
+
+<div class="container">
+  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+  <img id="expandedImg" style="width:100%">
+  <div id="imgtext"></div>
 </div>
 
 <script>
