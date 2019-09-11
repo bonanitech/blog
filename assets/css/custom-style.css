@@ -1,4 +1,5 @@
-a[href^="http://"]:after, a[href^="https://"]:after {
+a[href^="http://"]:after,
+a[href^="https://"]:after {
   content: "\f08e";
   font-family: FontAwesome;
   font-weight: normal;
@@ -8,7 +9,10 @@ a[href^="http://"]:after, a[href^="https://"]:after {
   padding-left: 3px;
 }
 
-.share-buttons a[href^="http://"]:after, .share-buttons a[href^="https://"]:after {
+.menu a[href^="http://"]:after,
+.menu a[href^="https://"]:after,
+.share-buttons a[href^="http://"]:after,
+.share-buttons a[href^="https://"]:after {
   content: none;
   padding-left: 0;
 }
@@ -63,4 +67,9 @@ a[href^="http://"]:after, a[href^="https://"]:after {
 .alert-warning code {
   color: #8a6d3b;
   background-color: #fcf8e3;
+}
+
+.swap-link {
+  float: left;
+  margin-right: 10px;
 }
