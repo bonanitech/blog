@@ -34,5 +34,5 @@ defaults:
       comments: true
 
 collections:
-  swaps:
+  swap:
     output: true
