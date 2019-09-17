@@ -1,6 +1,6 @@
 ---
 item: "hp"
-name: "HP Color LaserJet Enterrise M553dn (B5L25AR)"
+name: "HP Color LaserJet Enterprise M553dn (B5L25AR)"
 ---
 
 # {{ page.name }}
