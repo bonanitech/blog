@@ -9,8 +9,6 @@ a[href^="https://"]:after {
   padding-left: 3px;
 }
 
-.menu a[href^="http://"]:after,
-.menu a[href^="https://"]:after,
 .share-buttons a[href^="http://"]:after,
 .share-buttons a[href^="https://"]:after {
   content: none;
@@ -67,9 +65,4 @@ a[href^="https://"]:after {
 .alert-warning code {
   color: #8a6d3b;
   background-color: #fcf8e3;
-}
-
-.swap-link {
-  float: left;
-  margin-right: 10px;
 }
