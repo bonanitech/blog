@@ -667,7 +667,7 @@ Node-RED JSON code for the sequence in the beginning of this post.
         "fieldType": "msg",
         "format": "handlebars",
         "syntax": "mustache",
-        "template": "input_select.",
+        "template": "input_select.{{topic}}",
         "output": "str",
         "x": 380,
         "y": 60,
