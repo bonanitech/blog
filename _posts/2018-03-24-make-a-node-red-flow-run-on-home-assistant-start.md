@@ -105,6 +105,7 @@ Now, in Home Assistant, we create a `shell_command` and an `automation` that wil
 ```yaml
 shell_command:
   ha_start: 'curl http://localhost:1880/hastart'
+  # http://localhost:1880/endpoint/hastart if you're using the Node-RED Community Hass.io Add-on.
 
 automation:
   - alias: homeassistant_start
