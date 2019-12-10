@@ -9,16 +9,9 @@ permalink: /how-to-install-hass.io-on-ubuntu-server-18.04/
 **--- EDIT \(Dec 10, 2019\) ---**
 {: style="color:gray; font-size: 80%; text-align: center;"}
 
-The official Home Assistant documentation has a section called [Alternative: install on a generic Linux host](https://www.home-assistant.io/hassio/installation/#alternative-install-on-a-generic-linux-host) where the most up to date method to install Hass.io on Ubuntu, Debian, and Arch Linux can be found.
+The official Home Assistant documentation has a section called [Alternative: install on a generic Linux host](https://www.home-assistant.io/hassio/installation/#alternative-install-on-a-generic-linux-host), where the most up to date method to install Hass.io on Ubuntu, Debian, and Arch Linux can be found.
 
-**--- EDIT \(Nov 17, 2018\) ---**
-{: style="color:gray; font-size: 80%; text-align: center;"}
-
-The best method to install Hass.io on a Generic Ubuntu/Debian machine is described at [https://gist.github.com/frenck/32b4f74919ca6b95b30c66f85976ec58](https://gist.github.com/frenck/32b4f74919ca6b95b30c66f85976ec58)
-
-<script src="https://gist.github.com/frenck/32b4f74919ca6b95b30c66f85976ec58.js"></script>
-
-My thanks to [Frenck](https://frenck.dev/) for the awesome script.
+<br />
 
 {% include warning.html content="**DO NOT** follow the instructions below. I'm keeping them here just as a historical reference." %}
 
