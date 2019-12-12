@@ -123,3 +123,8 @@ automation:
 <br />
 
 I have been using this solution for a few months and am very happy with it, especially since I have had no issues so far.
+
+**--- EDIT \(11 Dec, 2019\) ---**
+{: style="color:gray; font-size: 80%; text-align: center;"}
+
+[Brian Hanifin](https://brianhanifin.com/) has made amazing improvements to the setup above, including "*failover code which turns the smart switch back into a dumb switch should Home Assistant be unavailable to turn on the light when flipped*". All described in detail in his [blog post](https://brianhanifin.com/posts/esphome-shelly1-dumb-light-switch-smart/).
