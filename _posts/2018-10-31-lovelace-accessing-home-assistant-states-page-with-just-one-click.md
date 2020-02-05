@@ -1,11 +1,18 @@
 ---
 title:  "[Lovelace] Accessing Home Assistant states page with just one click"
 twitter_text: "[Lovelace] Accessing @home_assistant states page with just one click"
-date:   2018-12-24 10:30:00
+date:   2018-10-31 10:30:00
 tags: HomeAssistant Lovelace
 permalink: /lovelace-accessing-home-assistant-states-page-with-just-one-click/
 ---
 <!-- markdownlint-disable html -->
+**--- EDIT \(Feb 05, 2020\) ---**
+{: style="color:gray; font-size: 80%; text-align: center;"}
+
+{% include important.html content="The States UI is now [deprecated](https://www.home-assistant.io/blog/2020/02/05/release-105/#the-old-states-ui-is-now-deprecated) and will be completely removed from Home Assistant in version 0.107.0. Therefore, this won't work anymore after that." %}
+
+<br />
+
 **--- EDIT \(Dec 24, 2018\) ---**
 {: style="color:gray; font-size: 80%; text-align: center;"}
 

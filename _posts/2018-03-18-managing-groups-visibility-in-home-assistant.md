@@ -6,6 +6,16 @@ tags: HomeAssistant
 permalink: /managing-groups-visibility-in-home-assistant/
 ---
 <!-- markdownlint-disable html -->
+**--- EDIT \(Feb 05, 2020\) ---**
+{: style="color:gray; font-size: 80%; text-align: center;"}
+
+{% include important.html content="The States UI is now [deprecated](https://www.home-assistant.io/blog/2020/02/05/release-105/#the-old-states-ui-is-now-deprecated) and will be completely removed from Home Assistant in version 0.107.0. Therefore, this won't work anymore after that." %}
+
+<br />
+
+**--- ORIGINAL POST ---**
+{: style="color:gray; font-size: 80%; text-align: center;"}
+
 After I wrote [Dynamically hide / unhide an entire view in Home Assistant](/dynamically-hide-unhide-an-entire-view/), many people asked me if it is possible to do the same with the cards \(groups\). It is, and it's easy too.
 
 Here is an example code:

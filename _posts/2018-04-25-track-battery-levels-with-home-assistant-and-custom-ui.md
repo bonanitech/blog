@@ -6,6 +6,16 @@ tags: HomeAssistant CustomUI
 permalink: /track-battery-levels-with-home-assistant-and-custom-ui/
 ---
 <!-- markdownlint-disable html -->
+**--- EDIT \(Feb 05, 2020\) ---**
+{: style="color:gray; font-size: 80%; text-align: center;"}
+
+{% include important.html content="The States UI is now [deprecated](https://www.home-assistant.io/blog/2020/02/05/release-105/#the-old-states-ui-is-now-deprecated) and will be completely removed from Home Assistant in version 0.107.0. Therefore, this won't work anymore after that." %}
+
+<br />
+
+**--- ORIGINAL POST ---**
+{: style="color:gray; font-size: 80%; text-align: center;"}
+
 If you have sensors around the house, you should be concerned about the battery life of these sensors. Unless they are hard wired, of course. 🙂
 
 I was reading [this example](https://www.home-assistant.io/cookbook/track_battery_level/) from the [Home Assistant Cookbook](https://www.home-assistant.io/cookbook) and started to think *"why not change the colors of the entities according to their battery level?"*.

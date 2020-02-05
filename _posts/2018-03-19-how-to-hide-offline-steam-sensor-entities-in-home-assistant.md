@@ -1,7 +1,7 @@
 ---
 title:  "How to hide offline Steam sensor entities in Home Assistant"
 twitter_text: "How to hide offline @steam_games sensor entities in @home_assistant"
-date:   2018-07-09 10:00:00
+date:   2018-03-19 10:00:00
 tags: HomeAssistant
 permalink: /how-to-hide-offline-steam-sensor-entities-in-home-assistant/
 ---
@@ -32,6 +32,13 @@ Now with the new Lovelace UI it's even easier to do it. We just need to use this
     title: Steam
   show_empty: false
 ```
+
+<br />
+
+**--- EDIT \(Feb 05, 2020\) ---**
+{: style="color:gray; font-size: 80%; text-align: center;"}
+
+{% include important.html content="The States UI is now [deprecated](https://www.home-assistant.io/blog/2020/02/05/release-105/#the-old-states-ui-is-now-deprecated) and will be completely removed from Home Assistant in version 0.107.0. Therefore, the code below won't work anymore after that." %}
 
 <br />
 
@@ -140,6 +147,6 @@ automation:
 
 Some important points:
 
-* Pay attention to the commas after each sensor in the templates, the last doesn't need one.
-* If you use views, don't forget to add the group (in this case `group.steam`) to the desired view.
-* You don't need to create the group, it will be created by the automations.
+- Pay attention to the commas after each sensor in the templates, the last doesn't need one.
+- If you use views, don't forget to add the group (in this case `group.steam`) to the desired view.
+- You don't need to create the group, it will be created by the automations.

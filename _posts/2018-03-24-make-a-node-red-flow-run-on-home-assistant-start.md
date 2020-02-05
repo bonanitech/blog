@@ -1,7 +1,7 @@
 ---
 title:  "How to run a Node-RED flow on Home Assistant start"
 twitter_text: "How to run a @NodeRED flow on @home_assistant start"
-date:   2018-07-09 12:00:00
+date:   2018-03-24 12:00:00
 tags: HomeAssistant NodeRED
 permalink: /make-a-node-red-flow-run-on-home-assistant-start/
 ---
