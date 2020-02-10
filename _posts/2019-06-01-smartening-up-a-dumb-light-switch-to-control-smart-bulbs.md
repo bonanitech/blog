@@ -112,7 +112,7 @@ automation:
 
 - **Really fast response** - It's like turning on and off an ordinary light bulb. Most people would not even notice that they are connected devices.
 - **Smart bulbs always on** - You have the smart bulbs (and their features) available all the time.
-- **Prevents smart bulbs resets** - Some smart bulbs are reset to factory defaults if turned on and off a 5 or 6 times in a row. You can flick the light switch as much as you want and that won't happen, only the LEDs will be switched on and off. [Frenck would love this part!](https://youtu.be/orZ2xlH81KQ?t=3789) 😄.
+- **Prevents smart bulbs resets** - Some smart bulbs are reset to factory defaults if turned on and off 5 or 6 times in a row. You can flick the light switch as much as you want and that won't happen, only the LEDs will be switched on and off. [Frenck would love this part!](https://youtu.be/orZ2xlH81KQ?t=3789) 😄.
 
 ## THE CONS
 
