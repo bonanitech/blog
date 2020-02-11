@@ -2,7 +2,7 @@
 title:  "Blink lights when your IP phone rings"
 twitter_text: "Blink lights when your IP phone rings using @home_assistant"
 date:   2018-03-21 15:48:00
-tags: HomeAssistant FreePBX Asterisk
+tags: [Home Assistant, FreePBX, Asterisk]
 permalink: /blink-lights-when-your-ip-phone-rings/
 ---
 <!-- markdownlint-disable html -->

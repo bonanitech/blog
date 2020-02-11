@@ -2,7 +2,7 @@
 title:  "Smartening up a dumb light switch to control smart bulbs"
 twitter_text: "Smartening up a dumb light switch to control smart bulbs"
 date:   2019-06-01 10:30:00
-tags: HomeAssistant ESPHome LIFX Shelly
+tags: [Home Assistant, ESPHome, LIFX, Shelly]
 permalink: /smartening-up-a-dumb-light-switch-to-control-smart-bulbs/
 ---
 <!-- markdownlint-disable html -->

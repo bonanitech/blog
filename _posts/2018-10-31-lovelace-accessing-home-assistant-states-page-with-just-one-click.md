@@ -2,7 +2,7 @@
 title:  "[Lovelace] Accessing Home Assistant states page with just one click"
 twitter_text: "[Lovelace] Accessing @home_assistant states page with just one click"
 date:   2018-10-31 10:30:00
-tags: HomeAssistant Lovelace
+tags: [Home Assistant, Lovelace]
 permalink: /lovelace-accessing-home-assistant-states-page-with-just-one-click/
 ---
 <!-- markdownlint-disable html -->

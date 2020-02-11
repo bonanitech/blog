@@ -2,7 +2,7 @@
 title: "How to trigger a Node-RED flow from the Home Assistant UI"
 twitter_text: "How to trigger a @NodeRED flow from the @home_assistant UI"
 date:   2019-07-14 10:30:00
-tags: HomeAssistant NodeRED
+tags: [Home Assistant, Node-RED]
 permalink: /how-to-trigger-a-node-red-flow-from-the-home-assistant-ui/
 ---
 <!-- markdownlint-disable html -->

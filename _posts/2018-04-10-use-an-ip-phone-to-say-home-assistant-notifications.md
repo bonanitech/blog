@@ -2,7 +2,7 @@
 title:  "Use an IP phone to 'say' Home Assistant notifications"
 twitter_text: "Use an IP phone to 'say' @home_assistant notifications"
 date:   2018-04-10 16:05:00
-tags: HomeAssistant FreePBX Asterisk
+tags: [Home Assistant, FreePBX, Asterisk]
 permalink: /use-an-ip-phone-to-say-home-assistant-notifications/
 ---
 <!-- markdownlint-disable html -->
