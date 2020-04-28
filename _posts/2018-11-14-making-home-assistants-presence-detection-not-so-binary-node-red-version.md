@@ -1059,9 +1059,7 @@ Node-RED JSON code for the sequence in the beginning of this post.
                 "vt": "str"
             },
             {
-                "t": "eq",
-                "v": "not_home",
-                "vt": "str"
+                "t": "else"
             }
         ],
         "checkall": "false",
@@ -1437,7 +1435,7 @@ Node-RED JSON code for the sequence in the beginning of this post.
         "debugenabled": false,
         "constraints": [
             {
-                "id": "8gnr9zfcdyu",
+                "id": "eaeskffh1a",
                 "targetType": "this_entity",
                 "targetValue": "",
                 "propertyType": "previous_state",
