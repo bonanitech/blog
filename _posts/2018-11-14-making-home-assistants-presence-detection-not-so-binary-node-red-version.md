@@ -44,8 +44,6 @@ Since its [version 0.3.0](https://github.com/zachowj/node-red-contrib-home-assis
 
 This means that we can remove almost all of the template nodes used in the original sequence and move their content to the call service nodes right after them.
 
-<br />
-
 ![Template Sequence]({{ "/assets/img/2018-11-14-template_sequence_v2.png" | absolute_url }})
 
 The JSON code of this sequence is available <a href="/download/making-home-assistants-presence-detection-not-so-binary-node-red-version-v2.json" download target="_blank">here</a>.
