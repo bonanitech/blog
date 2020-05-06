@@ -16,7 +16,6 @@ And how did I set this up? Also easy.
 On the FreePBX server, all incoming calls are redirected to a Ring Group containing two extensions:
 
 * My desk phone - extension 200
-
 * "Fake" extension - extension \*\*\*\*5678
 
 <br />
@@ -25,9 +24,7 @@ On the FreePBX server, all incoming calls are redirected to a Ring Group contain
 
 <br />
 
-The ****5678 extension is created in the `extensions_custom.conf` file.
-
-<br />
+The \*\*\*\*5678 extension is created in the `extensions_custom.conf` file.
 
 ```asterisk
 [from-internal-custom]
@@ -39,8 +36,6 @@ same => n,Congestion
 
 It calls the `/home/asterisk/hass.sh` shell script.
 
-<br />
-
 ```bash
 #!/bin/bash
 
@@ -50,8 +45,6 @@ curl -X POST -H "x-ha-access: HASS_PASSWORD" -H "Content-Type: application/json"
 <br />
 
 Which triggers the `incoming_call` script in Home Assistant.
-
-<br />
 
 ```yaml
 # FreePBX Incoming Call

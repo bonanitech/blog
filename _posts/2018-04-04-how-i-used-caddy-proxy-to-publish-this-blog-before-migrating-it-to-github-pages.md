@@ -17,8 +17,6 @@ The first step was to create an account and a domain on the [DuckDNS website](ht
 
 After that I copied the domain and token to the DuckDNS add-on Config, saved and started the add-on.
 
-<br />
-
 DuckDNS add-on Config example:  
 
 ```json
@@ -69,8 +67,6 @@ I also set up the Caddy Proxy add-on like below:
 <br />
 
 Then I installed [WordPress](https://hub.docker.com/_/wordpress/) on port `8081` \(because it was running on the same server\).
-
-<br />
 
 ```shell
 docker run --network=bridge -p 8081:80 -v /opt/wordpress/html:/var/www/html --name wordpress -d wordpress

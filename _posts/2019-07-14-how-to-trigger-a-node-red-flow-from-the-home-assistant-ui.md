@@ -11,8 +11,6 @@ I see a lot of people who use Node-RED as their automation engine looking for a 
 
 First I created an empty `script`.
 
-<br />
-
 ```yaml
 script:
   good_morning:
@@ -22,8 +20,6 @@ script:
 <br />
 
 And a button in Lovelace.
-
-<br />
 
 ```yaml
 - type: entity-button

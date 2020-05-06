@@ -7,57 +7,14 @@ permalink: /how-to-hide-offline-steam-sensor-entities-in-home-assistant/
 excerpt: "I received the message below on Reddit and decided to find a way to do what was proposed."
 ---
 <!-- markdownlint-disable html -->
-**--- EDIT \(Jul 09, 2018\) ---**
-{: style="color:gray; font-size: 80%; text-align: center;"}
-
-Now with the new Lovelace UI it's even easier to do it. We just need to use this `entity-filter` in `ui-lovelace.yaml`.
-
-<br />
-
-```yaml
-- type: entity-filter
-  entities:
-    - sensor.steam_12345678901234567
-    - sensor.steam_98765432109847553
-    - sensor.steam_98409840789049048
-    - sensor.steam_90848949084989804
-  state_filter:
-    - 'online'
-    - 'busy'
-    - 'away'
-    - 'snooze'
-    - 'looking_to_trade'
-    - 'looking_to_play'
-  card:
-    type: glance
-    title: Steam
-  show_empty: false
-```
-
-<br />
-
-**--- EDIT \(Feb 05, 2020\) ---**
-{: style="color:gray; font-size: 80%; text-align: center;"}
-
-{% include important.html content="The States UI is now [deprecated](https://www.home-assistant.io/blog/2020/02/05/release-105/#the-old-states-ui-is-now-deprecated) and will be completely removed from Home Assistant in version 0.107.0. Therefore, the code below won't work anymore after that." %}
-
-<br />
-
-**--- ORIGINAL POST ---**
-{: style="color:gray; font-size: 80%; text-align: center;"}
+{% include warning content="The States UI is now [deprecated](https://www.home-assistant.io/blog/2020/02/05/release-105/#the-old-states-ui-is-now-deprecated) and will be completely removed from Home Assistant in version 0.107.0. Therefore, the code below won't work anymore after that. Follow [this link](#lovelace-version) for the Lovelave version." %}
 
 I received the message below on [Reddit](https://www.reddit.com/r/homeassistant/comments/85fbob/managing_groups_visibility_in_home_assistant/dvx0473/) and decided to find a way to do what was proposed.
-
-<br />
 
 >Hi, this is great thanks so much for your contributions to the community. Blogs like yours are the reason I got in to HA in the first place.  
 >I’d be interested to see if you find a way to hide individual sensors from appearing groups. For example I have a group of steam sensors in a group called steam and would love to hide them individually when someone is not online without having to hide the whole group.
 
-<br />
-
 A few hours later...
-
-<br />
 
 ```yaml
 sensor:
@@ -72,8 +29,7 @@ sensor:
 
 <br />
 
-**--- EDIT \(Jun 18, 2018\) ---**
-{: style="color:gray; font-size: 80%; text-align: center;"}
+## Update - Jun 18, 2018
 
 After a request here on the comments section and on [Reddit](https://www.reddit.com/r/homeassistant/comments/85fbob/managing_groups_visibility_in_home_assistant/e0t40up/) I found out that, if the last or all entities of the sensor list in the automation template are offline, it would cause an error when the automation is run and therefore the frontend would not display the correct information in the group card.
 
@@ -85,9 +41,7 @@ It also solves another problem I encountered during the tests. If only one entit
 
 I really did not like the `if is_state_attr(steam.entity_id, 'icon', 'mdi:steam')` part, but I did not find another way to select only the sensor.steam_* entities. If anyone knows a better way to do it please tell us how on the comments section below.
 
-{% include note.html content="I'm keeping the old automation (commented out) below the current one for readers to understand the context." %}
-
-<br />
+{% include note content="I'm keeping the old automation (commented out) below the current one for readers to understand the context." %}
 
 {% raw %}
 
@@ -151,3 +105,29 @@ Some important points:
 - Pay attention to the commas after each sensor in the templates, the last doesn't need one.
 - If you use views, don't forget to add the group (in this case `group.steam`) to the desired view.
 - You don't need to create the group, it will be created by the automations.
+
+<br />
+
+## Lovelace version
+
+Now with the new Lovelace UI it's even easier to do it. We just need to use this `entity-filter` in `ui-lovelace.yaml`.
+
+```yaml
+- type: entity-filter
+  entities:
+    - sensor.steam_12345678901234567
+    - sensor.steam_98765432109847553
+    - sensor.steam_98409840789049048
+    - sensor.steam_90848949084989804
+  state_filter:
+    - 'online'
+    - 'busy'
+    - 'away'
+    - 'snooze'
+    - 'looking_to_trade'
+    - 'looking_to_play'
+  card:
+    type: glance
+    title: Steam
+  show_empty: false
+```

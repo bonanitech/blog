@@ -23,7 +23,7 @@ I bought some units and flashed them with [ESPHome](https://esphome.io/).
 
 <br />
 
-## SAMPLE CONFIG
+## Sample config
 
 ESPHome config for the living room switch:
 
@@ -109,13 +109,15 @@ automation:
 
 <br />
 
-## THE PROS
+## The pros
 
 - **Really fast response** - It's like turning on and off an ordinary light bulb. Most people would not even notice that they are connected devices.
 - **Smart bulbs always on** - You have the smart bulbs (and their features) available all the time.
 - **Prevents smart bulbs resets** - Some smart bulbs are reset to factory defaults if turned on and off 5 or 6 times in a row. You can flick the light switch as much as you want and that won't happen, only the LEDs will be switched on and off. [Frenck would love this part!](https://youtu.be/orZ2xlH81KQ?t=3789) 😄.
 
-## THE CONS
+<br />
+
+## The cons
 
 - **Additional cost** - Not really a con since they are not expensive. But needs to be taken into account.
 - **Relay always on** - This worries me a bit because I think this can shorten its life span.
@@ -125,7 +127,8 @@ automation:
 
 I have been using this solution for a few months and am very happy with it, especially since I have had no issues so far.
 
-**--- EDIT \(11 Dec, 2019\) ---**
-{: style="color:gray; font-size: 80%; text-align: center;"}
+<br />
+
+## Improvements
 
 [Brian Hanifin](https://brianhanifin.com/) has made amazing improvements to the setup above, including "*failover code which turns the smart switch back into a dumb switch should Home Assistant be unavailable to turn on the light when flipped*". All described in detail in his [blog post](https://brianhanifin.com/posts/esphome-shelly1-dumb-light-switch-smart/).

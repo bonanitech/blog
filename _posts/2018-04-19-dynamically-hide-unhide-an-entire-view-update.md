@@ -7,17 +7,9 @@ permalink: /dynamically-hide-unhide-an-entire-view-update/
 excerpt: "Reddit user /u/lordjustice17 sent me a message (see below) with a different use of \"Dynamically hide/unhide an entire view in Home Assistant\"."
 ---
 <!-- markdownlint-disable html -->
-**--- EDIT \(Feb 05, 2020\) ---**
-{: style="color:gray; font-size: 80%; text-align: center;"}
+{% include warning content="The States UI is now [deprecated](https://www.home-assistant.io/blog/2020/02/05/release-105/#the-old-states-ui-is-now-deprecated) and will be completely removed from Home Assistant in version 0.107.0. Therefore, this won't work anymore after that." %}
 
-{% include important.html content="The States UI is now [deprecated](https://www.home-assistant.io/blog/2020/02/05/release-105/#the-old-states-ui-is-now-deprecated) and will be completely removed from Home Assistant in version 0.107.0. Therefore, this won't work anymore after that." %}
-
-<br />
-
-**--- ORIGINAL POST ---**
-{: style="color:gray; font-size: 80%; text-align: center;"}
-
-Reddit user [/u/lordjustice17](https://www.reddit.com/user/lordjustice17) sent me a message \(see below\) on [Reddit](https://www.reddit.com/r/homeassistant/comments/84rogz/dynamically_hideunhide_an_entire_view_in_home/dxlv4ql/) with a different use of [Dynamically hide/unhide an entire view in Home Assistant](/dynamically-hide-unhide-an-entire-view/).
+Reddit user [/u/lordjustice17](https://www.reddit.com/user/lordjustice17) sent me a [message](https://www.reddit.com/r/homeassistant/comments/84rogz/dynamically_hideunhide_an_entire_view_in_home/dxlv4ql/) \(see below\) with a different use of [Dynamically hide/unhide an entire view in Home Assistant](/dynamically-hide-unhide-an-entire-view/).
 
 <br />
 
@@ -26,8 +18,6 @@ Reddit user [/u/lordjustice17](https://www.reddit.com/user/lordjustice17) sent m
 <br />
 
 His code:
-
-<br />
 
 {% raw %}
 

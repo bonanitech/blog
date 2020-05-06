@@ -7,15 +7,7 @@ permalink: /track-battery-levels-with-home-assistant-and-custom-ui/
 excerpt: "If you have sensors around the house, you should be concerned about the battery life of these sensors. Unless they are hard wired, of course. 🙂"
 ---
 <!-- markdownlint-disable html -->
-**--- EDIT \(Feb 05, 2020\) ---**
-{: style="color:gray; font-size: 80%; text-align: center;"}
-
-{% include important.html content="The States UI is now [deprecated](https://www.home-assistant.io/blog/2020/02/05/release-105/#the-old-states-ui-is-now-deprecated) and will be completely removed from Home Assistant in version 0.107.0. Therefore, this won't work anymore after that." %}
-
-<br />
-
-**--- ORIGINAL POST ---**
-{: style="color:gray; font-size: 80%; text-align: center;"}
+{% include warning content="The States UI is now [deprecated](https://www.home-assistant.io/blog/2020/02/05/release-105/#the-old-states-ui-is-now-deprecated) and will be completely removed from Home Assistant in version 0.107.0. Therefore, this won't work anymore after that." %}
 
 If you have sensors around the house, you should be concerned about the battery life of these sensors. Unless they are hard wired, of course. 🙂
 
@@ -25,8 +17,6 @@ It turns out that there is no way to color entities only with Home Assistant, fo
 
 I chose to install it [manually](https://github.com/andrey-git/home-assistant-custom-ui/blob/master/docs/installing.md#manual-install) and activated using the code below like described in the [Activating](https://github.com/andrey-git/home-assistant-custom-ui/blob/master/docs/activating.md) section of the documentation.
 
-<br />
-
 ```yaml
 customizer:
   custom_ui: local
@@ -35,8 +25,6 @@ customizer:
 <br />
 
 Then it was time to have fun with the YAML files.
-
-<br />
 
 ```yaml
 frontend:
@@ -52,8 +40,6 @@ frontend:
 <br />
 
 First I created two themes, `alert_yellow` and `alert_red`. Each of them define the colors for the text \(name and state\) and for the icon of a given entity.
-
-<br />
 
 {% raw %}
 
@@ -96,8 +82,6 @@ sensor:
 Then created the sensors using the `icon_template` code found in the Cookbook to show the icon corresponding to each battery level.
 
 I used two `input_number` to simulate the battery charge values of each `sensor`.
-
-<br />
 
 ```yaml
 customize:

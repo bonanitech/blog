@@ -15,8 +15,6 @@ I have three LIFX bulbs in a room, two in a ceiling fixture and one in a floor l
 
 The original way to group entities was by using the [Group component](https://home-assistant.io/components/group/). Code and resulting card below.
 
-<br />
-
 ```yaml
 group:
   room_lights:
@@ -66,8 +64,6 @@ But \(there is always a but\) the color of the icons were not changed when the g
 ## Switch
 
 Then I found [this discussion](https://community.home-assistant.io/t/three-smart-bulbs-in-a-group-can-i-get-the-default-dynamic-bulb-icon-to-work/10318) on the [Home Assistant Community Forum](https://community.home-assistant.io) which led me to [this issue](https://github.com/home-assistant/home-assistant-polymer/issues/186) on [GitHub](https://github.com) where the use of the [Switch component](https://home-assistant.io/components/switch/) was suggested. I decided to try it using a [Template Switch](https://home-assistant.io/components/switch.template/).  Code and resulting card below.
-
-<br />
 
 {% raw %}
 
@@ -131,8 +127,6 @@ Now the icons were changed every time the corresponding group was turned on or o
 
 Beginning in version 0.65 we have a new platform called [Light Group](https://home-assistant.io/components/light.group/) in the [Light component](https://home-assistant.io/components/light/). So I decided to test it. Code and resulting card below.
 
-<br />
-
 ```yaml
 light:
   - platform: lifx
@@ -177,12 +171,11 @@ Awesome. Now, besides the icons being changed with each change of state (on or o
 
 <br />
 
-**--- EDIT \(26 Apr, 2018\) ---**
-{: style="color:gray; font-size: 80%; text-align: center;"}
+## Update - 26 Apr, 2018
 
 [Hasscasts](https://www.youtube.com/channel/UCGOCeqMJnLvr-5C-ypUw7IQ) has published a great video about Light Groups
 
-{% include youtubePlayer.html id="sgomUe6R3MI" %}
+{% include youtube id="sgomUe6R3MI" %}
 
 <br />
 

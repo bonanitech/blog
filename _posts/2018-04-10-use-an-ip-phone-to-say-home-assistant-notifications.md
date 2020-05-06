@@ -21,9 +21,7 @@ The way I did it was creating a Paging Group on my FreePBX server.
 
 <br />
 
-Then on Home Assistant I have the following.
-
-<br />
+Then in Home Assistant I have the following.
 
 ```yaml
 shell_command:
@@ -40,11 +38,11 @@ automation:
       - service: shell_command.mauricio_arrived
 ```
 
-{% include tip.html content="You must set SSH to use keys for authentication, this will prevent the system from prompting for passwords every time shell command is executed." %}
-
-It will generate a file with the content below and upload it via SCP to the directory `/var/spool/asterisk/outgoing` on the FreePBX server. Asterisk uses files in this directory to initiate calls automatically, see [this](https://wiki.asterisk.org/wiki/display/AST/Asterisk+Call+Files) and [this](https://www.voip-info.org/wiki/view/Asterisk+auto-dial+out).
+{% include tip content="You must set SSH to use keys for authentication, this will prevent the system from prompting for passwords every time shell command is executed." %}
 
 <br />
+
+It will generate a file with the content below and upload it via SCP to the directory `/var/spool/asterisk/outgoing` on the FreePBX server. Asterisk uses files in this directory to initiate calls automatically, see [this](https://wiki.asterisk.org/wiki/display/AST/Asterisk+Call+Files) and [this](https://www.voip-info.org/wiki/view/Asterisk+auto-dial+out).
 
 ```yaml
 Channel: Local/724464@from-internal
@@ -52,6 +50,8 @@ Application: Flite
 Data: "*. Welcome home, Mauricio."
 ```
 
-{% include note.html content="I inserted `*.` in the text because my phone \(Sangoma S500\) has a two second beep that is played 'before' the audio, but it overlaps the beggining of the text being 'said'. I tried removing the beep in the phone configuration, but then I had a two second silence with the same problem." %}
+{% include note content="I inserted `*.` in the text because my phone \(Sangoma S500\) has a two second beep that is played 'before' the audio, but it overlaps the beggining of the text being 'said'. I tried removing the beep in the phone configuration, but then I had a two second silence with the same problem." %}
+
+<br />
 
 When I get home, the automation is triggered and I'm greeted with a robotic voice. 🤖
