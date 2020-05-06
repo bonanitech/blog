@@ -4,7 +4,7 @@ twitter_text: "Use an IP phone to 'say' @home_assistant notifications"
 date:   2018-04-10 16:05:00
 tags: [Home Assistant, FreePBX, Asterisk]
 permalink: /use-an-ip-phone-to-say-home-assistant-notifications/
-excerpt: "Turn your IP phone into a notification announcer."
+excerpt: "After I posted \"Blink lights when your IP phone rings\", I kept thinking \"Why not use my IP phone to 'say' notifications?\""
 ---
 <!-- markdownlint-disable html -->
 After I posted [Blink lights when your IP phone rings]({{ site.baseurl }}{% post_url 2018-03-21-blink-lights-when-your-ip-phone-rings %}), I kept thinking "Why not use my IP phone to 'say' notifications?"

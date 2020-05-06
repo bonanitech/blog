@@ -4,7 +4,7 @@ twitter_text: "How to trigger a @NodeRED flow from the @home_assistant UI"
 date:   2019-07-14 10:30:00
 tags: [Home Assistant, Node-RED]
 permalink: /how-to-trigger-a-node-red-flow-from-the-home-assistant-ui/
-excerpt: "Triggering a Node-RED flow with a simple click/tap on the UI. Or via a voice command (bonus)."
+excerpt: "I see a lot of people who use Node-RED as their automation engine looking for a way to trigger a flow from the Home Assistant UI. Here's how I do it."
 ---
 <!-- markdownlint-disable html -->
 I see a lot of people who use Node-RED as their automation engine looking for a way to trigger a flow from the Home Assistant UI. Here's how I do it.

@@ -4,7 +4,7 @@ twitter_text: "How I used @caddyserver Proxy to publish this blog before migrati
 date:   2018-04-04 10:40:00
 tags: [Home Assistant, DuckDNS, Caddy, GitHub]
 permalink: /how-i-used-caddy-proxy-to-publish-this-blog-before-migrating-it-to-github-pages/
-excerpt: "Publishing my blog from a computer at home."
+excerpt: "Before migrating this blog to GitHub Pages I used this Caddy Proxy add-on on Hass.io to help me publish it."
 ---
 <!-- markdownlint-disable html -->
 Before migrating this blog to [GitHub Pages](https://pages.github.com) I used this [Caddy Proxy add-on](https://github.com/bestlibre/hassio-addons/tree/master/caddy_proxy) on Hass.io to help me publish it.

@@ -4,7 +4,7 @@ twitter_text: "Dynamically hide/unhide an entire view in @home_assistant"
 date:   2018-03-15 21:03:00
 tags: [Home Assistant]
 permalink: /dynamically-hide-unhide-an-entire-view/
-excerpt: "How to hide and unhide view in Home Assistant."
+excerpt: "Today I learned a way to hide and unhide a view in Home Assistant. It turns out it’s easier than I expected. All I had to do was use the `group.set`  service to change the attribute `view`."
 ---
 <!-- markdownlint-disable html -->
 **--- EDIT \(Feb 05, 2020\) ---**

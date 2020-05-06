@@ -4,7 +4,7 @@ twitter_text: "Using @NodeRED to capture Dash Button press"
 date:   2018-05-21 20:30:00
 tags: [Home Assistant, Node-RED]
 permalink: /using-node-red-to-capture-dash-button-press/
-excerpt: "How to use Dash Button as a Node-RED automated light switch."
+excerpt: "If, like me, you are frustrated by the inability to install certain add-ons in the latest versions of \"Hass.io running on a generic Linux Server\", you must be looking for alternatives."
 ---
 <!-- markdownlint-disable html -->
 **--- EDIT \(May 28, 2018\) ---**

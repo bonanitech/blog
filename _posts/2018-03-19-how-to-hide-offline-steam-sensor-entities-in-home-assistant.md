@@ -4,7 +4,7 @@ twitter_text: "How to hide offline @steam_games sensor entities in @home_assista
 date:   2018-03-19 10:00:00
 tags: [Home Assistant]
 permalink: /how-to-hide-offline-steam-sensor-entities-in-home-assistant/
-excerpt: "Showing only the Steam accounts you follow that are online."
+excerpt: "I received the message below on Reddit and decided to find a way to do what was proposed."
 ---
 <!-- markdownlint-disable html -->
 **--- EDIT \(Jul 09, 2018\) ---**
