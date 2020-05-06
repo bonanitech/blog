@@ -4,6 +4,7 @@ twitter_text: "Managing groups visibility in @home_assistant"
 date:   2018-03-18 19:54:00
 tags: [Home Assistant]
 permalink: /managing-groups-visibility-in-home-assistant/
+excerpt: "How to hide and unhide groups (cards) in the Home Assistant frontend."
 ---
 <!-- markdownlint-disable html -->
 **--- EDIT \(Feb 05, 2020\) ---**

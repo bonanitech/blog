@@ -9,7 +9,7 @@ description: A simple blog about tech stuff
       {% for post in paginator.posts %}
         <li class="post-container"> 
 
-          <p> <a class="post-link" href="{{ post.permalink | prepend: site.baseurl }}">{{ post.title }}</a> — <span><em>{{ post.date | date: "%b %-d, %Y" }}</em></span><br />{{ post.content | strip_html | truncatewords: 30  }} <a href="{{ post.permalink | prepend: site.baseurl }}"> Read more... </a> </p>
+          <p> <a class="post-link" href="{{ post.permalink | prepend: site.baseurl }}">{{ post.title }}</a> — <span><em>{{ post.date | date: "%b %-d, %Y" }}</em></span><br />{{ post.excerpt | strip_html | truncatewords: 30  }} <a href="{{ post.permalink | prepend: site.baseurl }}"> Read more... </a> </p>
 
         </li>
       {% endfor %}
