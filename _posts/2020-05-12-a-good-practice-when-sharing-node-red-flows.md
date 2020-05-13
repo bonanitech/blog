@@ -9,7 +9,7 @@ excerpt: "So you've created an amazing flow and want to share it. How to minimiz
 <!-- markdownlint-disable html -->
 So you've created an amazing flow, and now you want to share it with the world. How to minimize the chances of issues for those who are going to import this flow?
 
-It's important to keep that in mind, especially when you are sharing flows with Home Assistant nodes. Nobody wants to end up with multiple servers by mistake.
+It's important to keep that in mind, especially when you are sharing flows with Home Assistant nodes. Nobody wants to end up with multiple server nodes by mistake.
 
 ![servers]({{ "/assets/img/Screen Shot 2020-04-25 at 2.15.13 PM.png" | absolute_url }})
 
