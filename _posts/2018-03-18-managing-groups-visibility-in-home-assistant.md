@@ -1,7 +1,7 @@
 ---
-title:  "Managing groups visibility in Home Assistant"
+title: "Managing groups visibility in Home Assistant"
 twitter_text: "Managing groups visibility in @home_assistant"
-date:   2018-03-18 19:54:00
+date: 2018-03-18
 tags: [Home Assistant]
 permalink: /managing-groups-visibility-in-home-assistant/
 excerpt: "After I wrote \"Dynamically hide / unhide an entire view in Home Assistant\", many people asked me if it is possible to do the same with the cards (groups). It is, and it's easy too."

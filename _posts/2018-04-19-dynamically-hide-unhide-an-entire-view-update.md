@@ -1,7 +1,7 @@
 ---
-title:  "Dynamically hide/unhide an entire view in Home Assistant"
+title: "Dynamically hide/unhide an entire view in Home Assistant"
 twitter_text: "Dynamically hide/unhide an entire view in @home_assistant"
-date:   2018-04-19 11:25:00
+date: 2018-04-19
 tags: [Home Assistant]
 permalink: /dynamically-hide-unhide-an-entire-view-update/
 excerpt: "Reddit user /u/lordjustice17 sent me a message (see below) with a different use of \"Dynamically hide/unhide an entire view in Home Assistant\"."

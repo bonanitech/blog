@@ -1,7 +1,7 @@
 ---
-title:  "[Lovelace] Accessing Home Assistant states page with just one click"
+title: "[Lovelace] Accessing Home Assistant states page with just one click"
 twitter_text: "[Lovelace] Accessing @home_assistant states page with just one click"
-date:   2018-10-31 10:30:00
+date: 2018-10-31
 tags: [Home Assistant, Lovelace]
 permalink: /lovelace-accessing-home-assistant-states-page-with-just-one-click/
 excerpt: "Sometimes you need to access the Home Assistant `states` page (old UI) and when you have Lovelace as the default UI you have to type it in the address bar. Here is an easier way to access it."

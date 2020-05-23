@@ -1,7 +1,7 @@
 ---
-title:  "Using Node-RED to capture Dash Button press"
+title: "Using Node-RED to capture Dash Button press"
 twitter_text: "Using @NodeRED to capture Dash Button press"
-date:   2018-05-21 20:30:00
+date: 2018-05-21
 tags: [Home Assistant, Node-RED]
 permalink: /using-node-red-to-capture-dash-button-press/
 excerpt: "If, like me, you are frustrated by the inability to install certain add-ons in the latest versions of \"Hass.io running on a generic Linux Server\", you must be looking for alternatives."

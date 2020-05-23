@@ -1,7 +1,7 @@
 ---
-title:  "Track battery levels with Home Assistant and Custom UI"
+title: "Track battery levels with Home Assistant and Custom UI"
 twitter_text: "Track battery levels with @home_assistant and Custom UI"
-date:   2018-04-25 11:25:00
+date: 2018-04-25
 tags: [Home Assistant, CustomUI]
 permalink: /track-battery-levels-with-home-assistant-and-custom-ui/
 excerpt: "If you have sensors around the house, you should be concerned about the battery life of these sensors. Unless they are hard wired, of course. 🙂"

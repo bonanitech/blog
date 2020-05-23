@@ -1,7 +1,7 @@
 ---
-title:  "Blink lights when your IP phone rings"
+title: "Blink lights when your IP phone rings"
 twitter_text: "Blink lights when your IP phone rings using @home_assistant"
-date:   2018-03-21 15:48:00
+date: 2018-03-21
 tags: [Home Assistant, FreePBX, Asterisk]
 permalink: /blink-lights-when-your-ip-phone-rings/
 excerpt: "I have an IP phone on my desk connected to a FreePBX server. It is permanently set to silent mode. I keep it that way because 90% of the time I work with headphones. It's also in a place where I can not easily see it."

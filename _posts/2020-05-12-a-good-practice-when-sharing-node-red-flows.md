@@ -1,7 +1,7 @@
 ---
 title: "A good practice when sharing Node-RED flows with Home Assistant nodes"
 twitter_text: "A good practice when sharing @NodeRED flows with @home_assistant node"
-date: 2020-05-12 10:00:00
+date: 2020-05-12
 tags: [Home Assistant, Node-RED]
 permalink: /a-good-practice-when-sharing-node-red-flows-with-home-assistant-nodes/
 excerpt: "So you've created an amazing flow and want to share it. How to minimize the chances of issues for the person who will import this flow?"
