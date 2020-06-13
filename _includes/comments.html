@@ -1,4 +1,4 @@
-{% if page.comments %}
+{% if page.comments != false and jekyll.environment != "development" %}
 <section class="comments">
     <br />
     <h2>Comments</h2>
