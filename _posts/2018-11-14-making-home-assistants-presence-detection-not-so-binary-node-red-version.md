@@ -144,3 +144,13 @@ Here's the sequence with a fix for this issue.
 The JSON code of this sequence is available <a href="/download/making-home-assistants-presence-detection-not-so-binary-node-red-version-v4.json" download target="_blank">here</a>.
 
 Thank you, [CamelY0](https://disqus.com/by/camely0/), for finding, reporting, and helping to fix the issue.
+
+<br />
+
+## Update - Jun 17, 2020
+
+This flow went through a diet. Now we no longer need the "rbe" and "template" nodes in it, nor do we need to use the "change" nodes to reset the timers.
+
+![Template Sequence]({{ "/assets/img/2018-11-14-template_sequence_v5.png" | absolute_url }})
+
+The JSON code of this sequence is available <a href="/download/making-home-assistants-presence-detection-not-so-binary-node-red-version-v5.json" download target="_blank">here</a>.
