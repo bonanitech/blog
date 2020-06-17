@@ -149,8 +149,22 @@ Thank you, [CamelY0](https://disqus.com/by/camely0/), for finding, reporting, an
 
 ## Update - Jun 17, 2020
 
-This flow went through a diet. Now we no longer need the "rbe" and "template" nodes in it, nor do we need to use the "change" nodes to reset the timers.
+This sequence went through a diet. Now we no longer need the "rbe" and "template" nodes in it, nor do we need to use the "change" nodes to reset the timers.
 
 ![Template Sequence]({{ "/assets/img/2018-11-14-template_sequence_v5.png" | absolute_url }})
 
 The JSON code of this sequence is available <a href="/download/making-home-assistants-presence-detection-not-so-binary-node-red-version-v5.json" download target="_blank">here</a>.
+
+<br />
+
+## Update - Jun 17, 2020 (2)
+
+Always the `zones`! 🤦🏼‍♂️
+
+The issue mentioned on May 01, 2020 (see [above](#update---may-01-2020)) found its way in again. Here's the sequence with the fix.
+
+![Template Sequence]({{ "/assets/img/2018-11-14-template_sequence_v6.png" | absolute_url }})
+
+The JSON code of this sequence is available <a href="/download/making-home-assistants-presence-detection-not-so-binary-node-red-version-v6.json" download target="_blank">here</a>.
+
+My thanks to Kermit [Jason Zachow](https://github.com/zachowj) for the JSONata tips.
