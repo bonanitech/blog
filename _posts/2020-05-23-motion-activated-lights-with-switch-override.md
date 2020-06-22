@@ -52,7 +52,7 @@ The JSON code of this flow is available <a href="/download/motion-activated-ligh
 
 By default, when motion is detected, the light turns on automatically. The light goes off after 10 minutes if no movement is detected during that period. If a movement is detected while the light is still on, the 10-minute countdown is restarted.
 
-If the light is turned on using the wall switch, the node that monitors the motion sensor is deactivated and the light stays on until it is turned off using the wall switch. After it's turned off, the operation by the motion sensor works again.
+If the light is turned on using the wall switch, the node that monitors the motion sensor is deactivated, and the light stays on until it is turned off using the wall switch. After it's turned off, the node that monitors the motion sensor is re-activated, and the rule described above works again.
 
 <br />
 
