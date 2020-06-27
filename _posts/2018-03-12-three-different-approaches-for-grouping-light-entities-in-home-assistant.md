@@ -171,7 +171,7 @@ Awesome. Now, besides the icons being changed with each change of state (on or o
 
 <br />
 
-## Update - 26 Apr, 2018
+## Update - Apr 26, 2018
 
 [Hasscasts](https://www.youtube.com/channel/UCGOCeqMJnLvr-5C-ypUw7IQ) has published a great video about Light Groups
 
