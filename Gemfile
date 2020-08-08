@@ -1,7 +1,7 @@
 source "https://rubygems.org"
 
 group :development do
-  gem "jekyll", "~> 3.8.6"
+  gem "jekyll", "~> 3.9.0"
 end
 
 gem "liquid-c"
