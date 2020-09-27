@@ -114,3 +114,59 @@ Following is the JSON code of the sequence. Do not forget to change the status n
     }
 ]
 ```
+
+<br />
+
+## Update - Sep 26, 2020
+
+For those using `node-red-contrib-home-assistant-websocket` (installed by default in Node-RED Community Hass.io Add-on), here's another possible solution.
+
+<br />
+
+![]({{ "/assets/img/Screen Shot 2020-09-26 at 7.58.33 PM.png" | absolute_url }})
+
+<br />
+
+```json
+[{
+  "id": "b66320a5.f8586",
+  "type": "server-events",
+  "z": "d0505e55.8a4b8",
+  "name": "",
+  "event_type": "home_assistant_client",
+  "exposeToHomeAssistant": false,
+  "haConfig": [{
+    "property": "name",
+    "value": ""
+  }, {
+    "property": "icon",
+    "value": ""
+  }],
+  "waitForRunning": true,
+  "x": 160,
+  "y": 590,
+  "wires": [
+    ["b46e7e0a.fef1f"]
+  ]
+}, {
+  "id": "b46e7e0a.fef1f",
+  "type": "switch",
+  "z": "d0505e55.8a4b8",
+  "name": "",
+  "property": "payload",
+  "propertyType": "msg",
+  "rules": [{
+    "t": "eq",
+    "v": "running",
+    "vt": "str"
+  }],
+  "checkall": "true",
+  "repair": false,
+  "outputs": 1,
+  "x": 350,
+  "y": 590,
+  "wires": [
+    []
+  ]
+}]
+```
