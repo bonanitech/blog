@@ -55,7 +55,7 @@ After that, in Home Assistant, we add the following code to a Lovelace view.
 
 <br />
 
-This will create the this button.
+This will create button below.
 
 <br />
 
