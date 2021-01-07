@@ -25,7 +25,7 @@ The JSON code of this sequence is available <a href="/download/making-home-assis
 
 Now all I needed was to set up an `input_select` with the same name of a `device_tracker` in Home Assistant.
 
-In `known_devices.yaml`:
+For reference, in `known_devices.yaml`.
 
 ```yaml
 homer:
@@ -37,9 +37,11 @@ homer:
   track: true
 ```
 
+{% include warning content="The `known_devices.yaml` file was [removed](https://www.home-assistant.io/blog/2019/06/05/release-94/#modernizing-the-device-tracker) from Home Assistant in version 0.94. It's suggested to use the person integration instead." %}
+
 <br />
 
-In `configuration.yaml`:
+Then I added this to `configuration.yaml`.
 
 ```yaml
 input_select:
@@ -66,6 +68,8 @@ This must be repeated for each person being tracked, just replacing the names wh
 
 For example:
 
+`known_devices.yaml`
+
 ```yaml
 marge:
   hide_if_away: false
@@ -77,6 +81,8 @@ marge:
 ```
 
 <br />
+
+`configuration.yaml`
 
 ```yaml
 input_select:
