@@ -7,9 +7,9 @@ permalink: /how-to-trigger-a-node-red-flow-from-the-home-assistant-ui-new-versio
 excerpt: "Now we have a better and more elegant way to do it."
 ---
 <!-- markdownlint-disable html -->
-Until a few months ago, I was using [this method](https://bonani.tech/how-to-trigger-a-node-red-flow-from-the-home-assistant-ui/) to trigger flow from the Home Assistant UI. Although it works fine, it’s not very elegant. Empty scripts cause linting warnings, and we don’t know if it will be forever supported by Home Assistant.
+Until a few months ago, I was using [this method](https://bonani.tech/how-to-trigger-a-node-red-flow-from-the-home-assistant-ui/) to trigger a flow from the Home Assistant UI. Although it works fine, it’s not very elegant. Empty scripts cause linting warnings, and we don’t know if that will be forever supported by Home Assistant.
 
-As [pointed out](https://bonani.tech/how-to-trigger-a-node-red-flow-from-the-home-assistant-ui/#comment-4794636679) by iantrich (a long time ago! 😳 ) in the comments section of my old post, since version [0.20.0](https://github.com/zachowj/node-red-contrib-home-assistant-websocket/releases/tag/v0.20.0) of `node-red-contrib-home-assistant-websocket`, we can "Trigger an exposed event node from a service call".
+As [pointed out](https://bonani.tech/how-to-trigger-a-node-red-flow-from-the-home-assistant-ui/#comment-4794636679) by iantrich (a long time ago! 😳) in the comments section of my old post, since version [0.20.0](https://github.com/zachowj/node-red-contrib-home-assistant-websocket/releases/tag/v0.20.0) of `node-red-contrib-home-assistant-websocket`, we can "Trigger an exposed event node from a service call".
 
 > With the release of the Node-RED [custom component](https://github.com/zachowj/hass-node-red) version 0.3.0, it adds the ability to trigger an event node from a service call.
 
@@ -55,7 +55,7 @@ After that, in Home Assistant, we add the following code to a Lovelace view.
 
 <br />
 
-This will create button below.
+This will create the button below.
 
 <br />
 
