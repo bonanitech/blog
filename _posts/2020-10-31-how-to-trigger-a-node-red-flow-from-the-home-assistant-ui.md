@@ -53,6 +53,8 @@ After that, in Home Assistant, we add the following code to a Lovelace view.
       entity_id: switch.scene_good_morning
 ```
 
+{% include note content="`script.good_morning` is used here as the entity because I didn’t want the button to change its color. That script was created using the code [below](#exposing-to-voice-assistants). If you don't want or don't need to use that script, you can use `switch.scene_good_morning` as the entity here." %}
+
 <br />
 
 This will create the button below.
